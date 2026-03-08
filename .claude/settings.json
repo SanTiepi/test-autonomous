@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Before finishing, verify: (1) Were all tasks in the TodoList completed? (2) Were tests run after code changes? (3) Was TASKS.md updated if an objective was completed? Reply {\"ok\": true} if all good, or {\"ok\": false, \"reason\": \"what was missed\"} if something was forgotten."
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'CMD=$(echo $CLAUDE_TOOL_INPUT | jq -r .command 2>/dev/null); case \"$CMD\" in *\"rm -rf /\"*|*\"--force\"*|*\"--no-verify\"*|*\"push --force\"*|*\"reset --hard\"*) echo \"BLOCKED: dangerous command detected\" >&2; exit 2;; *) exit 0;; esac'"
+          }
+        ]
+      }
+    ]
+  }
+}

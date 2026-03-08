@@ -1,0 +1,9 @@
+{
+  "name": "test-autonomous",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/",
+    "start": "node src/index.mjs"
+  }
+}
