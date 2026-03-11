@@ -1,0 +1,3943 @@
+-- Compositions découvertes par Benoît
+-- g(a,b) = f1(f2(a,b), f3(a,b))
+-- 303 compositions uniques
+
+-- Composition #1
+-- Structure: add(sub(a,b), sub(a,b))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is -2
+g(1, 1) is 0
+g(2, 1) is 2
+g(1, 2) is -2
+g(3, 2) is 2
+g(2, 3) is -2
+g(5, 5) is 0
+
+-- Composition #2
+-- Structure: add(sub(a,b), diff(a,b))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 3
+g(0, 1) is -3
+g(1, 1) is 0
+g(2, 1) is 3
+g(1, 2) is -3
+g(3, 2) is 3
+g(2, 3) is -3
+g(5, 5) is 0
+
+-- Composition #3
+-- Structure: add(diff(a,b), diff(a,b))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is -4
+g(1, 1) is 0
+g(2, 1) is 4
+g(1, 2) is -4
+g(3, 2) is 4
+g(2, 3) is -4
+g(5, 5) is 0
+
+-- Composition #4
+-- Structure: sub(add(a,b), dbl(a,b))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is -1
+g(0, 1) is 1
+g(1, 1) is 0
+g(2, 1) is -1
+g(1, 2) is 1
+g(3, 2) is -1
+g(2, 3) is 1
+g(5, 5) is 0
+
+-- Composition #5
+-- Structure: sub(dbl(a,b), add(a,b))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is -1
+g(1, 1) is 0
+g(2, 1) is 1
+g(1, 2) is -1
+g(3, 2) is 1
+g(2, 3) is -1
+g(5, 5) is 0
+
+-- Composition #6
+-- Structure: mul(add(a,b), sub(a,b))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is -1
+g(1, 1) is 0
+g(2, 1) is 3
+g(1, 2) is -3
+g(3, 2) is 5
+g(2, 3) is -5
+g(5, 5) is 0
+
+-- Composition #7
+-- Structure: mul(add(a,b), diff(a,b))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is -2
+g(1, 1) is 0
+g(2, 1) is 6
+g(1, 2) is -6
+g(3, 2) is 10
+g(2, 3) is -10
+g(5, 5) is 0
+
+-- Composition #8
+-- Structure: diff(add(a,b), dbl(a,b))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is -2
+g(0, 1) is 2
+g(1, 1) is 0
+g(2, 1) is -2
+g(1, 2) is 2
+g(3, 2) is -2
+g(2, 3) is 2
+g(5, 5) is 0
+
+-- Composition #9
+-- Structure: cross(add(a,b), diff(a,b))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is -4
+g(1, 1) is 0
+g(2, 1) is 12
+g(1, 2) is -12
+g(3, 2) is 20
+g(2, 3) is -20
+g(5, 5) is 0
+
+-- Composition #10
+-- Structure: dbl(dbl(diff(a,b),a), mul(b,tri(a,b)))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 8
+g(0, 1) is -8
+g(1, 1) is 0
+g(2, 1) is 8
+g(1, 2) is -8
+g(3, 2) is 8
+g(2, 3) is -8
+g(5, 5) is 0
+
+-- Composition #11
+-- Structure: sub(dbl(a,b), sub(a,b))
+-- Propriétés: [commutative, neutral:0, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 2
+g(2, 1) is 3
+g(1, 2) is 3
+g(3, 2) is 5
+g(2, 3) is 5
+g(5, 5) is 10
+
+-- Composition #12
+-- Structure: mul(sub(a,b), sub(a,b))
+-- Propriétés: [commutative, nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 0
+g(2, 1) is 1
+g(1, 2) is 1
+g(3, 2) is 1
+g(2, 3) is 1
+g(5, 5) is 0
+
+-- Composition #13
+-- Structure: mul(sub(a,b), mul(a,b))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 2
+g(1, 2) is -2
+g(3, 2) is 6
+g(2, 3) is -6
+g(5, 5) is 0
+
+-- Composition #14
+-- Structure: mul(sub(a,b), diff(a,b))
+-- Propriétés: [commutative, nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 2
+g(1, 1) is 0
+g(2, 1) is 2
+g(1, 2) is 2
+g(3, 2) is 2
+g(2, 3) is 2
+g(5, 5) is 0
+
+-- Composition #15
+-- Structure: mul(sub(a,b), cross(a,b))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 4
+g(1, 2) is -4
+g(3, 2) is 12
+g(2, 3) is -12
+g(5, 5) is 0
+
+-- Composition #16
+-- Structure: mul(sub(a,b), mix(a,b))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is -1
+g(1, 1) is 0
+g(2, 1) is 5
+g(1, 2) is -5
+g(3, 2) is 11
+g(2, 3) is -11
+g(5, 5) is 0
+
+-- Composition #17
+-- Structure: mul(diff(a,b), diff(a,b))
+-- Propriétés: [commutative, nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 4
+g(1, 1) is 0
+g(2, 1) is 4
+g(1, 2) is 4
+g(3, 2) is 4
+g(2, 3) is 4
+g(5, 5) is 0
+
+-- Composition #18
+-- Structure: mul(diff(a,b), cross(a,b))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 8
+g(1, 2) is -8
+g(3, 2) is 24
+g(2, 3) is -24
+g(5, 5) is 0
+
+-- Composition #19
+-- Structure: mul(diff(a,b), mix(a,b))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is -2
+g(1, 1) is 0
+g(2, 1) is 10
+g(1, 2) is -10
+g(3, 2) is 22
+g(2, 3) is -22
+g(5, 5) is 0
+
+-- Composition #20
+-- Structure: cross(diff(a,b), diff(a,b))
+-- Propriétés: [commutative, nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 8
+g(0, 1) is 8
+g(1, 1) is 0
+g(2, 1) is 8
+g(1, 2) is 8
+g(3, 2) is 8
+g(2, 3) is 8
+g(5, 5) is 0
+
+-- Composition #21
+-- Structure: cross(diff(a,b), cross(a,b))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 16
+g(1, 2) is -16
+g(3, 2) is 48
+g(2, 3) is -48
+g(5, 5) is 0
+
+-- Composition #22
+-- Structure: cross(diff(a,b), mix(a,b))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is -4
+g(1, 1) is 0
+g(2, 1) is 20
+g(1, 2) is -20
+g(3, 2) is 44
+g(2, 3) is -44
+g(5, 5) is 0
+
+-- Composition #23
+-- Structure: cross(cross(diff(a,b),a), dbl(b,cross(a,b)))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 32
+g(1, 2) is -32
+g(3, 2) is 96
+g(2, 3) is -96
+g(5, 5) is 0
+
+-- Composition #24
+-- Structure: sq(dbl(diff(a,b),a), avg(b,mix(a,b)))
+-- Propriétés: [commutative, nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 16
+g(0, 1) is 16
+g(1, 1) is 0
+g(2, 1) is 16
+g(1, 2) is 16
+g(3, 2) is 16
+g(2, 3) is 16
+g(5, 5) is 0
+
+-- Composition #25
+-- Structure: cross(mul(add(a,b),a), mul(b,sub(a,b)))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 12
+g(1, 2) is -12
+g(3, 2) is 60
+g(2, 3) is -60
+g(5, 5) is 0
+
+-- Composition #26
+-- Structure: cross(mul(add(a,b),a), cross(b,sub(a,b)))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 24
+g(1, 2) is -24
+g(3, 2) is 120
+g(2, 3) is -120
+g(5, 5) is 0
+
+-- Composition #27
+-- Structure: cross(cross(tri(a,b),a), cross(b,sub(a,b)))
+-- Propriétés: [antisymmetric, nilpotent, conservation:0]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 80
+g(1, 2) is -80
+g(3, 2) is 528
+g(2, 3) is -528
+g(5, 5) is 0
+
+-- Composition #28
+-- Structure: add(add(a,b), add(a,b))
+-- Propriétés: [commutative, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 2
+g(1, 1) is 4
+g(2, 1) is 6
+g(1, 2) is 6
+g(3, 2) is 10
+g(2, 3) is 10
+g(5, 5) is 20
+
+-- Composition #29
+-- Structure: add(add(a,b), mul(a,b))
+-- Propriétés: [commutative, neutral:0]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 3
+g(2, 1) is 5
+g(1, 2) is 5
+g(3, 2) is 11
+g(2, 3) is 11
+g(5, 5) is 35
+
+-- Composition #30
+-- Structure: add(add(a,b), cross(a,b))
+-- Propriétés: [commutative, neutral:0]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 4
+g(2, 1) is 7
+g(1, 2) is 7
+g(3, 2) is 17
+g(2, 3) is 17
+g(5, 5) is 60
+
+-- Composition #31
+-- Structure: add(mul(a,b), mul(a,b))
+-- Propriétés: [commutative, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 2
+g(2, 1) is 4
+g(1, 2) is 4
+g(3, 2) is 12
+g(2, 3) is 12
+g(5, 5) is 50
+
+-- Composition #32
+-- Structure: add(mul(a,b), cross(a,b))
+-- Propriétés: [commutative, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 3
+g(2, 1) is 6
+g(1, 2) is 6
+g(3, 2) is 18
+g(2, 3) is 18
+g(5, 5) is 75
+
+-- Composition #33
+-- Structure: add(cross(a,b), cross(a,b))
+-- Propriétés: [commutative, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 4
+g(2, 1) is 8
+g(1, 2) is 8
+g(3, 2) is 24
+g(2, 3) is 24
+g(5, 5) is 100
+
+-- Composition #34
+-- Structure: add(cross(a,b), mix(a,b))
+-- Propriétés: [commutative, neutral:0]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 5
+g(2, 1) is 9
+g(1, 2) is 9
+g(3, 2) is 23
+g(2, 3) is 23
+g(5, 5) is 85
+
+-- Composition #35
+-- Structure: sub(add(a,b), mul(a,b))
+-- Propriétés: [commutative, neutral:0]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 1
+g(2, 1) is 1
+g(1, 2) is 1
+g(3, 2) is -1
+g(2, 3) is -1
+g(5, 5) is -15
+
+-- Composition #36
+-- Structure: sub(add(a,b), cross(a,b))
+-- Propriétés: [commutative, neutral:0]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 0
+g(2, 1) is -1
+g(1, 2) is -1
+g(3, 2) is -7
+g(2, 3) is -7
+g(5, 5) is -40
+
+-- Composition #37
+-- Structure: sub(add(a,b), mix(a,b))
+-- Propriétés: [commutative, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is -1
+g(2, 1) is -2
+g(1, 2) is -2
+g(3, 2) is -6
+g(2, 3) is -6
+g(5, 5) is -25
+
+-- Composition #38
+-- Structure: sub(sub(a,b), dbl(a,b))
+-- Propriétés: [commutative, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is -1
+g(0, 1) is -1
+g(1, 1) is -2
+g(2, 1) is -3
+g(1, 2) is -3
+g(3, 2) is -5
+g(2, 3) is -5
+g(5, 5) is -10
+
+-- Composition #39
+-- Structure: sub(mul(a,b), sq(a,b))
+-- Propriétés: [nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -1
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is -2
+g(1, 2) is 1
+g(3, 2) is -3
+g(2, 3) is 2
+g(5, 5) is 0
+
+-- Composition #40
+-- Structure: sub(sq(a,b), mul(a,b))
+-- Propriétés: [nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 2
+g(1, 2) is -1
+g(3, 2) is 3
+g(2, 3) is -2
+g(5, 5) is 0
+
+-- Composition #41
+-- Structure: sub(cross(a,b), mul(a,b))
+-- Propriétés: [commutative, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 1
+g(2, 1) is 2
+g(1, 2) is 2
+g(3, 2) is 6
+g(2, 3) is 6
+g(5, 5) is 25
+
+-- Composition #42
+-- Structure: mul(add(a,b), add(a,b))
+-- Propriétés: [commutative, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 4
+g(2, 1) is 9
+g(1, 2) is 9
+g(3, 2) is 25
+g(2, 3) is 25
+g(5, 5) is 100
+
+-- Composition #43
+-- Structure: mul(sub(a,b), dbl(a,b))
+-- Propriétés: [nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 4
+g(1, 2) is -2
+g(3, 2) is 6
+g(2, 3) is -4
+g(5, 5) is 0
+
+-- Composition #44
+-- Structure: mul(dbl(a,b), diff(a,b))
+-- Propriétés: [nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 8
+g(1, 2) is -4
+g(3, 2) is 12
+g(2, 3) is -8
+g(5, 5) is 0
+
+-- Composition #45
+-- Structure: diff(add(a,b), mix(a,b))
+-- Propriétés: [commutative, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is -2
+g(2, 1) is -4
+g(1, 2) is -4
+g(3, 2) is -12
+g(2, 3) is -12
+g(5, 5) is -50
+
+-- Composition #46
+-- Structure: diff(sub(a,b), dbl(a,b))
+-- Propriétés: [commutative, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is -2
+g(0, 1) is -2
+g(1, 1) is -4
+g(2, 1) is -6
+g(1, 2) is -6
+g(3, 2) is -10
+g(2, 3) is -10
+g(5, 5) is -20
+
+-- Composition #47
+-- Structure: diff(mul(a,b), sq(a,b))
+-- Propriétés: [nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -2
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is -4
+g(1, 2) is 2
+g(3, 2) is -6
+g(2, 3) is 4
+g(5, 5) is 0
+
+-- Composition #48
+-- Structure: cross(add(a,b), add(a,b))
+-- Propriétés: [commutative, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 2
+g(1, 1) is 8
+g(2, 1) is 18
+g(1, 2) is 18
+g(3, 2) is 50
+g(2, 3) is 50
+g(5, 5) is 200
+
+-- Composition #49
+-- Structure: cross(dbl(a,b), diff(a,b))
+-- Propriétés: [nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 8
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 16
+g(1, 2) is -8
+g(3, 2) is 24
+g(2, 3) is -16
+g(5, 5) is 0
+
+-- Composition #50
+-- Structure: mix(add(a,b), mul(a,b))
+-- Propriétés: [commutative, neutral:0]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 5
+g(2, 1) is 11
+g(1, 2) is 11
+g(3, 2) is 41
+g(2, 3) is 41
+g(5, 5) is 285
+
+-- Composition #51
+-- Structure: mix(add(a,b), cross(a,b))
+-- Propriétés: [commutative, neutral:0]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 8
+g(2, 1) is 19
+g(1, 2) is 19
+g(3, 2) is 77
+g(2, 3) is 77
+g(5, 5) is 560
+
+-- Composition #52
+-- Structure: mix(mul(a,b), mix(a,b))
+-- Propriétés: [commutative, neutral:0]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 7
+g(2, 1) is 17
+g(1, 2) is 17
+g(3, 2) is 83
+g(2, 3) is 83
+g(5, 5) is 935
+
+-- Composition #53
+-- Structure: mix(cross(a,b), mix(a,b))
+-- Propriétés: [commutative, neutral:0]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 11
+g(2, 1) is 29
+g(1, 2) is 29
+g(3, 2) is 155
+g(2, 3) is 155
+g(5, 5) is 1835
+
+-- Composition #54
+-- Structure: dbl(dbl(avg(a,b),a), dbl(b,mul(a,b)))
+-- Propriétés: [commutative, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 4
+g(1, 1) is 8
+g(2, 1) is 12
+g(1, 2) is 12
+g(3, 2) is 20
+g(2, 3) is 20
+g(5, 5) is 40
+
+-- Composition #55
+-- Structure: sub(avg(add(a,b),a), dbl(b,sq(a,b)))
+-- Propriétés: [idempotent, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is -1
+g(1, 1) is 1
+g(2, 1) is 3
+g(1, 2) is 0
+g(3, 2) is 4
+g(2, 3) is 1
+g(5, 5) is 5
+
+-- Composition #56
+-- Structure: cross(dbl(sub(a,b),a), add(b,avg(a,b)))
+-- Propriétés: [nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is -8
+g(1, 1) is 0
+g(2, 1) is 16
+g(1, 2) is -20
+g(3, 2) is 28
+g(2, 3) is -32
+g(5, 5) is 0
+
+-- Composition #57
+-- Structure: cross(dbl(diff(a,b),a), avg(b,diff(a,b)))
+-- Propriétés: [nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 16
+g(0, 1) is 8
+g(1, 1) is 0
+g(2, 1) is 24
+g(1, 2) is 0
+g(3, 2) is 32
+g(2, 3) is -8
+g(5, 5) is 0
+
+-- Composition #58
+-- Structure: sq(dbl(add(a,b),a), diff(b,tri(a,b)))
+-- Propriétés: [commutative, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 4
+g(1, 1) is 16
+g(2, 1) is 36
+g(1, 2) is 36
+g(3, 2) is 100
+g(2, 3) is 100
+g(5, 5) is 400
+
+-- Composition #59
+-- Structure: avg(add(avg(a,b),a), avg(b,avg(a,b)))
+-- Propriétés: [commutative, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 3
+g(0, 1) is 3
+g(1, 1) is 6
+g(2, 1) is 9
+g(1, 2) is 9
+g(3, 2) is 15
+g(2, 3) is 15
+g(5, 5) is 30
+
+-- Composition #60
+-- Structure: avg(mul(add(a,b),a), sq(b,diff(a,b)))
+-- Propriétés: [commutative, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 3
+g(2, 1) is 7
+g(1, 2) is 7
+g(3, 2) is 19
+g(2, 3) is 19
+g(5, 5) is 75
+
+-- Composition #61
+-- Structure: sub(diff(dbl(a,b),a), sub(b,diff(a,b)))
+-- Propriétés: [idempotent, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is -3
+g(1, 1) is 1
+g(2, 1) is 5
+g(1, 2) is -2
+g(3, 2) is 6
+g(2, 3) is -1
+g(5, 5) is 5
+
+-- Composition #62
+-- Structure: cross(dbl(diff(a,b),a), diff(b,add(a,b)))
+-- Propriétés: [nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -16
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is -32
+g(1, 2) is 16
+g(3, 2) is -48
+g(2, 3) is 32
+g(5, 5) is 0
+
+-- Composition #63
+-- Structure: cross(add(dbl(a,b),a), dbl(b,sq(a,b)))
+-- Propriétés: [commutative, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 12
+g(2, 1) is 24
+g(1, 2) is 24
+g(3, 2) is 72
+g(2, 3) is 72
+g(5, 5) is 300
+
+-- Composition #64
+-- Structure: avg(sq(diff(a,b),a), cross(b,sub(a,b)))
+-- Propriétés: [nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 2
+g(1, 1) is 0
+g(2, 1) is 6
+g(1, 2) is 0
+g(3, 2) is 8
+g(2, 3) is -2
+g(5, 5) is 0
+
+-- Composition #65
+-- Structure: avg(add(add(a,b),a), diff(b,dbl(a,b)))
+-- Propriétés: [idempotent, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is -2
+g(0, 1) is 3
+g(1, 1) is 1
+g(2, 1) is -1
+g(1, 2) is 4
+g(3, 2) is 0
+g(2, 3) is 5
+g(5, 5) is 5
+
+-- Composition #66
+-- Structure: cross(dbl(sub(a,b),a), sub(b,sub(a,b)))
+-- Propriétés: [nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -4
+g(0, 1) is -8
+g(1, 1) is 0
+g(2, 1) is 0
+g(1, 2) is -12
+g(3, 2) is 4
+g(2, 3) is -16
+g(5, 5) is 0
+
+-- Composition #67
+-- Structure: sub(avg(dbl(a,b),a), dbl(b,avg(a,b)))
+-- Propriétés: [idempotent, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 3
+g(0, 1) is -2
+g(1, 1) is 1
+g(2, 1) is 4
+g(1, 2) is -1
+g(3, 2) is 5
+g(2, 3) is 0
+g(5, 5) is 5
+
+-- Composition #68
+-- Structure: sq(sq(diff(a,b),a), avg(b,diff(a,b)))
+-- Propriétés: [commutative, nilpotent]
+g(0, 0) is 0
+g(1, 0) is 16
+g(0, 1) is 16
+g(1, 1) is 0
+g(2, 1) is 16
+g(1, 2) is 16
+g(3, 2) is 16
+g(2, 3) is 16
+g(5, 5) is 0
+
+-- Composition #69
+-- Structure: mul(dbl(diff(a,b),a), avg(b,dbl(a,b)))
+-- Propriétés: [nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 8
+g(0, 1) is -4
+g(1, 1) is 0
+g(2, 1) is 20
+g(1, 2) is -16
+g(3, 2) is 32
+g(2, 3) is -28
+g(5, 5) is 0
+
+-- Composition #70
+-- Structure: diff(diff(mix(a,b),a), diff(b,mul(a,b)))
+-- Propriétés: [commutative, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 8
+g(2, 1) is 16
+g(1, 2) is 16
+g(3, 2) is 48
+g(2, 3) is 48
+g(5, 5) is 200
+
+-- Composition #71
+-- Structure: cross(avg(sub(a,b),a), sub(b,sub(a,b)))
+-- Propriétés: [commutative, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -4
+g(0, 1) is -4
+g(1, 1) is 2
+g(2, 1) is 0
+g(1, 2) is 0
+g(3, 2) is 8
+g(2, 3) is 8
+g(5, 5) is 50
+
+-- Composition #72
+-- Structure: avg(dbl(sq(a,b),a), cross(b,avg(a,b)))
+-- Propriétés: [commutative, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 2
+g(1, 1) is 6
+g(2, 1) is 14
+g(1, 2) is 14
+g(3, 2) is 38
+g(2, 3) is 38
+g(5, 5) is 150
+
+-- Composition #73
+-- Structure: diff(sub(sub(a,b),a), avg(b,dbl(a,b)))
+-- Propriétés: [commutative, homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is -4
+g(0, 1) is -4
+g(1, 1) is -8
+g(2, 1) is -12
+g(1, 2) is -12
+g(3, 2) is -20
+g(2, 3) is -20
+g(5, 5) is -40
+
+-- Composition #74
+-- Structure: cross(sq(sub(a,b),a), mul(b,dbl(a,b)))
+-- Propriétés: [commutative, nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 8
+g(1, 2) is 8
+g(3, 2) is 24
+g(2, 3) is 24
+g(5, 5) is 0
+
+-- Composition #75
+-- Structure: sq(sq(sub(a,b),a), dbl(b,cross(a,b)))
+-- Propriétés: [commutative, nilpotent]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 0
+g(2, 1) is 1
+g(1, 2) is 1
+g(3, 2) is 1
+g(2, 3) is 1
+g(5, 5) is 0
+
+-- Composition #76
+-- Structure: diff(cross(diff(a,b),a), mul(b,diff(a,b)))
+-- Propriétés: [nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 8
+g(0, 1) is 4
+g(1, 1) is 0
+g(2, 1) is 12
+g(1, 2) is 0
+g(3, 2) is 16
+g(2, 3) is -4
+g(5, 5) is 0
+
+-- Composition #77
+-- Structure: sub(avg(sub(a,b),a), tri(b,diff(a,b)))
+-- Propriétés: [nilpotent, homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 2
+g(1, 1) is 0
+g(2, 1) is -2
+g(1, 2) is 4
+g(3, 2) is -4
+g(2, 3) is 6
+g(5, 5) is 0
+
+-- Composition #78
+-- Structure: add(add(a,b), sub(a,b))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 0
+g(1, 1) is 2
+g(2, 1) is 4
+g(1, 2) is 2
+g(3, 2) is 6
+g(2, 3) is 4
+g(5, 5) is 10
+
+-- Composition #79
+-- Structure: add(add(a,b), dbl(a,b))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 3
+g(0, 1) is 1
+g(1, 1) is 4
+g(2, 1) is 7
+g(1, 2) is 5
+g(3, 2) is 11
+g(2, 3) is 9
+g(5, 5) is 20
+
+-- Composition #80
+-- Structure: add(add(a,b), diff(a,b))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 3
+g(0, 1) is -1
+g(1, 1) is 2
+g(2, 1) is 5
+g(1, 2) is 1
+g(3, 2) is 7
+g(2, 3) is 3
+g(5, 5) is 10
+
+-- Composition #81
+-- Structure: add(add(a,b), mix(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 2
+g(1, 1) is 5
+g(2, 1) is 8
+g(1, 2) is 8
+g(3, 2) is 16
+g(2, 3) is 16
+g(5, 5) is 45
+
+-- Composition #82
+-- Structure: add(mul(a,b), sq(a,b))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 0
+g(1, 1) is 2
+g(2, 1) is 6
+g(1, 2) is 3
+g(3, 2) is 15
+g(2, 3) is 10
+g(5, 5) is 50
+
+-- Composition #83
+-- Structure: add(dbl(a,b), dbl(a,b))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 0
+g(1, 1) is 4
+g(2, 1) is 8
+g(1, 2) is 4
+g(3, 2) is 12
+g(2, 3) is 8
+g(5, 5) is 20
+
+-- Composition #84
+-- Structure: add(dbl(a,b), diff(a,b))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is -2
+g(1, 1) is 2
+g(2, 1) is 6
+g(1, 2) is 0
+g(3, 2) is 8
+g(2, 3) is 2
+g(5, 5) is 10
+
+-- Composition #85
+-- Structure: add(sq(a,b), sq(a,b))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 0
+g(1, 1) is 2
+g(2, 1) is 8
+g(1, 2) is 2
+g(3, 2) is 18
+g(2, 3) is 8
+g(5, 5) is 50
+
+-- Composition #86
+-- Structure: add(sq(a,b), cross(a,b))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 0
+g(1, 1) is 3
+g(2, 1) is 8
+g(1, 2) is 5
+g(3, 2) is 21
+g(2, 3) is 16
+g(5, 5) is 75
+
+-- Composition #87
+-- Structure: add(mix(a,b), mix(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 2
+g(1, 1) is 6
+g(2, 1) is 10
+g(1, 2) is 10
+g(3, 2) is 22
+g(2, 3) is 22
+g(5, 5) is 70
+
+-- Composition #88
+-- Structure: sub(add(a,b), sub(a,b))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 2
+g(1, 1) is 2
+g(2, 1) is 2
+g(1, 2) is 4
+g(3, 2) is 4
+g(2, 3) is 6
+g(5, 5) is 10
+
+-- Composition #89
+-- Structure: sub(add(a,b), diff(a,b))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is -1
+g(0, 1) is 3
+g(1, 1) is 2
+g(2, 1) is 1
+g(1, 2) is 5
+g(3, 2) is 3
+g(2, 3) is 7
+g(5, 5) is 10
+
+-- Composition #90
+-- Structure: sub(sub(a,b), add(a,b))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is -2
+g(1, 1) is -2
+g(2, 1) is -2
+g(1, 2) is -4
+g(3, 2) is -4
+g(2, 3) is -6
+g(5, 5) is -10
+
+-- Composition #91
+-- Structure: sub(mul(a,b), add(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is -1
+g(0, 1) is -1
+g(1, 1) is -1
+g(2, 1) is -1
+g(1, 2) is -1
+g(3, 2) is 1
+g(2, 3) is 1
+g(5, 5) is 15
+
+-- Composition #92
+-- Structure: sub(diff(a,b), add(a,b))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is -3
+g(1, 1) is -2
+g(2, 1) is -1
+g(1, 2) is -5
+g(3, 2) is -3
+g(2, 3) is -7
+g(5, 5) is -10
+
+-- Composition #93
+-- Structure: sub(sq(a,b), cross(a,b))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 0
+g(1, 1) is -1
+g(2, 1) is 0
+g(1, 2) is -3
+g(3, 2) is -3
+g(2, 3) is -8
+g(5, 5) is -25
+
+-- Composition #94
+-- Structure: sub(cross(a,b), add(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is -1
+g(0, 1) is -1
+g(1, 1) is 0
+g(2, 1) is 1
+g(1, 2) is 1
+g(3, 2) is 7
+g(2, 3) is 7
+g(5, 5) is 40
+
+-- Composition #95
+-- Structure: sub(cross(a,b), sq(a,b))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -1
+g(0, 1) is 0
+g(1, 1) is 1
+g(2, 1) is 0
+g(1, 2) is 3
+g(3, 2) is 3
+g(2, 3) is 8
+g(5, 5) is 25
+
+-- Composition #96
+-- Structure: mul(add(a,b), mul(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 2
+g(2, 1) is 6
+g(1, 2) is 6
+g(3, 2) is 30
+g(2, 3) is 30
+g(5, 5) is 250
+
+-- Composition #97
+-- Structure: mul(add(a,b), dbl(a,b))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 0
+g(1, 1) is 4
+g(2, 1) is 12
+g(1, 2) is 6
+g(3, 2) is 30
+g(2, 3) is 20
+g(5, 5) is 100
+
+-- Composition #98
+-- Structure: mul(add(a,b), cross(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 4
+g(2, 1) is 12
+g(1, 2) is 12
+g(3, 2) is 60
+g(2, 3) is 60
+g(5, 5) is 500
+
+-- Composition #99
+-- Structure: mul(add(a,b), mix(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 6
+g(2, 1) is 15
+g(1, 2) is 15
+g(3, 2) is 55
+g(2, 3) is 55
+g(5, 5) is 350
+
+-- Composition #100
+-- Structure: mul(sub(a,b), sq(a,b))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 4
+g(1, 2) is -1
+g(3, 2) is 9
+g(2, 3) is -4
+g(5, 5) is 0
+
+-- Composition #101
+-- Structure: mul(mul(a,b), mul(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 1
+g(2, 1) is 4
+g(1, 2) is 4
+g(3, 2) is 36
+g(2, 3) is 36
+g(5, 5) is 625
+
+-- Composition #102
+-- Structure: mul(mul(a,b), cross(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 2
+g(2, 1) is 8
+g(1, 2) is 8
+g(3, 2) is 72
+g(2, 3) is 72
+g(5, 5) is 1250
+
+-- Composition #103
+-- Structure: mul(mul(a,b), mix(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 3
+g(2, 1) is 10
+g(1, 2) is 10
+g(3, 2) is 66
+g(2, 3) is 66
+g(5, 5) is 875
+
+-- Composition #104
+-- Structure: mul(dbl(a,b), dbl(a,b))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 0
+g(1, 1) is 4
+g(2, 1) is 16
+g(1, 2) is 4
+g(3, 2) is 36
+g(2, 3) is 16
+g(5, 5) is 100
+
+-- Composition #105
+-- Structure: mul(diff(a,b), sq(a,b))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 8
+g(1, 2) is -2
+g(3, 2) is 18
+g(2, 3) is -8
+g(5, 5) is 0
+
+-- Composition #106
+-- Structure: mul(cross(a,b), cross(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 4
+g(2, 1) is 16
+g(1, 2) is 16
+g(3, 2) is 144
+g(2, 3) is 144
+g(5, 5) is 2500
+
+-- Composition #107
+-- Structure: mul(cross(a,b), mix(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 6
+g(2, 1) is 20
+g(1, 2) is 20
+g(3, 2) is 132
+g(2, 3) is 132
+g(5, 5) is 1750
+
+-- Composition #108
+-- Structure: mul(mix(a,b), mix(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 9
+g(2, 1) is 25
+g(1, 2) is 25
+g(3, 2) is 121
+g(2, 3) is 121
+g(5, 5) is 1225
+
+-- Composition #109
+-- Structure: diff(add(a,b), sub(a,b))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 4
+g(1, 1) is 4
+g(2, 1) is 4
+g(1, 2) is 8
+g(3, 2) is 8
+g(2, 3) is 12
+g(5, 5) is 20
+
+-- Composition #110
+-- Structure: diff(add(a,b), mul(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 2
+g(1, 1) is 2
+g(2, 1) is 2
+g(1, 2) is 2
+g(3, 2) is -2
+g(2, 3) is -2
+g(5, 5) is -30
+
+-- Composition #111
+-- Structure: diff(add(a,b), diff(a,b))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is -2
+g(0, 1) is 6
+g(1, 1) is 4
+g(2, 1) is 2
+g(1, 2) is 10
+g(3, 2) is 6
+g(2, 3) is 14
+g(5, 5) is 20
+
+-- Composition #112
+-- Structure: diff(add(a,b), cross(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 2
+g(1, 1) is 0
+g(2, 1) is -2
+g(1, 2) is -2
+g(3, 2) is -14
+g(2, 3) is -14
+g(5, 5) is -80
+
+-- Composition #113
+-- Structure: diff(sub(a,b), add(a,b))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is -4
+g(1, 1) is -4
+g(2, 1) is -4
+g(1, 2) is -8
+g(3, 2) is -8
+g(2, 3) is -12
+g(5, 5) is -20
+
+-- Composition #114
+-- Structure: diff(mul(a,b), add(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is -2
+g(0, 1) is -2
+g(1, 1) is -2
+g(2, 1) is -2
+g(1, 2) is -2
+g(3, 2) is 2
+g(2, 3) is 2
+g(5, 5) is 30
+
+-- Composition #115
+-- Structure: diff(diff(a,b), add(a,b))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is -6
+g(1, 1) is -4
+g(2, 1) is -2
+g(1, 2) is -10
+g(3, 2) is -6
+g(2, 3) is -14
+g(5, 5) is -20
+
+-- Composition #116
+-- Structure: diff(sq(a,b), cross(a,b))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 0
+g(1, 1) is -2
+g(2, 1) is 0
+g(1, 2) is -6
+g(3, 2) is -6
+g(2, 3) is -16
+g(5, 5) is -50
+
+-- Composition #117
+-- Structure: diff(cross(a,b), add(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is -2
+g(0, 1) is -2
+g(1, 1) is 0
+g(2, 1) is 2
+g(1, 2) is 2
+g(3, 2) is 14
+g(2, 3) is 14
+g(5, 5) is 80
+
+-- Composition #118
+-- Structure: diff(cross(a,b), sq(a,b))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -2
+g(0, 1) is 0
+g(1, 1) is 2
+g(2, 1) is 0
+g(1, 2) is 6
+g(3, 2) is 6
+g(2, 3) is 16
+g(5, 5) is 50
+
+-- Composition #119
+-- Structure: cross(add(a,b), dbl(a,b))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 0
+g(1, 1) is 8
+g(2, 1) is 24
+g(1, 2) is 12
+g(3, 2) is 60
+g(2, 3) is 40
+g(5, 5) is 200
+
+-- Composition #120
+-- Structure: cross(add(a,b), cross(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 8
+g(2, 1) is 24
+g(1, 2) is 24
+g(3, 2) is 120
+g(2, 3) is 120
+g(5, 5) is 1000
+
+-- Composition #121
+-- Structure: cross(add(a,b), mix(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 2
+g(1, 1) is 12
+g(2, 1) is 30
+g(1, 2) is 30
+g(3, 2) is 110
+g(2, 3) is 110
+g(5, 5) is 700
+
+-- Composition #122
+-- Structure: cross(dbl(a,b), dbl(a,b))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 8
+g(0, 1) is 0
+g(1, 1) is 8
+g(2, 1) is 32
+g(1, 2) is 8
+g(3, 2) is 72
+g(2, 3) is 32
+g(5, 5) is 200
+
+-- Composition #123
+-- Structure: cross(diff(a,b), sq(a,b))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 16
+g(1, 2) is -4
+g(3, 2) is 36
+g(2, 3) is -16
+g(5, 5) is 0
+
+-- Composition #124
+-- Structure: cross(cross(a,b), cross(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 8
+g(2, 1) is 32
+g(1, 2) is 32
+g(3, 2) is 288
+g(2, 3) is 288
+g(5, 5) is 5000
+
+-- Composition #125
+-- Structure: cross(cross(a,b), mix(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 12
+g(2, 1) is 40
+g(1, 2) is 40
+g(3, 2) is 264
+g(2, 3) is 264
+g(5, 5) is 3500
+
+-- Composition #126
+-- Structure: cross(mix(a,b), mix(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 2
+g(1, 1) is 18
+g(2, 1) is 50
+g(1, 2) is 50
+g(3, 2) is 242
+g(2, 3) is 242
+g(5, 5) is 2450
+
+-- Composition #127
+-- Structure: mix(add(a,b), add(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 3
+g(0, 1) is 3
+g(1, 1) is 8
+g(2, 1) is 15
+g(1, 2) is 15
+g(3, 2) is 35
+g(2, 3) is 35
+g(5, 5) is 120
+
+-- Composition #128
+-- Structure: mix(add(a,b), mix(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 3
+g(0, 1) is 3
+g(1, 1) is 11
+g(2, 1) is 23
+g(1, 2) is 23
+g(3, 2) is 71
+g(2, 3) is 71
+g(5, 5) is 395
+
+-- Composition #129
+-- Structure: mix(sub(a,b), sub(a,b))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 3
+g(0, 1) is -1
+g(1, 1) is 0
+g(2, 1) is 3
+g(1, 2) is -1
+g(3, 2) is 3
+g(2, 3) is -1
+g(5, 5) is 0
+
+-- Composition #130
+-- Structure: mix(sub(a,b), diff(a,b))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 5
+g(0, 1) is -1
+g(1, 1) is 0
+g(2, 1) is 5
+g(1, 2) is -1
+g(3, 2) is 5
+g(2, 3) is -1
+g(5, 5) is 0
+
+-- Composition #131
+-- Structure: mix(mul(a,b), mul(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 3
+g(2, 1) is 8
+g(1, 2) is 8
+g(3, 2) is 48
+g(2, 3) is 48
+g(5, 5) is 675
+
+-- Composition #132
+-- Structure: mix(mul(a,b), cross(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 5
+g(2, 1) is 14
+g(1, 2) is 14
+g(3, 2) is 90
+g(2, 3) is 90
+g(5, 5) is 1325
+
+-- Composition #133
+-- Structure: mix(diff(a,b), diff(a,b))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 8
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 8
+g(1, 2) is 0
+g(3, 2) is 8
+g(2, 3) is 0
+g(5, 5) is 0
+
+-- Composition #134
+-- Structure: mix(cross(a,b), cross(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 8
+g(2, 1) is 24
+g(1, 2) is 24
+g(3, 2) is 168
+g(2, 3) is 168
+g(5, 5) is 2600
+
+-- Composition #135
+-- Structure: mix(mix(a,b), mix(a,b))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 3
+g(0, 1) is 3
+g(1, 1) is 15
+g(2, 1) is 35
+g(1, 2) is 35
+g(3, 2) is 143
+g(2, 3) is 143
+g(5, 5) is 1295
+
+-- Composition #136
+-- Structure: mul(sub(avg(a,b),a), diff(b,dbl(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 2
+g(1, 1) is -2
+g(2, 1) is -6
+g(1, 2) is 0
+g(3, 2) is -16
+g(2, 3) is -6
+g(5, 5) is -50
+
+-- Composition #137
+-- Structure: avg(diff(sub(a,b),a), avg(b,diff(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is -3
+g(1, 1) is -1
+g(2, 1) is 1
+g(1, 2) is -4
+g(3, 2) is 0
+g(2, 3) is -5
+g(5, 5) is -5
+
+-- Composition #138
+-- Structure: diff(diff(add(a,b),a), avg(b,dbl(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is -4
+g(0, 1) is 2
+g(1, 1) is -2
+g(2, 1) is -6
+g(1, 2) is 0
+g(3, 2) is -8
+g(2, 3) is -2
+g(5, 5) is -10
+
+-- Composition #139
+-- Structure: sq(diff(add(a,b),a), mul(b,tri(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 4
+g(1, 1) is 4
+g(2, 1) is 4
+g(1, 2) is 16
+g(3, 2) is 16
+g(2, 3) is 36
+g(5, 5) is 100
+
+-- Composition #140
+-- Structure: diff(mul(add(a,b),a), sq(b,tri(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is -2
+g(1, 1) is 2
+g(2, 1) is 10
+g(1, 2) is -2
+g(3, 2) is 22
+g(2, 3) is 2
+g(5, 5) is 50
+
+-- Composition #141
+-- Structure: sub(avg(sq(a,b),a), sq(b,cross(a,b)))
+-- Propriétés: [idempotent]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is -1
+g(1, 1) is 1
+g(2, 1) is 5
+g(1, 2) is -2
+g(3, 2) is 8
+g(2, 3) is -3
+g(5, 5) is 5
+
+-- Composition #142
+-- Structure: tri(tri(avg(a,b),a), mix(b,add(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 7
+g(0, 1) is 7
+g(1, 1) is 35
+g(2, 1) is 95
+g(1, 2) is 95
+g(3, 2) is 431
+g(2, 3) is 431
+g(5, 5) is 4355
+
+-- Composition #143
+-- Structure: sq(sq(mix(a,b),a), mix(b,mix(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 81
+g(2, 1) is 625
+g(1, 2) is 625
+g(3, 2) is 14641
+g(2, 3) is 14641
+g(5, 5) is 1500625
+
+-- Composition #144
+-- Structure: mix(mul(add(a,b),a), mul(b,avg(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 8
+g(2, 1) is 27
+g(1, 2) is 27
+g(3, 2) is 175
+g(2, 3) is 175
+g(5, 5) is 2600
+
+-- Composition #145
+-- Structure: dbl(dbl(tri(a,b),a), add(b,diff(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 4
+g(1, 1) is 12
+g(2, 1) is 20
+g(1, 2) is 20
+g(3, 2) is 44
+g(2, 3) is 44
+g(5, 5) is 140
+
+-- Composition #146
+-- Structure: cross(dbl(add(a,b),a), diff(b,sub(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -8
+g(0, 1) is 16
+g(1, 1) is 16
+g(2, 1) is 0
+g(1, 2) is 72
+g(3, 2) is 40
+g(2, 3) is 160
+g(5, 5) is 400
+
+-- Composition #147
+-- Structure: mul(sub(dbl(a,b),a), add(b,dbl(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 0
+g(1, 1) is 3
+g(2, 1) is 10
+g(1, 2) is 4
+g(3, 2) is 24
+g(2, 3) is 14
+g(5, 5) is 75
+
+-- Composition #148
+-- Structure: sub(dbl(diff(a,b),a), dbl(b,sub(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is -6
+g(1, 1) is -2
+g(2, 1) is 2
+g(1, 2) is -8
+g(3, 2) is 0
+g(2, 3) is -10
+g(5, 5) is -10
+
+-- Composition #149
+-- Structure: tri(cross(diff(a,b),a), mul(b,diff(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is -2
+g(1, 1) is 0
+g(2, 1) is 26
+g(1, 2) is 8
+g(3, 2) is 64
+g(2, 3) is 34
+g(5, 5) is 0
+
+-- Composition #150
+-- Structure: sq(sub(dbl(a,b),a), sub(b,mul(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 0
+g(1, 1) is 1
+g(2, 1) is 4
+g(1, 2) is 1
+g(3, 2) is 9
+g(2, 3) is 4
+g(5, 5) is 25
+
+-- Composition #151
+-- Structure: sq(diff(diff(a,b),a), mix(b,sq(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 16
+g(1, 1) is 4
+g(2, 1) is 0
+g(1, 2) is 36
+g(3, 2) is 4
+g(2, 3) is 64
+g(5, 5) is 100
+
+-- Composition #152
+-- Structure: sq(avg(sub(a,b),a), cross(b,avg(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 1
+g(1, 1) is 1
+g(2, 1) is 9
+g(1, 2) is 0
+g(3, 2) is 16
+g(2, 3) is 1
+g(5, 5) is 25
+
+-- Composition #153
+-- Structure: sq(dbl(tri(a,b),a), cross(b,sq(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 4
+g(1, 1) is 36
+g(2, 1) is 100
+g(1, 2) is 100
+g(3, 2) is 484
+g(2, 3) is 484
+g(5, 5) is 4900
+
+-- Composition #154
+-- Structure: cross(dbl(diff(a,b),a), sq(b,mix(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is -8
+g(1, 1) is 0
+g(2, 1) is 8
+g(1, 2) is -32
+g(3, 2) is 32
+g(2, 3) is -72
+g(5, 5) is 0
+
+-- Composition #155
+-- Structure: cross(avg(diff(a,b),a), diff(b,sub(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -12
+g(0, 1) is -16
+g(1, 1) is 4
+g(2, 1) is 0
+g(1, 2) is -12
+g(3, 2) is 20
+g(2, 3) is 0
+g(5, 5) is 100
+
+-- Composition #156
+-- Structure: tri(dbl(diff(a,b),a), avg(b,diff(a,b)))
+-- Propriétés: [idempotent]
+g(0, 0) is 0
+g(1, 0) is 14
+g(0, 1) is -1
+g(1, 1) is 1
+g(2, 1) is 19
+g(1, 2) is -4
+g(3, 2) is 24
+g(2, 3) is -7
+g(5, 5) is 5
+
+-- Composition #157
+-- Structure: avg(tri(avg(a,b),a), diff(b,tri(a,b)))
+-- Propriétés: [idempotent]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 1
+g(2, 1) is 3
+g(1, 2) is 1
+g(3, 2) is 5
+g(2, 3) is 1
+g(5, 5) is 5
+
+-- Composition #158
+-- Structure: sq(dbl(cross(a,b),a), cross(b,dbl(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 16
+g(2, 1) is 64
+g(1, 2) is 64
+g(3, 2) is 576
+g(2, 3) is 576
+g(5, 5) is 10000
+
+-- Composition #159
+-- Structure: mul(add(diff(a,b),a), sub(b,avg(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -3
+g(0, 1) is 0
+g(1, 1) is -1
+g(2, 1) is -8
+g(1, 2) is 1
+g(3, 2) is -15
+g(2, 3) is 0
+g(5, 5) is -25
+
+-- Composition #160
+-- Structure: sq(dbl(dbl(a,b),a), sq(b,tri(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 16
+g(0, 1) is 0
+g(1, 1) is 16
+g(2, 1) is 64
+g(1, 2) is 16
+g(3, 2) is 144
+g(2, 3) is 64
+g(5, 5) is 400
+
+-- Composition #161
+-- Structure: sq(mul(diff(a,b),a), sq(b,avg(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 16
+g(1, 2) is 4
+g(3, 2) is 36
+g(2, 3) is 16
+g(5, 5) is 0
+
+-- Composition #162
+-- Structure: add(mul(diff(a,b),a), mul(b,add(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 1
+g(1, 1) is 2
+g(2, 1) is 7
+g(1, 2) is 4
+g(3, 2) is 16
+g(2, 3) is 11
+g(5, 5) is 50
+
+-- Composition #163
+-- Structure: cross(mul(tri(a,b),a), mul(b,tri(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 18
+g(2, 1) is 100
+g(1, 2) is 100
+g(3, 2) is 1452
+g(2, 3) is 1452
+g(5, 5) is 61250
+
+-- Composition #164
+-- Structure: dbl(diff(diff(a,b),a), diff(b,sub(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is -8
+g(1, 1) is -4
+g(2, 1) is 0
+g(1, 2) is -12
+g(3, 2) is -4
+g(2, 3) is -16
+g(5, 5) is -20
+
+-- Composition #165
+-- Structure: mul(dbl(avg(a,b),a), diff(b,dbl(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -8
+g(0, 1) is 4
+g(1, 1) is -8
+g(2, 1) is -36
+g(1, 2) is 0
+g(3, 2) is -80
+g(2, 3) is -20
+g(5, 5) is -200
+
+-- Composition #166
+-- Structure: sq(mul(sub(a,b),a), sq(b,sub(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 4
+g(1, 2) is 1
+g(3, 2) is 9
+g(2, 3) is 4
+g(5, 5) is 0
+
+-- Composition #167
+-- Structure: mul(dbl(sub(a,b),a), avg(b,mix(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is -4
+g(1, 1) is 0
+g(2, 1) is 12
+g(1, 2) is -14
+g(3, 2) is 26
+g(2, 3) is -28
+g(5, 5) is 0
+
+-- Composition #168
+-- Structure: avg(mix(mix(a,b),a), tri(b,tri(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 4
+g(1, 1) is 14
+g(2, 1) is 28
+g(1, 2) is 28
+g(3, 2) is 82
+g(2, 3) is 82
+g(5, 5) is 430
+
+-- Composition #169
+-- Structure: cross(avg(dbl(a,b),a), sub(b,diff(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -12
+g(0, 1) is 0
+g(1, 1) is 6
+g(2, 1) is -12
+g(1, 2) is 24
+g(3, 2) is 0
+g(2, 3) is 60
+g(5, 5) is 150
+
+-- Composition #170
+-- Structure: diff(avg(sub(a,b),a), diff(b,diff(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 12
+g(0, 1) is -14
+g(1, 1) is -2
+g(2, 1) is 10
+g(1, 2) is -16
+g(3, 2) is 8
+g(2, 3) is -18
+g(5, 5) is -10
+
+-- Composition #171
+-- Structure: diff(mul(diff(a,b),a), sq(b,add(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is -2
+g(1, 1) is -2
+g(2, 1) is 6
+g(1, 2) is -12
+g(3, 2) is 4
+g(2, 3) is -26
+g(5, 5) is -50
+
+-- Composition #172
+-- Structure: sq(avg(dbl(a,b),a), tri(b,add(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 9
+g(0, 1) is 0
+g(1, 1) is 9
+g(2, 1) is 36
+g(1, 2) is 9
+g(3, 2) is 81
+g(2, 3) is 36
+g(5, 5) is 225
+
+-- Composition #173
+-- Structure: cross(sub(mix(a,b),a), mul(b,diff(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is -4
+g(1, 1) is 0
+g(2, 1) is 12
+g(1, 2) is -32
+g(3, 2) is 64
+g(2, 3) is -108
+g(5, 5) is 0
+
+-- Composition #174
+-- Structure: cross(diff(dbl(a,b),a), cross(b,mix(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 24
+g(2, 1) is 80
+g(1, 2) is 80
+g(3, 2) is 528
+g(2, 3) is 528
+g(5, 5) is 7000
+
+-- Composition #175
+-- Structure: sq(sub(avg(a,b),a), mul(b,cross(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 1
+g(1, 1) is 1
+g(2, 1) is 1
+g(1, 2) is 4
+g(3, 2) is 4
+g(2, 3) is 9
+g(5, 5) is 25
+
+-- Composition #176
+-- Structure: sq(avg(avg(a,b),a), avg(b,tri(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 1
+g(1, 1) is 9
+g(2, 1) is 25
+g(1, 2) is 16
+g(3, 2) is 64
+g(2, 3) is 49
+g(5, 5) is 225
+
+-- Composition #177
+-- Structure: mul(dbl(sub(a,b),a), mul(b,cross(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 8
+g(1, 2) is -16
+g(3, 2) is 48
+g(2, 3) is -72
+g(5, 5) is 0
+
+-- Composition #178
+-- Structure: dbl(avg(dbl(a,b),a), sq(b,sq(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 6
+g(0, 1) is 0
+g(1, 1) is 6
+g(2, 1) is 12
+g(1, 2) is 6
+g(3, 2) is 18
+g(2, 3) is 12
+g(5, 5) is 30
+
+-- Composition #179
+-- Structure: tri(sq(diff(a,b),a), tri(b,sub(a,b)))
+-- Propriétés: [idempotent]
+g(0, 0) is 0
+g(1, 0) is 9
+g(0, 1) is -1
+g(1, 1) is 1
+g(2, 1) is 19
+g(1, 2) is -1
+g(3, 2) is 29
+g(2, 3) is -1
+g(5, 5) is 5
+
+-- Composition #180
+-- Structure: avg(sq(avg(a,b),a), sq(b,sq(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 2
+g(1, 1) is 5
+g(2, 1) is 10
+g(1, 2) is 13
+g(3, 2) is 29
+g(2, 3) is 34
+g(5, 5) is 125
+
+-- Composition #181
+-- Structure: avg(dbl(mul(a,b),a), diff(b,mix(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is -2
+g(0, 1) is 0
+g(1, 1) is -2
+g(2, 1) is -4
+g(1, 2) is -2
+g(3, 2) is -6
+g(2, 3) is -4
+g(5, 5) is -10
+
+-- Composition #182
+-- Structure: avg(cross(avg(a,b),a), sq(b,mul(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 1
+g(1, 1) is 5
+g(2, 1) is 13
+g(1, 2) is 10
+g(3, 2) is 34
+g(2, 3) is 29
+g(5, 5) is 125
+
+-- Composition #183
+-- Structure: mul(add(dbl(a,b),a), cross(b,add(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 12
+g(2, 1) is 36
+g(1, 2) is 36
+g(3, 2) is 180
+g(2, 3) is 180
+g(5, 5) is 1500
+
+-- Composition #184
+-- Structure: avg(mul(diff(a,b),a), sub(b,sub(a,b)))
+-- Propriétés: [idempotent]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 2
+g(1, 1) is 1
+g(2, 1) is 4
+g(1, 2) is 1
+g(3, 2) is 7
+g(2, 3) is 0
+g(5, 5) is 5
+
+-- Composition #185
+-- Structure: sub(add(sub(a,b),a), cross(b,diff(a,b)))
+-- Propriétés: [idempotent]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 3
+g(1, 1) is 1
+g(2, 1) is -1
+g(1, 2) is 8
+g(3, 2) is -4
+g(2, 3) is 13
+g(5, 5) is 5
+
+-- Composition #186
+-- Structure: sq(sub(diff(a,b),a), diff(b,tri(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 4
+g(1, 1) is 1
+g(2, 1) is 0
+g(1, 2) is 9
+g(3, 2) is 1
+g(2, 3) is 16
+g(5, 5) is 25
+
+-- Composition #187
+-- Structure: dbl(add(avg(a,b),a), avg(b,add(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 2
+g(1, 1) is 6
+g(2, 1) is 10
+g(1, 2) is 8
+g(3, 2) is 16
+g(2, 3) is 14
+g(5, 5) is 30
+
+-- Composition #188
+-- Structure: sub(add(sub(a,b),a), diff(b,dbl(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 6
+g(0, 1) is -3
+g(1, 1) is 3
+g(2, 1) is 9
+g(1, 2) is 0
+g(3, 2) is 12
+g(2, 3) is 3
+g(5, 5) is 15
+
+-- Composition #189
+-- Structure: cross(sub(dbl(a,b),a), add(b,add(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 0
+g(1, 1) is 6
+g(2, 1) is 16
+g(1, 2) is 10
+g(3, 2) is 42
+g(2, 3) is 32
+g(5, 5) is 150
+
+-- Composition #190
+-- Structure: mul(cross(mul(a,b),a), cross(b,tri(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 12
+g(2, 1) is 80
+g(1, 2) is 80
+g(3, 2) is 1584
+g(2, 3) is 1584
+g(5, 5) is 87500
+
+-- Composition #191
+-- Structure: sq(sq(add(a,b),a), diff(b,dbl(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 16
+g(2, 1) is 81
+g(1, 2) is 81
+g(3, 2) is 625
+g(2, 3) is 625
+g(5, 5) is 10000
+
+-- Composition #192
+-- Structure: add(sub(dbl(a,b),a), diff(b,dbl(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is -3
+g(0, 1) is 2
+g(1, 1) is -1
+g(2, 1) is -4
+g(1, 2) is 1
+g(3, 2) is -5
+g(2, 3) is 0
+g(5, 5) is -5
+
+-- Composition #193
+-- Structure: sq(cross(diff(a,b),a), diff(b,diff(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 16
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 64
+g(1, 2) is 16
+g(3, 2) is 144
+g(2, 3) is 64
+g(5, 5) is 0
+
+-- Composition #194
+-- Structure: tri(avg(avg(a,b),a), add(b,add(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 5
+g(0, 1) is 5
+g(1, 1) is 15
+g(2, 1) is 29
+g(1, 2) is 29
+g(3, 2) is 71
+g(2, 3) is 71
+g(5, 5) is 255
+
+-- Composition #195
+-- Structure: mul(diff(diff(a,b),a), avg(b,avg(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is -8
+g(1, 1) is -6
+g(2, 1) is 0
+g(1, 2) is -30
+g(3, 2) is -14
+g(2, 3) is -64
+g(5, 5) is -150
+
+-- Composition #196
+-- Structure: sq(sq(cross(a,b),a), diff(b,sq(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 16
+g(2, 1) is 256
+g(1, 2) is 256
+g(3, 2) is 20736
+g(2, 3) is 20736
+g(5, 5) is 6250000
+
+-- Composition #197
+-- Structure: sub(mul(dbl(a,b),a), sq(b,sub(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is -1
+g(1, 1) is 1
+g(2, 1) is 7
+g(1, 2) is -2
+g(3, 2) is 14
+g(2, 3) is -1
+g(5, 5) is 25
+
+-- Composition #198
+-- Structure: sq(sq(mul(a,b),a), dbl(b,sq(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 1
+g(2, 1) is 16
+g(1, 2) is 16
+g(3, 2) is 1296
+g(2, 3) is 1296
+g(5, 5) is 390625
+
+-- Composition #199
+-- Structure: tri(avg(mul(a,b),a), sub(b,cross(a,b)))
+-- Propriétés: [neutral:0]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is -1
+g(2, 1) is -11
+g(1, 2) is -5
+g(3, 2) is -91
+g(2, 3) is -73
+g(5, 5) is -1365
+
+-- Composition #200
+-- Structure: diff(diff(mul(a,b),a), add(b,cross(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is -4
+g(0, 1) is -2
+g(1, 1) is -6
+g(2, 1) is -10
+g(1, 2) is -8
+g(3, 2) is -16
+g(2, 3) is -14
+g(5, 5) is -30
+
+-- Composition #201
+-- Structure: mix(avg(mul(a,b),a), tri(b,cross(a,b)))
+-- Propriétés: [neutral:0]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 17
+g(2, 1) is 49
+g(1, 2) is 59
+g(3, 2) is 389
+g(2, 3) is 467
+g(5, 5) is 9485
+
+-- Composition #202
+-- Structure: add(add(sq(a,b),a), tri(b,add(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 3
+g(0, 1) is 3
+g(1, 1) is 7
+g(2, 1) is 13
+g(1, 2) is 13
+g(3, 2) is 29
+g(2, 3) is 29
+g(5, 5) is 95
+
+-- Composition #203
+-- Structure: diff(sub(mix(a,b),a), sub(b,tri(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 2
+g(1, 1) is 8
+g(2, 1) is 14
+g(1, 2) is 14
+g(3, 2) is 34
+g(2, 3) is 34
+g(5, 5) is 120
+
+-- Composition #204
+-- Structure: avg(diff(diff(a,b),a), add(b,diff(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is -5
+g(1, 1) is -1
+g(2, 1) is 3
+g(1, 2) is -6
+g(3, 2) is 2
+g(2, 3) is -7
+g(5, 5) is -5
+
+-- Composition #205
+-- Structure: avg(sub(dbl(a,b),a), dbl(b,mix(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 2
+g(1, 1) is 3
+g(2, 1) is 4
+g(1, 2) is 5
+g(3, 2) is 7
+g(2, 3) is 8
+g(5, 5) is 15
+
+-- Composition #206
+-- Structure: cross(sq(cross(a,b),a), cross(b,diff(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 128
+g(1, 2) is -256
+g(3, 2) is 2304
+g(2, 3) is -3456
+g(5, 5) is 0
+
+-- Composition #207
+-- Structure: add(mix(dbl(a,b),a), diff(b,sq(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 3
+g(0, 1) is 2
+g(1, 1) is 5
+g(2, 1) is 8
+g(1, 2) is 7
+g(3, 2) is 13
+g(2, 3) is 12
+g(5, 5) is 25
+
+-- Composition #208
+-- Structure: diff(add(diff(a,b),a), dbl(b,add(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 6
+g(0, 1) is -8
+g(1, 1) is -2
+g(2, 1) is 4
+g(1, 2) is -10
+g(3, 2) is 2
+g(2, 3) is -12
+g(5, 5) is -10
+
+-- Composition #209
+-- Structure: diff(add(cross(a,b),a), tri(b,sub(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 2
+g(1, 1) is 4
+g(2, 1) is 6
+g(1, 2) is 12
+g(3, 2) is 20
+g(2, 3) is 30
+g(5, 5) is 100
+
+-- Composition #210
+-- Structure: diff(dbl(sq(a,b),a), sq(b,mul(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is -2
+g(1, 1) is 2
+g(2, 1) is 14
+g(1, 2) is -4
+g(3, 2) is 28
+g(2, 3) is -2
+g(5, 5) is 50
+
+-- Composition #211
+-- Structure: add(sq(sub(a,b),a), sq(b,avg(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 2
+g(1, 1) is 1
+g(2, 1) is 2
+g(1, 2) is 5
+g(3, 2) is 5
+g(2, 3) is 10
+g(5, 5) is 25
+
+-- Composition #212
+-- Structure: dbl(add(diff(a,b),a), sq(b,dbl(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 6
+g(0, 1) is -4
+g(1, 1) is 2
+g(2, 1) is 8
+g(1, 2) is -2
+g(3, 2) is 10
+g(2, 3) is 0
+g(5, 5) is 10
+
+-- Composition #213
+-- Structure: add(sub(avg(a,b),a), diff(b,sub(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is -2
+g(0, 1) is 5
+g(1, 1) is 3
+g(2, 1) is 1
+g(1, 2) is 8
+g(3, 2) is 4
+g(2, 3) is 11
+g(5, 5) is 15
+
+-- Composition #214
+-- Structure: cross(avg(dbl(a,b),a), diff(b,sub(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -12
+g(0, 1) is 0
+g(1, 1) is 12
+g(2, 1) is 0
+g(1, 2) is 36
+g(3, 2) is 36
+g(2, 3) is 96
+g(5, 5) is 300
+
+-- Composition #215
+-- Structure: cross(cross(sub(a,b),a), add(b,mix(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 48
+g(1, 2) is -28
+g(3, 2) is 156
+g(2, 3) is -112
+g(5, 5) is 0
+
+-- Composition #216
+-- Structure: mul(sub(diff(a,b),a), dbl(b,sq(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is -4
+g(1, 1) is -2
+g(2, 1) is 0
+g(1, 2) is -12
+g(3, 2) is -4
+g(2, 3) is -24
+g(5, 5) is -50
+
+-- Composition #217
+-- Structure: mul(mul(sub(a,b),a), avg(b,avg(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 8
+g(1, 2) is -5
+g(3, 2) is 21
+g(2, 3) is -16
+g(5, 5) is 0
+
+-- Composition #218
+-- Structure: diff(sub(avg(a,b),a), diff(b,diff(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 8
+g(0, 1) is -10
+g(1, 1) is -2
+g(2, 1) is 6
+g(1, 2) is -12
+g(3, 2) is 4
+g(2, 3) is -14
+g(5, 5) is -10
+
+-- Composition #219
+-- Structure: cross(dbl(sub(a,b),a), sq(b,mul(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is -4
+g(1, 1) is 0
+g(2, 1) is 4
+g(1, 2) is -16
+g(3, 2) is 16
+g(2, 3) is -36
+g(5, 5) is 0
+
+-- Composition #220
+-- Structure: sub(add(diff(a,b),a), tri(b,diff(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 0
+g(2, 1) is -1
+g(1, 2) is 3
+g(3, 2) is -3
+g(2, 3) is 5
+g(5, 5) is 0
+
+-- Composition #221
+-- Structure: mul(add(dbl(a,b),a), cross(b,mul(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 6
+g(2, 1) is 24
+g(1, 2) is 24
+g(3, 2) is 216
+g(2, 3) is 216
+g(5, 5) is 3750
+
+-- Composition #222
+-- Structure: sub(sub(cross(a,b),a), tri(b,dbl(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is -3
+g(0, 1) is -1
+g(1, 1) is -4
+g(2, 1) is -7
+g(1, 2) is -5
+g(3, 2) is -11
+g(2, 3) is -9
+g(5, 5) is -20
+
+-- Composition #223
+-- Structure: cross(dbl(add(a,b),a), dbl(b,dbl(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 8
+g(1, 1) is 16
+g(2, 1) is 24
+g(1, 2) is 48
+g(3, 2) is 80
+g(2, 3) is 120
+g(5, 5) is 400
+
+-- Composition #224
+-- Structure: cross(sq(diff(a,b),a), sq(b,sq(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 8
+g(1, 1) is 0
+g(2, 1) is 8
+g(1, 2) is 32
+g(3, 2) is 32
+g(2, 3) is 72
+g(5, 5) is 0
+
+-- Composition #225
+-- Structure: avg(sq(diff(a,b),a), tri(b,diff(a,b)))
+-- Propriétés: [idempotent]
+g(0, 0) is 0
+g(1, 0) is 6
+g(0, 1) is 1
+g(1, 1) is 1
+g(2, 1) is 9
+g(1, 2) is 0
+g(3, 2) is 12
+g(2, 3) is -1
+g(5, 5) is 5
+
+-- Composition #226
+-- Structure: cross(sq(diff(a,b),a), mul(b,mul(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 16
+g(1, 2) is 32
+g(3, 2) is 96
+g(2, 3) is 144
+g(5, 5) is 0
+
+-- Composition #227
+-- Structure: cross(cross(add(a,b),a), dbl(b,sq(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 16
+g(2, 1) is 48
+g(1, 2) is 48
+g(3, 2) is 240
+g(2, 3) is 240
+g(5, 5) is 2000
+
+-- Composition #228
+-- Structure: avg(sub(mix(a,b),a), mix(b,dbl(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 2
+g(1, 1) is 7
+g(2, 1) is 12
+g(1, 2) is 12
+g(3, 2) is 28
+g(2, 3) is 28
+g(5, 5) is 95
+
+-- Composition #229
+-- Structure: sq(add(diff(a,b),a), avg(b,dbl(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 9
+g(0, 1) is 4
+g(1, 1) is 1
+g(2, 1) is 16
+g(1, 2) is 1
+g(3, 2) is 25
+g(2, 3) is 0
+g(5, 5) is 25
+
+-- Composition #230
+-- Structure: mul(sub(avg(a,b),a), avg(b,diff(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is -1
+g(1, 1) is 1
+g(2, 1) is 3
+g(1, 2) is 0
+g(3, 2) is 8
+g(2, 3) is 3
+g(5, 5) is 25
+
+-- Composition #231
+-- Structure: sub(sq(diff(a,b),a), sq(b,mix(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 3
+g(1, 1) is -1
+g(2, 1) is 3
+g(1, 2) is 0
+g(3, 2) is 0
+g(2, 3) is -5
+g(5, 5) is -25
+
+-- Composition #232
+-- Structure: mul(sq(tri(a,b),a), mul(b,diff(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is -2
+g(1, 1) is 0
+g(2, 1) is 50
+g(1, 2) is -100
+g(3, 2) is 484
+g(2, 3) is -726
+g(5, 5) is 0
+
+-- Composition #233
+-- Structure: avg(dbl(add(a,b),a), add(b,add(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 3
+g(0, 1) is 4
+g(1, 1) is 7
+g(2, 1) is 10
+g(1, 2) is 11
+g(3, 2) is 17
+g(2, 3) is 18
+g(5, 5) is 35
+
+-- Composition #234
+-- Structure: dbl(dbl(dbl(a,b),a), avg(b,diff(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 8
+g(0, 1) is 0
+g(1, 1) is 8
+g(2, 1) is 16
+g(1, 2) is 8
+g(3, 2) is 24
+g(2, 3) is 16
+g(5, 5) is 40
+
+-- Composition #235
+-- Structure: diff(add(avg(a,b),a), diff(b,sub(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 8
+g(0, 1) is -6
+g(1, 1) is 2
+g(2, 1) is 10
+g(1, 2) is -4
+g(3, 2) is 12
+g(2, 3) is -2
+g(5, 5) is 10
+
+-- Composition #236
+-- Structure: mix(sub(dbl(a,b),a), mul(b,sub(a,b)))
+-- Propriétés: [idempotent]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is -1
+g(1, 1) is 1
+g(2, 1) is 5
+g(1, 2) is -3
+g(3, 2) is 11
+g(2, 3) is -7
+g(5, 5) is 5
+
+-- Composition #237
+-- Structure: mix(dbl(sub(a,b),a), cross(b,diff(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 2
+g(1, 1) is 0
+g(2, 1) is 14
+g(1, 2) is 6
+g(3, 2) is 26
+g(2, 3) is 10
+g(5, 5) is 0
+
+-- Composition #238
+-- Structure: cross(add(mul(a,b),a), mul(b,sub(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 8
+g(1, 2) is -12
+g(3, 2) is 36
+g(2, 3) is -48
+g(5, 5) is 0
+
+-- Composition #239
+-- Structure: cross(cross(avg(a,b),a), mul(b,tri(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 24
+g(2, 1) is 120
+g(1, 2) is 120
+g(3, 2) is 1320
+g(2, 3) is 1320
+g(5, 5) is 35000
+
+-- Composition #240
+-- Structure: mul(sub(diff(a,b),a), diff(b,sub(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -2
+g(0, 1) is -8
+g(1, 1) is -2
+g(2, 1) is 0
+g(1, 2) is -18
+g(3, 2) is -2
+g(2, 3) is -32
+g(5, 5) is -50
+
+-- Composition #241
+-- Structure: cross(sub(dbl(a,b),a), diff(b,sub(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -4
+g(0, 1) is 0
+g(1, 1) is 4
+g(2, 1) is 0
+g(1, 2) is 12
+g(3, 2) is 12
+g(2, 3) is 32
+g(5, 5) is 100
+
+-- Composition #242
+-- Structure: tri(sq(sub(a,b),a), sub(b,sub(a,b)))
+-- Propriétés: [idempotent]
+g(0, 0) is 0
+g(1, 0) is -1
+g(0, 1) is 5
+g(1, 1) is 1
+g(2, 1) is 1
+g(1, 2) is 7
+g(3, 2) is 3
+g(2, 3) is 9
+g(5, 5) is 5
+
+-- Composition #243
+-- Structure: sub(mix(diff(a,b),a), cross(b,sub(a,b)))
+-- Propriétés: [idempotent]
+g(0, 0) is 0
+g(1, 0) is 5
+g(0, 1) is 0
+g(1, 1) is 1
+g(2, 1) is 6
+g(1, 2) is 1
+g(3, 2) is 7
+g(2, 3) is 2
+g(5, 5) is 5
+
+-- Composition #244
+-- Structure: avg(diff(add(a,b),a), avg(b,add(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 4
+g(1, 1) is 5
+g(2, 1) is 6
+g(1, 2) is 9
+g(3, 2) is 11
+g(2, 3) is 14
+g(5, 5) is 25
+
+-- Composition #245
+-- Structure: avg(add(diff(a,b),a), avg(b,dbl(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 5
+g(0, 1) is -1
+g(1, 1) is 4
+g(2, 1) is 9
+g(1, 2) is 3
+g(3, 2) is 13
+g(2, 3) is 7
+g(5, 5) is 20
+
+-- Composition #246
+-- Structure: diff(avg(sub(a,b),a), mix(b,sub(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 0
+g(1, 2) is 2
+g(3, 2) is -2
+g(2, 3) is 4
+g(5, 5) is 0
+
+-- Composition #247
+-- Structure: sub(dbl(mul(a,b),a), avg(b,cross(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is -1
+g(1, 1) is -1
+g(2, 1) is -1
+g(1, 2) is -2
+g(3, 2) is -2
+g(2, 3) is -3
+g(5, 5) is -5
+
+-- Composition #248
+-- Structure: sub(add(avg(a,b),a), diff(b,add(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 1
+g(1, 1) is 5
+g(2, 1) is 9
+g(1, 2) is 6
+g(3, 2) is 14
+g(2, 3) is 11
+g(5, 5) is 25
+
+-- Composition #249
+-- Structure: mul(sub(sub(a,b),a), dbl(b,mix(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is -2
+g(1, 1) is -2
+g(2, 1) is -2
+g(1, 2) is -8
+g(3, 2) is -8
+g(2, 3) is -18
+g(5, 5) is -50
+
+-- Composition #250
+-- Structure: cross(mul(sub(a,b),a), sq(b,diff(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 4
+g(1, 2) is -8
+g(3, 2) is 24
+g(2, 3) is -36
+g(5, 5) is 0
+
+-- Composition #251
+-- Structure: avg(add(avg(a,b),a), dbl(b,sq(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 3
+g(1, 1) is 5
+g(2, 1) is 7
+g(1, 2) is 8
+g(3, 2) is 12
+g(2, 3) is 13
+g(5, 5) is 25
+
+-- Composition #252
+-- Structure: add(cross(diff(a,b),a), add(b,diff(a,b)))
+-- Propriétés: [idempotent]
+g(0, 0) is 0
+g(1, 0) is 6
+g(0, 1) is -1
+g(1, 1) is 1
+g(2, 1) is 11
+g(1, 2) is -4
+g(3, 2) is 16
+g(2, 3) is -7
+g(5, 5) is 5
+
+-- Composition #253
+-- Structure: cross(avg(avg(a,b),a), dbl(b,mul(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 4
+g(1, 1) is 12
+g(2, 1) is 20
+g(1, 2) is 32
+g(3, 2) is 64
+g(2, 3) is 84
+g(5, 5) is 300
+
+-- Composition #254
+-- Structure: diff(sub(diff(a,b),a), dbl(b,dbl(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is -8
+g(1, 1) is -6
+g(2, 1) is -4
+g(1, 2) is -14
+g(3, 2) is -10
+g(2, 3) is -20
+g(5, 5) is -30
+
+-- Composition #255
+-- Structure: avg(avg(mix(a,b),a), add(b,mix(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 3
+g(0, 1) is 3
+g(1, 1) is 8
+g(2, 1) is 13
+g(1, 2) is 13
+g(3, 2) is 27
+g(2, 3) is 27
+g(5, 5) is 80
+
+-- Composition #256
+-- Structure: cross(cross(cross(a,b),a), mul(b,tri(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 24
+g(2, 1) is 160
+g(1, 2) is 160
+g(3, 2) is 3168
+g(2, 3) is 3168
+g(5, 5) is 175000
+
+-- Composition #257
+-- Structure: avg(tri(sub(a,b),a), mul(b,diff(a,b)))
+-- Propriétés: [idempotent]
+g(0, 0) is 0
+g(1, 0) is 3
+g(0, 1) is -3
+g(1, 1) is 1
+g(2, 1) is 7
+g(1, 2) is -5
+g(3, 2) is 11
+g(2, 3) is -7
+g(5, 5) is 5
+
+-- Composition #258
+-- Structure: add(cross(sub(a,b),a), avg(b,sub(a,b)))
+-- Propriétés: [idempotent]
+g(0, 0) is 0
+g(1, 0) is 3
+g(0, 1) is 0
+g(1, 1) is 1
+g(2, 1) is 6
+g(1, 2) is -1
+g(3, 2) is 9
+g(2, 3) is -2
+g(5, 5) is 5
+
+-- Composition #259
+-- Structure: mix(mul(mix(a,b),a), mul(b,tri(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 15
+g(2, 1) is 65
+g(1, 2) is 65
+g(3, 2) is 781
+g(2, 3) is 781
+g(5, 5) is 30975
+
+-- Composition #260
+-- Structure: mul(avg(sub(a,b),a), dbl(b,mul(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is -2
+g(1, 1) is 2
+g(2, 1) is 6
+g(1, 2) is 0
+g(3, 2) is 16
+g(2, 3) is 6
+g(5, 5) is 50
+
+-- Composition #261
+-- Structure: add(tri(diff(a,b),a), mul(b,diff(a,b)))
+-- Propriétés: [idempotent]
+g(0, 0) is 0
+g(1, 0) is 5
+g(0, 1) is -4
+g(1, 1) is 1
+g(2, 1) is 10
+g(1, 2) is -7
+g(3, 2) is 15
+g(2, 3) is -10
+g(5, 5) is 5
+
+-- Composition #262
+-- Structure: cross(mul(sub(a,b),a), sub(b,mix(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is -2
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is -16
+g(1, 2) is 6
+g(3, 2) is -54
+g(2, 3) is 32
+g(5, 5) is 0
+
+-- Composition #263
+-- Structure: cross(mul(sub(a,b),a), tri(b,sub(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 12
+g(1, 2) is 2
+g(3, 2) is 30
+g(2, 3) is 4
+g(5, 5) is 0
+
+-- Composition #264
+-- Structure: mul(dbl(diff(a,b),a), add(b,sq(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is -4
+g(1, 1) is 0
+g(2, 1) is 20
+g(1, 2) is -12
+g(3, 2) is 44
+g(2, 3) is -28
+g(5, 5) is 0
+
+-- Composition #265
+-- Structure: cross(sq(diff(a,b),a), tri(b,mul(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 8
+g(1, 1) is 0
+g(2, 1) is 40
+g(1, 2) is 64
+g(3, 2) is 160
+g(2, 3) is 216
+g(5, 5) is 0
+
+-- Composition #266
+-- Structure: mul(cross(diff(a,b),a), avg(b,avg(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 32
+g(1, 2) is -20
+g(3, 2) is 84
+g(2, 3) is -64
+g(5, 5) is 0
+
+-- Composition #267
+-- Structure: mul(mul(sub(a,b),a), sub(b,sq(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is -1
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is -6
+g(1, 2) is -1
+g(3, 2) is -21
+g(2, 3) is 2
+g(5, 5) is 0
+
+-- Composition #268
+-- Structure: cross(diff(add(a,b),a), dbl(b,sq(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 8
+g(1, 1) is 8
+g(2, 1) is 8
+g(1, 2) is 32
+g(3, 2) is 32
+g(2, 3) is 72
+g(5, 5) is 200
+
+-- Composition #269
+-- Structure: add(diff(diff(a,b),a), sub(b,avg(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is -4
+g(1, 1) is -3
+g(2, 1) is -2
+g(1, 2) is -7
+g(3, 2) is -5
+g(2, 3) is -10
+g(5, 5) is -15
+
+-- Composition #270
+-- Structure: tri(add(cross(a,b),a), tri(b,cross(a,b)))
+-- Propriétés: [neutral:0]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 23
+g(2, 1) is 69
+g(1, 2) is 89
+g(3, 2) is 623
+g(2, 3) is 779
+g(5, 5) is 17135
+
+-- Composition #271
+-- Structure: mul(dbl(dbl(a,b),a), add(b,add(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 0
+g(1, 1) is 12
+g(2, 1) is 32
+g(1, 2) is 20
+g(3, 2) is 84
+g(2, 3) is 64
+g(5, 5) is 300
+
+-- Composition #272
+-- Structure: add(tri(mul(a,b),a), add(b,mul(a,b)))
+-- Propriétés: [neutral:0]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 5
+g(2, 1) is 11
+g(1, 2) is 9
+g(3, 2) is 35
+g(2, 3) is 29
+g(5, 5) is 185
+
+-- Composition #273
+-- Structure: mix(cross(mix(a,b),a), cross(b,mix(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 2
+g(1, 1) is 48
+g(2, 1) is 230
+g(1, 2) is 230
+g(3, 2) is 3014
+g(2, 3) is 3014
+g(5, 5) is 123200
+
+-- Composition #274
+-- Structure: mul(tri(diff(a,b),a), cross(b,sub(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 4
+g(1, 1) is 0
+g(2, 1) is 16
+g(1, 2) is 12
+g(3, 2) is 44
+g(2, 3) is 24
+g(5, 5) is 0
+
+-- Composition #275
+-- Structure: mul(add(sub(a,b),a), avg(b,dbl(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is -1
+g(1, 1) is 3
+g(2, 1) is 15
+g(1, 2) is 0
+g(3, 2) is 32
+g(2, 3) is 7
+g(5, 5) is 75
+
+-- Composition #276
+-- Structure: cross(tri(dbl(a,b),a), cross(b,diff(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 112
+g(1, 2) is -80
+g(3, 2) is 432
+g(2, 3) is -336
+g(5, 5) is 0
+
+-- Composition #277
+-- Structure: mul(sq(diff(a,b),a), diff(b,avg(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is -8
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is -16
+g(1, 2) is -8
+g(3, 2) is -24
+g(2, 3) is -16
+g(5, 5) is 0
+
+-- Composition #278
+-- Structure: mul(sq(diff(a,b),a), avg(b,mul(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 4
+g(1, 1) is 0
+g(2, 1) is 12
+g(1, 2) is 16
+g(3, 2) is 32
+g(2, 3) is 36
+g(5, 5) is 0
+
+-- Composition #279
+-- Structure: diff(sub(sub(a,b),a), dbl(b,sub(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is -6
+g(1, 1) is -6
+g(2, 1) is -6
+g(1, 2) is -12
+g(3, 2) is -12
+g(2, 3) is -18
+g(5, 5) is -30
+
+-- Composition #280
+-- Structure: tri(mix(mix(a,b),a), tri(b,add(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 7
+g(0, 1) is 7
+g(1, 1) is 47
+g(2, 1) is 143
+g(1, 2) is 143
+g(3, 2) is 863
+g(2, 3) is 863
+g(5, 5) is 14255
+
+-- Composition #281
+-- Structure: avg(avg(cross(a,b),a), mix(b,cross(a,b)))
+-- Propriétés: [neutral:0]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is 1
+g(1, 1) is 8
+g(2, 1) is 15
+g(1, 2) is 19
+g(3, 2) is 53
+g(2, 3) is 65
+g(5, 5) is 360
+
+-- Composition #282
+-- Structure: mul(avg(dbl(a,b),a), diff(b,avg(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -6
+g(0, 1) is 0
+g(1, 1) is -6
+g(2, 1) is -24
+g(1, 2) is -6
+g(3, 2) is -54
+g(2, 3) is -24
+g(5, 5) is -150
+
+-- Composition #283
+-- Structure: avg(dbl(sub(a,b),a), sub(b,add(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 1
+g(0, 1) is -2
+g(1, 1) is -1
+g(2, 1) is 0
+g(1, 2) is -3
+g(3, 2) is -1
+g(2, 3) is -4
+g(5, 5) is -5
+
+-- Composition #284
+-- Structure: mul(dbl(avg(a,b),a), avg(b,avg(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 4
+g(1, 1) is 12
+g(2, 1) is 24
+g(1, 2) is 30
+g(3, 2) is 70
+g(2, 3) is 80
+g(5, 5) is 300
+
+-- Composition #285
+-- Structure: cross(avg(dbl(a,b),a), avg(b,sub(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 6
+g(0, 1) is 0
+g(1, 1) is 6
+g(2, 1) is 24
+g(1, 2) is 6
+g(3, 2) is 54
+g(2, 3) is 24
+g(5, 5) is 150
+
+-- Composition #286
+-- Structure: avg(mul(diff(a,b),a), sq(b,mix(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 1
+g(1, 1) is 1
+g(2, 1) is 5
+g(1, 2) is 2
+g(3, 2) is 10
+g(2, 3) is 5
+g(5, 5) is 25
+
+-- Composition #287
+-- Structure: avg(dbl(add(a,b),a), dbl(b,add(a,b)))
+-- Propriétés: [homogeneous-1]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 4
+g(1, 1) is 6
+g(2, 1) is 8
+g(1, 2) is 10
+g(3, 2) is 14
+g(2, 3) is 16
+g(5, 5) is 30
+
+-- Composition #288
+-- Structure: mix(cross(sub(a,b),a), sub(b,diff(a,b)))
+-- Propriétés: [idempotent]
+g(0, 0) is 0
+g(1, 0) is -4
+g(0, 1) is 3
+g(1, 1) is 1
+g(2, 1) is -1
+g(1, 2) is -6
+g(3, 2) is 6
+g(2, 3) is -19
+g(5, 5) is 5
+
+-- Composition #289
+-- Structure: cross(mul(diff(a,b),a), mix(b,sq(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 72
+g(1, 2) is -20
+g(3, 2) is 348
+g(2, 3) is -152
+g(5, 5) is 0
+
+-- Composition #290
+-- Structure: add(sq(diff(a,b),a), cross(b,add(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 6
+g(1, 1) is 4
+g(2, 1) is 10
+g(1, 2) is 16
+g(3, 2) is 24
+g(2, 3) is 34
+g(5, 5) is 100
+
+-- Composition #291
+-- Structure: sub(tri(avg(a,b),a), mix(b,sub(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is 2
+g(1, 1) is 4
+g(2, 1) is 8
+g(1, 2) is 8
+g(3, 2) is 18
+g(2, 3) is 18
+g(5, 5) is 60
+
+-- Composition #292
+-- Structure: mul(cross(sub(a,b),a), diff(b,sq(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is -4
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is -24
+g(1, 2) is -4
+g(3, 2) is -84
+g(2, 3) is 8
+g(5, 5) is 0
+
+-- Composition #293
+-- Structure: cross(sq(sub(a,b),a), dbl(b,mix(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 4
+g(1, 1) is 0
+g(2, 1) is 4
+g(1, 2) is 8
+g(3, 2) is 8
+g(2, 3) is 12
+g(5, 5) is 0
+
+-- Composition #294
+-- Structure: mul(sq(cross(a,b),a), cross(b,sub(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is 0
+g(1, 1) is 0
+g(2, 1) is 32
+g(1, 2) is -64
+g(3, 2) is 576
+g(2, 3) is -864
+g(5, 5) is 0
+
+-- Composition #295
+-- Structure: avg(sub(cross(a,b),a), mix(b,sub(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is -1
+g(1, 1) is 2
+g(2, 1) is 5
+g(1, 2) is 2
+g(3, 2) is 14
+g(2, 3) is 9
+g(5, 5) is 50
+
+-- Composition #296
+-- Structure: mul(avg(diff(a,b),a), diff(b,dbl(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is -12
+g(0, 1) is -4
+g(1, 1) is -2
+g(2, 1) is -24
+g(1, 2) is 0
+g(3, 2) is -40
+g(2, 3) is 0
+g(5, 5) is -50
+
+-- Composition #297
+-- Structure: cross(avg(diff(a,b),a), dbl(b,diff(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is -8
+g(1, 1) is 4
+g(2, 1) is 16
+g(1, 2) is -8
+g(3, 2) is 40
+g(2, 3) is 0
+g(5, 5) is 100
+
+-- Composition #298
+-- Structure: diff(diff(cross(a,b),a), dbl(b,sub(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is -4
+g(0, 1) is -4
+g(1, 1) is 0
+g(2, 1) is 4
+g(1, 2) is 4
+g(3, 2) is 28
+g(2, 3) is 28
+g(5, 5) is 160
+
+-- Composition #299
+-- Structure: avg(avg(avg(a,b),a), avg(b,tri(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is 3
+g(0, 1) is 3
+g(1, 1) is 7
+g(2, 1) is 11
+g(1, 2) is 11
+g(3, 2) is 21
+g(2, 3) is 21
+g(5, 5) is 55
+
+-- Composition #300
+-- Structure: add(cross(add(a,b),a), cross(b,diff(a,b)))
+-- Propriétés: [homogeneous-2]
+g(0, 0) is 0
+g(1, 0) is 2
+g(0, 1) is -4
+g(1, 1) is 4
+g(2, 1) is 16
+g(1, 2) is -2
+g(3, 2) is 38
+g(2, 3) is 8
+g(5, 5) is 100
+
+-- Composition #301
+-- Structure: sub(add(mul(a,b),a), mix(b,dbl(a,b)))
+-- Propriétés: [commutative]
+g(0, 0) is 0
+g(1, 0) is -1
+g(0, 1) is -1
+g(1, 1) is -3
+g(2, 1) is -5
+g(1, 2) is -5
+g(3, 2) is -11
+g(2, 3) is -11
+g(5, 5) is -35
+
+-- Composition #302
+-- Structure: mix(dbl(diff(a,b),a), mul(b,diff(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 4
+g(0, 1) is 2
+g(1, 1) is 0
+g(2, 1) is 14
+g(1, 2) is 8
+g(3, 2) is 24
+g(2, 3) is 14
+g(5, 5) is 0
+
+-- Composition #303
+-- Structure: mul(sq(mix(a,b),a), cross(b,diff(a,b)))
+-- Propriétés: [nilpotent]
+g(0, 0) is 0
+g(1, 0) is 0
+g(0, 1) is -4
+g(1, 1) is 0
+g(2, 1) is 100
+g(1, 2) is -200
+g(3, 2) is 968
+g(2, 3) is -1452
+g(5, 5) is 0
+

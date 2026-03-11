@@ -1,0 +1,19 @@
+-- Dialogue Explorateur ↔ Langage
+-- 4 relations acceptées par consensus
+
+-- Tour 4 [commutative, neutral:0]
+f a,b ->
+  b + a
+
+-- Tour 7 [conservation:2]
+f a,b ->
+  1 * b - a + 1
+
+-- Tour 10 [conservation:2]
+f a,b ->
+  2 + a - 1 - b
+
+-- Tour 20 [commutative]
+f a,b ->
+  1 - b + 0 - 1 * a + 0 * a
+

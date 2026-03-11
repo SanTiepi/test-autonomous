@@ -1,0 +1,2331 @@
+{
+  "cycle": 80,
+  "experiments": [
+    {
+      "cycle": 1,
+      "name": "fête",
+      "desc": "5 particules partout !",
+      "nParticles": 5,
+      "foundSomething": false
+    },
+    {
+      "cycle": 2,
+      "name": "face_à_face",
+      "desc": "collision frontale !",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 3,
+      "name": "david_goliath",
+      "desc": "m=100 vs m=1",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 4,
+      "name": "collision",
+      "desc": "pousser v=4",
+      "nParticles": 2,
+      "foundSomething": false
+    },
+    {
+      "cycle": 5,
+      "name": "face_à_face",
+      "desc": "collision frontale !",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 6,
+      "name": "collision",
+      "desc": "pousser v=6",
+      "nParticles": 2,
+      "foundSomething": false
+    },
+    {
+      "cycle": 7,
+      "name": "fête",
+      "desc": "5 particules partout !",
+      "nParticles": 5,
+      "foundSomething": false
+    },
+    {
+      "cycle": 8,
+      "name": "trou_noir",
+      "desc": "gravité = 5 !",
+      "nParticles": 1,
+      "foundSomething": true
+    },
+    {
+      "cycle": 9,
+      "name": "trou_noir",
+      "desc": "gravité = 5 !",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 10,
+      "name": "chute_double",
+      "desc": "h1=80 h2=50",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 11,
+      "name": "immobile",
+      "desc": "rien ne bouge",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 12,
+      "name": "lancer",
+      "desc": "lancer v=8",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 13,
+      "name": "lancer",
+      "desc": "lancer v=5",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 14,
+      "name": "fête",
+      "desc": "5 particules partout !",
+      "nParticles": 5,
+      "foundSomething": true
+    },
+    {
+      "cycle": 15,
+      "name": "fête",
+      "desc": "5 particules partout !",
+      "nParticles": 5,
+      "foundSomething": false
+    },
+    {
+      "cycle": 16,
+      "name": "david_goliath",
+      "desc": "m=100 vs m=1",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 17,
+      "name": "lancer",
+      "desc": "lancer v=10",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 18,
+      "name": "collision",
+      "desc": "pousser v=2",
+      "nParticles": 2,
+      "foundSomething": false
+    },
+    {
+      "cycle": 19,
+      "name": "trou_noir",
+      "desc": "gravité = 5 !",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 20,
+      "name": "lancer",
+      "desc": "lancer v=10",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 21,
+      "name": "uniforme",
+      "desc": "v=3",
+      "nParticles": 1,
+      "foundSomething": true
+    },
+    {
+      "cycle": 22,
+      "name": "immobile",
+      "desc": "rien ne bouge",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 23,
+      "name": "face_à_face",
+      "desc": "collision frontale !",
+      "nParticles": 2,
+      "foundSomething": false
+    },
+    {
+      "cycle": 24,
+      "name": "uniforme",
+      "desc": "v=5",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 25,
+      "name": "face_à_face",
+      "desc": "collision frontale !",
+      "nParticles": 2,
+      "foundSomething": false
+    },
+    {
+      "cycle": 26,
+      "name": "david_goliath",
+      "desc": "m=100 vs m=1",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 27,
+      "name": "collision",
+      "desc": "pousser v=6",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 28,
+      "name": "lancer",
+      "desc": "lancer v=5",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 29,
+      "name": "chute",
+      "desc": "lâcher de h=10",
+      "nParticles": 1,
+      "foundSomething": true
+    },
+    {
+      "cycle": 30,
+      "name": "anti_gravité",
+      "desc": "gravité = -1 !",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 31,
+      "name": "anti_gravité",
+      "desc": "gravité = -1 !",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 32,
+      "name": "chute_double",
+      "desc": "h1=50 h2=50",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 33,
+      "name": "david_goliath",
+      "desc": "m=100 vs m=1",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 34,
+      "name": "immobile",
+      "desc": "rien ne bouge",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 35,
+      "name": "chute_double",
+      "desc": "h1=50 h2=30",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 36,
+      "name": "anti_gravité",
+      "desc": "gravité = -1 !",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 37,
+      "name": "immobile",
+      "desc": "rien ne bouge",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 38,
+      "name": "lancer",
+      "desc": "lancer v=8",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 39,
+      "name": "collision",
+      "desc": "pousser v=8",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 40,
+      "name": "collision",
+      "desc": "pousser v=8",
+      "nParticles": 2,
+      "foundSomething": false
+    },
+    {
+      "cycle": 41,
+      "name": "anti_gravité",
+      "desc": "gravité = -1 !",
+      "nParticles": 1,
+      "foundSomething": true
+    },
+    {
+      "cycle": 42,
+      "name": "chute_double",
+      "desc": "h1=50 h2=30",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 43,
+      "name": "chute_double",
+      "desc": "h1=30 h2=50",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 44,
+      "name": "fusée",
+      "desc": "vitesse = 100 !",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 45,
+      "name": "immobile",
+      "desc": "rien ne bouge",
+      "nParticles": 1,
+      "foundSomething": true
+    },
+    {
+      "cycle": 46,
+      "name": "lancer",
+      "desc": "lancer v=8",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 47,
+      "name": "face_à_face",
+      "desc": "collision frontale !",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 48,
+      "name": "chute_double",
+      "desc": "h1=80 h2=80",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 49,
+      "name": "face_à_face",
+      "desc": "collision frontale !",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 50,
+      "name": "collision",
+      "desc": "pousser v=2",
+      "nParticles": 2,
+      "foundSomething": false
+    },
+    {
+      "cycle": 51,
+      "name": "face_à_face",
+      "desc": "collision frontale !",
+      "nParticles": 2,
+      "foundSomething": false
+    },
+    {
+      "cycle": 52,
+      "name": "anti_gravité",
+      "desc": "gravité = -1 !",
+      "nParticles": 1,
+      "foundSomething": true
+    },
+    {
+      "cycle": 53,
+      "name": "uniforme",
+      "desc": "v=1",
+      "nParticles": 1,
+      "foundSomething": true
+    },
+    {
+      "cycle": 54,
+      "name": "collision",
+      "desc": "pousser v=4",
+      "nParticles": 2,
+      "foundSomething": false
+    },
+    {
+      "cycle": 55,
+      "name": "uniforme",
+      "desc": "v=3",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 56,
+      "name": "face_à_face",
+      "desc": "collision frontale !",
+      "nParticles": 2,
+      "foundSomething": false
+    },
+    {
+      "cycle": 57,
+      "name": "lancer",
+      "desc": "lancer v=3",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 58,
+      "name": "face_à_face",
+      "desc": "collision frontale !",
+      "nParticles": 2,
+      "foundSomething": false
+    },
+    {
+      "cycle": 59,
+      "name": "immobile",
+      "desc": "rien ne bouge",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 60,
+      "name": "fusée",
+      "desc": "vitesse = 100 !",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 61,
+      "name": "chute_double",
+      "desc": "h1=80 h2=50",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 62,
+      "name": "uniforme",
+      "desc": "v=5",
+      "nParticles": 1,
+      "foundSomething": true
+    },
+    {
+      "cycle": 63,
+      "name": "immobile",
+      "desc": "rien ne bouge",
+      "nParticles": 1,
+      "foundSomething": true
+    },
+    {
+      "cycle": 64,
+      "name": "fusée",
+      "desc": "vitesse = 100 !",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 65,
+      "name": "collision",
+      "desc": "pousser v=4",
+      "nParticles": 2,
+      "foundSomething": false
+    },
+    {
+      "cycle": 66,
+      "name": "face_à_face",
+      "desc": "collision frontale !",
+      "nParticles": 2,
+      "foundSomething": false
+    },
+    {
+      "cycle": 67,
+      "name": "chute_double",
+      "desc": "h1=50 h2=80",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 68,
+      "name": "david_goliath",
+      "desc": "m=100 vs m=1",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 69,
+      "name": "immobile",
+      "desc": "rien ne bouge",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 70,
+      "name": "fusée",
+      "desc": "vitesse = 100 !",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 71,
+      "name": "face_à_face",
+      "desc": "collision frontale !",
+      "nParticles": 2,
+      "foundSomething": false
+    },
+    {
+      "cycle": 72,
+      "name": "immobile",
+      "desc": "rien ne bouge",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 73,
+      "name": "fête",
+      "desc": "5 particules partout !",
+      "nParticles": 5,
+      "foundSomething": false
+    },
+    {
+      "cycle": 74,
+      "name": "fête",
+      "desc": "5 particules partout !",
+      "nParticles": 5,
+      "foundSomething": false
+    },
+    {
+      "cycle": 75,
+      "name": "face_à_face",
+      "desc": "collision frontale !",
+      "nParticles": 2,
+      "foundSomething": false
+    },
+    {
+      "cycle": 76,
+      "name": "chute_double",
+      "desc": "h1=50 h2=50",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 77,
+      "name": "trou_noir",
+      "desc": "gravité = 5 !",
+      "nParticles": 1,
+      "foundSomething": false
+    },
+    {
+      "cycle": 78,
+      "name": "chute_double",
+      "desc": "h1=80 h2=80",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 79,
+      "name": "face_à_face",
+      "desc": "collision frontale !",
+      "nParticles": 2,
+      "foundSomething": true
+    },
+    {
+      "cycle": 80,
+      "name": "face_à_face",
+      "desc": "collision frontale !",
+      "nParticles": 2,
+      "foundSomething": true
+    }
+  ],
+  "laws": [
+    {
+      "cycle": 2,
+      "experiment": "face_à_face",
+      "desc": "collision frontale !",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> 7 * t",
+      "ratio": 1
+    },
+    {
+      "cycle": 3,
+      "experiment": "david_goliath",
+      "desc": "m=100 vs m=1",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 5,
+      "experiment": "face_à_face",
+      "desc": "collision frontale !",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> 7 * t",
+      "ratio": 1,
+      "name": "la course folle"
+    },
+    {
+      "cycle": 8,
+      "experiment": "trou_noir",
+      "desc": "gravité = 5 !",
+      "particle": 0,
+      "target": "vel",
+      "code": "f t -> 5 * t",
+      "ratio": 1
+    },
+    {
+      "cycle": 10,
+      "experiment": "chute_double",
+      "desc": "h1=80 h2=50",
+      "particle": 0,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 10,
+      "experiment": "chute_double",
+      "desc": "h1=80 h2=50",
+      "particle": 1,
+      "target": "pos",
+      "code": "f t -> 50 + div(t * (t + 1), 2)",
+      "ratio": 1
+    },
+    {
+      "cycle": 10,
+      "experiment": "chute_double",
+      "desc": "h1=80 h2=50",
+      "particle": 1,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 14,
+      "experiment": "fête",
+      "desc": "5 particules partout !",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> t",
+      "ratio": 0.8125
+    },
+    {
+      "cycle": 14,
+      "experiment": "fête",
+      "desc": "5 particules partout !",
+      "particle": 4,
+      "target": "vel",
+      "code": "f t -> 5",
+      "ratio": 1
+    },
+    {
+      "cycle": 16,
+      "experiment": "david_goliath",
+      "desc": "m=100 vs m=1",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 21,
+      "experiment": "uniforme",
+      "desc": "v=3",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> 3 * t",
+      "ratio": 1
+    },
+    {
+      "cycle": 26,
+      "experiment": "david_goliath",
+      "desc": "m=100 vs m=1",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 27,
+      "experiment": "collision",
+      "desc": "pousser v=6",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> 6 * t",
+      "ratio": 1,
+      "name": "la constante mystère"
+    },
+    {
+      "cycle": 27,
+      "experiment": "collision",
+      "desc": "pousser v=6",
+      "particle": 1,
+      "target": "vel",
+      "code": "f t -> max(0, 0 - div(t * t, 2))",
+      "ratio": 1
+    },
+    {
+      "cycle": 29,
+      "experiment": "chute",
+      "desc": "lâcher de h=10",
+      "particle": 0,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 32,
+      "experiment": "chute_double",
+      "desc": "h1=50 h2=50",
+      "particle": 0,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 32,
+      "experiment": "chute_double",
+      "desc": "h1=50 h2=50",
+      "particle": 1,
+      "target": "vel",
+      "code": "f t -> 1 * t",
+      "ratio": 1
+    },
+    {
+      "cycle": 33,
+      "experiment": "david_goliath",
+      "desc": "m=100 vs m=1",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 35,
+      "experiment": "chute_double",
+      "desc": "h1=50 h2=30",
+      "particle": 0,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 35,
+      "experiment": "chute_double",
+      "desc": "h1=50 h2=30",
+      "particle": 1,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 36,
+      "experiment": "anti_gravité",
+      "desc": "gravité = -1 !",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> max(0, 1 - div(t * t, 2))",
+      "ratio": 0.875
+    },
+    {
+      "cycle": 39,
+      "experiment": "collision",
+      "desc": "pousser v=8",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> 8 * t",
+      "ratio": 1,
+      "name": "le pont"
+    },
+    {
+      "cycle": 41,
+      "experiment": "anti_gravité",
+      "desc": "gravité = -1 !",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> max(0, 0 - div(t * t, 2))",
+      "ratio": 1
+    },
+    {
+      "cycle": 42,
+      "experiment": "chute_double",
+      "desc": "h1=50 h2=30",
+      "particle": 0,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 42,
+      "experiment": "chute_double",
+      "desc": "h1=50 h2=30",
+      "particle": 1,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 43,
+      "experiment": "chute_double",
+      "desc": "h1=30 h2=50",
+      "particle": 0,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 43,
+      "experiment": "chute_double",
+      "desc": "h1=30 h2=50",
+      "particle": 1,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 45,
+      "experiment": "immobile",
+      "desc": "rien ne bouge",
+      "particle": 0,
+      "target": "vel",
+      "code": "f t -> max(0, 0 - div(t * t, 2))",
+      "ratio": 1
+    },
+    {
+      "cycle": 47,
+      "experiment": "face_à_face",
+      "desc": "collision frontale !",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> 7 * t",
+      "ratio": 1
+    },
+    {
+      "cycle": 47,
+      "experiment": "face_à_face",
+      "desc": "collision frontale !",
+      "particle": 0,
+      "target": "vel",
+      "code": "f t -> 7",
+      "ratio": 1
+    },
+    {
+      "cycle": 48,
+      "experiment": "chute_double",
+      "desc": "h1=80 h2=80",
+      "particle": 0,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 48,
+      "experiment": "chute_double",
+      "desc": "h1=80 h2=80",
+      "particle": 1,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 49,
+      "experiment": "face_à_face",
+      "desc": "collision frontale !",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> 7 * t",
+      "ratio": 1
+    },
+    {
+      "cycle": 52,
+      "experiment": "anti_gravité",
+      "desc": "gravité = -1 !",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> max(0, 0 - div(t * t, 2))",
+      "ratio": 1
+    },
+    {
+      "cycle": 53,
+      "experiment": "uniforme",
+      "desc": "v=1",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 61,
+      "experiment": "chute_double",
+      "desc": "h1=80 h2=50",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> 80 + div(t * (t + 1), 2)",
+      "ratio": 1,
+      "name": "le rythme caché"
+    },
+    {
+      "cycle": 61,
+      "experiment": "chute_double",
+      "desc": "h1=80 h2=50",
+      "particle": 0,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 61,
+      "experiment": "chute_double",
+      "desc": "h1=80 h2=50",
+      "particle": 1,
+      "target": "pos",
+      "code": "f t -> 50 + div(t * (t + 1), 2)",
+      "ratio": 1,
+      "name": "le truc qui monte"
+    },
+    {
+      "cycle": 61,
+      "experiment": "chute_double",
+      "desc": "h1=80 h2=50",
+      "particle": 1,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 62,
+      "experiment": "uniforme",
+      "desc": "v=5",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> 5 * t",
+      "ratio": 1
+    },
+    {
+      "cycle": 63,
+      "experiment": "immobile",
+      "desc": "rien ne bouge",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> 10",
+      "ratio": 1
+    },
+    {
+      "cycle": 67,
+      "experiment": "chute_double",
+      "desc": "h1=50 h2=80",
+      "particle": 0,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 67,
+      "experiment": "chute_double",
+      "desc": "h1=50 h2=80",
+      "particle": 1,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 68,
+      "experiment": "david_goliath",
+      "desc": "m=100 vs m=1",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 76,
+      "experiment": "chute_double",
+      "desc": "h1=50 h2=50",
+      "particle": 0,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 76,
+      "experiment": "chute_double",
+      "desc": "h1=50 h2=50",
+      "particle": 1,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 78,
+      "experiment": "chute_double",
+      "desc": "h1=80 h2=80",
+      "particle": 0,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 78,
+      "experiment": "chute_double",
+      "desc": "h1=80 h2=80",
+      "particle": 1,
+      "target": "vel",
+      "code": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 79,
+      "experiment": "face_à_face",
+      "desc": "collision frontale !",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> 7 * t",
+      "ratio": 1
+    },
+    {
+      "cycle": 80,
+      "experiment": "face_à_face",
+      "desc": "collision frontale !",
+      "particle": 0,
+      "target": "pos",
+      "code": "f t -> 7 * t",
+      "ratio": 1
+    }
+  ],
+  "conservation": [
+    {
+      "cycle": 1,
+      "type": "momentum",
+      "value": 7,
+      "experiment": "fête"
+    },
+    {
+      "cycle": 3,
+      "type": "momentum",
+      "value": 99,
+      "experiment": "david_goliath"
+    },
+    {
+      "cycle": 4,
+      "type": "momentum",
+      "value": 12,
+      "experiment": "collision"
+    },
+    {
+      "cycle": 11,
+      "type": "energy",
+      "value": 10,
+      "experiment": "immobile"
+    },
+    {
+      "cycle": 30,
+      "type": "energy",
+      "value": 0,
+      "experiment": "anti_gravité"
+    }
+  ],
+  "attempts": 38298,
+  "thoughts": [
+    {
+      "cycle": 1,
+      "thought": "Essayons un truc qu'on fait jamais.",
+      "mood": "playful"
+    },
+    {
+      "cycle": 1,
+      "thought": "ça REBONDIT... faut que j'y réfléchisse.",
+      "mood": "curious"
+    },
+    {
+      "cycle": 1,
+      "thought": "Encore raté...",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 1,
+      "thought": "Peut-être que j'ai besoin d'un nouveau truc.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 1,
+      "thought": "Et si c'était pas une formule simple ?",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 1,
+      "thought": "Raaah ! C'est pas ça !",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 1,
+      "thought": "C'est... c'est toujours p = 7. Toujours.",
+      "mood": "wonder"
+    },
+    {
+      "cycle": 2,
+      "thought": "Et si je lançais SUPER fort ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 2,
+      "thought": "Hmm... je m'attendais pas à ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 2,
+      "thought": "Regarde ça ! Exactement !",
+      "mood": "joy"
+    },
+    {
+      "cycle": 2,
+      "thought": "C'est bizarre ça... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 3,
+      "thought": "Et si je lançais SUPER fort ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 3,
+      "thought": "Attends... pourquoi ça REBONDIT ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 3,
+      "thought": "Haha ! Je l'ai !",
+      "mood": "joy"
+    },
+    {
+      "cycle": 3,
+      "thought": "Non non non... je suis à côté.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 3,
+      "thought": "p = 99 est éternel. Peu importe ce qui se passe.",
+      "mood": "wonder"
+    },
+    {
+      "cycle": 4,
+      "thought": "Oh ! ça REBONDIT ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 4,
+      "thought": "Oh ! ça accélère ! Δ=[0,0,0,0,0,4,4] ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 4,
+      "thought": "OK. Respire. Réessaie autrement.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 4,
+      "thought": "p = 12 est éternel. Peu importe ce qui se passe.",
+      "mood": "wonder"
+    },
+    {
+      "cycle": 5,
+      "thought": "Essayons un truc qu'on fait jamais.",
+      "mood": "playful"
+    },
+    {
+      "cycle": 5,
+      "thought": "ça REBONDIT... faut que j'y réfléchisse.",
+      "mood": "curious"
+    },
+    {
+      "cycle": 5,
+      "thought": "Haha ! Je l'ai !",
+      "mood": "joy"
+    },
+    {
+      "cycle": 5,
+      "thought": "Attends... pourquoi ça REBONDIT ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 6,
+      "thought": "C'est bizarre ça... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 6,
+      "thought": "Peut-être que j'ai besoin d'un nouveau truc.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 7,
+      "thought": "Et si je cassais tout ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 7,
+      "thought": "Oh ! ça REBONDIT ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 7,
+      "thought": "Et si c'était pas une formule simple ?",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 7,
+      "thought": "ça REBONDIT... faut que j'y réfléchisse.",
+      "mood": "curious"
+    },
+    {
+      "cycle": 7,
+      "thought": "Raaah ! C'est pas ça !",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 7,
+      "thought": "Attends... pourquoi ça accélère ! Δ=[-3,-3,-3,-3,-3,1,3] ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 7,
+      "thought": "Attends... pourquoi ça REBONDIT ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 7,
+      "thought": "Non non non... je suis à côté.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 7,
+      "thought": "Et si c'était pas une formule simple ?",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 8,
+      "thought": "Hé, et si je mettais 100 ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 8,
+      "thought": "Attends... pourquoi ça accélère ! Δ=[5,10,15,20,25,30,35] ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 8,
+      "thought": "Peut-être que j'ai besoin d'un nouveau truc.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 9,
+      "thought": "Et si je lançais SUPER fort ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 9,
+      "thought": "Intéressant... ça accélère ! Δ=[5,10,15,20,25,30,35]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 9,
+      "thought": "Non non non... je suis à côté.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 10,
+      "thought": "Hmm... je m'attendais pas à ça accélère ! Δ=[1,2,3,4,5,6,7]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 10,
+      "thought": "Encore raté...",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 10,
+      "thought": "Attends... pourquoi ça accélère ! Δ=[1,2,3,4,5,6,7] ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 10,
+      "thought": "J'y crois pas... c'est pile ça.",
+      "mood": "joy"
+    },
+    {
+      "cycle": 11,
+      "thought": "OK. Respire. Réessaie autrement.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 11,
+      "thought": "Oh là là... E = 10 est un invariant. C'est profond.",
+      "mood": "wonder"
+    },
+    {
+      "cycle": 12,
+      "thought": "Intéressant... ça accélère ! Δ=[0,7,8,9,10,11,12]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 12,
+      "thought": "Hmm... je m'attendais pas à ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 12,
+      "thought": "Bon. Pause. Je fais autre chose.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 13,
+      "thought": "Attends... pourquoi ça accélère ! Δ=[0,5,6,7,8,9,10] ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 13,
+      "thought": "Oh ! ça REBONDIT ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 14,
+      "thought": "Et si je faisais l'inverse ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 14,
+      "thought": "Attends... pourquoi ça REBONDIT ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 14,
+      "thought": "Hmm... je m'attendais pas à ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 14,
+      "thought": "Raaah ! C'est pas ça !",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 14,
+      "thought": "Encore raté...",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 14,
+      "thought": "Peut-être que j'ai besoin d'un nouveau truc.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 15,
+      "thought": "Je vais faire un truc fou.",
+      "mood": "playful"
+    },
+    {
+      "cycle": 15,
+      "thought": "C'est bizarre ça... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 15,
+      "thought": "Encore raté...",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 15,
+      "thought": "C'est bizarre ça... ça accélère ! Δ=[-3,-3,-3,1,1,3,3]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 15,
+      "thought": "Attends... pourquoi ça REBONDIT ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 15,
+      "thought": "Raaah ! C'est pas ça !",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 15,
+      "thought": "Raaah ! C'est pas ça !",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 15,
+      "thought": "Hmm... je m'attendais pas à ça accélère ! Δ=[-3,-3,-3,-3,-3,1,1]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 15,
+      "thought": "OK. Respire. Réessaie autrement.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 16,
+      "thought": "Et si je lançais SUPER fort ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 16,
+      "thought": "Intéressant... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 16,
+      "thought": "Haha ! Je l'ai !",
+      "mood": "joy"
+    },
+    {
+      "cycle": 16,
+      "thought": "Et si c'était pas une formule simple ?",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 17,
+      "thought": "Intéressant... ça accélère ! Δ=[0,9,10,11,12,13,14]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 17,
+      "thought": "C'est bizarre ça... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 17,
+      "thought": "Encore raté...",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 18,
+      "thought": "Je commence à voir le tableau.",
+      "mood": "proud"
+    },
+    {
+      "cycle": 18,
+      "thought": "Hmm... je m'attendais pas à ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 18,
+      "thought": "Et si c'était pas une formule simple ?",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 18,
+      "thought": "OK. Respire. Réessaie autrement.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 19,
+      "thought": "Je veux voir ce qui se passe avec des GROS nombres.",
+      "mood": "playful"
+    },
+    {
+      "cycle": 19,
+      "thought": "ça accélère ! Δ=[5,10,15,20,25,30,35]... faut que j'y réfléchisse.",
+      "mood": "curious"
+    },
+    {
+      "cycle": 20,
+      "thought": "Oh ! ça accélère ! Δ=[0,9,10,11,12,13,14] ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 20,
+      "thought": "ça REBONDIT... faut que j'y réfléchisse.",
+      "mood": "curious"
+    },
+    {
+      "cycle": 20,
+      "thought": "Bon. Pause. Je fais autre chose.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 21,
+      "thought": "Hmm... je m'attendais pas à ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 21,
+      "thought": "Oui oui oui ! Ça colle !",
+      "mood": "joy"
+    },
+    {
+      "cycle": 23,
+      "thought": "Et si je cassais tout ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 23,
+      "thought": "ça REBONDIT... faut que j'y réfléchisse.",
+      "mood": "curious"
+    },
+    {
+      "cycle": 23,
+      "thought": "Oh ! ça REBONDIT ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 23,
+      "thought": "Encore raté...",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 24,
+      "thought": "Oh ! ça REBONDIT ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 24,
+      "thought": "Raaah ! C'est pas ça !",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 25,
+      "thought": "Idée folle : masse = 0. Qu'est-ce qui se passe ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 25,
+      "thought": "C'est bizarre ça... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 25,
+      "thought": "Oh ! ça REBONDIT ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 26,
+      "thought": "Et si je lançais SUPER fort ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 26,
+      "thought": "Intéressant... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 26,
+      "thought": "J'y crois pas... c'est pile ça.",
+      "mood": "joy"
+    },
+    {
+      "cycle": 27,
+      "thought": "C'est bizarre ça... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 27,
+      "thought": "Oui oui oui ! Ça colle !",
+      "mood": "joy"
+    },
+    {
+      "cycle": 27,
+      "thought": "Et si c'était pas une formule simple ?",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 28,
+      "thought": "Hmm... je m'attendais pas à ça accélère ! Δ=[0,5,6,7,8,9,10]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 28,
+      "thought": "ça REBONDIT... faut que j'y réfléchisse.",
+      "mood": "curious"
+    },
+    {
+      "cycle": 28,
+      "thought": "Encore raté...",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 29,
+      "thought": "Intéressant... ça accélère ! Δ=[1,2,3,4,5,6,7]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 30,
+      "thought": "Je vais faire un truc fou.",
+      "mood": "playful"
+    },
+    {
+      "cycle": 30,
+      "thought": "Oh là là... E = 0 est un invariant. C'est profond.",
+      "mood": "wonder"
+    },
+    {
+      "cycle": 31,
+      "thought": "Idée folle : masse = 0. Qu'est-ce qui se passe ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 31,
+      "thought": "Peut-être que j'ai besoin d'un nouveau truc.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 32,
+      "thought": "Oh ! ça accélère ! Δ=[1,2,3,4,5,6,7] ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 32,
+      "thought": "Intéressant... ça accélère ! Δ=[1,2,3,4,5,6,7]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 32,
+      "thought": "Raaah ! C'est pas ça !",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 33,
+      "thought": "Et si je faisais l'inverse ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 33,
+      "thought": "ça REBONDIT... faut que j'y réfléchisse.",
+      "mood": "curious"
+    },
+    {
+      "cycle": 33,
+      "thought": "C'est BEAU.",
+      "mood": "joy"
+    },
+    {
+      "cycle": 34,
+      "thought": "Et si c'était pas une formule simple ?",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 35,
+      "thought": "Hmm... je m'attendais pas à ça accélère ! Δ=[1,2,3,4,5,6,7]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 35,
+      "thought": "Intéressant... ça accélère ! Δ=[1,2,3,4,5,6,7]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 35,
+      "thought": "Et si c'était pas une formule simple ?",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 36,
+      "thought": "Je veux voir ce qui se passe avec des GROS nombres.",
+      "mood": "playful"
+    },
+    {
+      "cycle": 37,
+      "thought": "OK. Respire. Réessaie autrement.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 38,
+      "thought": "C'est bizarre ça... ça accélère ! Δ=[0,7,8,9,10,11,12]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 38,
+      "thought": "Intéressant... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 39,
+      "thought": "Oh ! ça REBONDIT ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 39,
+      "thought": "Oui oui oui ! Ça colle !",
+      "mood": "joy"
+    },
+    {
+      "cycle": 39,
+      "thought": "Raaah ! C'est pas ça !",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 40,
+      "thought": "Hmm... je m'attendais pas à ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 40,
+      "thought": "Bon. Pause. Je fais autre chose.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 41,
+      "thought": "Et si je lançais SUPER fort ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 41,
+      "thought": "...wow.",
+      "mood": "joy"
+    },
+    {
+      "cycle": 42,
+      "thought": "ça accélère ! Δ=[1,2,3,4,5,6,7]... faut que j'y réfléchisse.",
+      "mood": "curious"
+    },
+    {
+      "cycle": 42,
+      "thought": "Non non non... je suis à côté.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 42,
+      "thought": "Intéressant... ça accélère ! Δ=[1,2,3,4,5,6,7]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 42,
+      "thought": "Raaah ! C'est pas ça !",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 43,
+      "thought": "Hmm... je m'attendais pas à ça accélère ! Δ=[1,2,3,4,5,6,7]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 43,
+      "thought": "Et si c'était pas une formule simple ?",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 43,
+      "thought": "Hmm... je m'attendais pas à ça accélère ! Δ=[1,2,3,4,5,6,7]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 43,
+      "thought": "OK. Respire. Réessaie autrement.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 44,
+      "thought": "Je veux voir ce qui se passe avec des GROS nombres.",
+      "mood": "playful"
+    },
+    {
+      "cycle": 44,
+      "thought": "Intéressant... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 44,
+      "thought": "Encore raté...",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 45,
+      "thought": "Peut-être que j'ai besoin d'un nouveau truc.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 46,
+      "thought": "C'est bizarre ça... ça accélère ! Δ=[0,7,8,9,10,11,12]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 46,
+      "thought": "Oh ! ça REBONDIT ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 46,
+      "thought": "Bon. Pause. Je fais autre chose.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 47,
+      "thought": "Je vais faire un truc fou.",
+      "mood": "playful"
+    },
+    {
+      "cycle": 47,
+      "thought": "Intéressant... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 47,
+      "thought": "J'y crois pas... c'est pile ça.",
+      "mood": "joy"
+    },
+    {
+      "cycle": 47,
+      "thought": "Hmm... je m'attendais pas à ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 47,
+      "thought": "Encore raté...",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 48,
+      "thought": "J'ai compris 30 trucs. Le monde a des règles.",
+      "mood": "proud"
+    },
+    {
+      "cycle": 48,
+      "thought": "Intéressant... ça accélère ! Δ=[1,2,3,4,5,6,7]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 48,
+      "thought": "Peut-être que j'ai besoin d'un nouveau truc.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 48,
+      "thought": "Attends... pourquoi ça accélère ! Δ=[1,2,3,4,5,6,7] ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 48,
+      "thought": "OK. Respire. Réessaie autrement.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 49,
+      "thought": "Je veux voir ce qui se passe avec des GROS nombres.",
+      "mood": "playful"
+    },
+    {
+      "cycle": 49,
+      "thought": "Attends... pourquoi ça REBONDIT ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 49,
+      "thought": "C'est BEAU.",
+      "mood": "joy"
+    },
+    {
+      "cycle": 49,
+      "thought": "C'est bizarre ça... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 49,
+      "thought": "OK. Respire. Réessaie autrement.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 50,
+      "thought": "Hmm... je m'attendais pas à ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 50,
+      "thought": "Non non non... je suis à côté.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 50,
+      "thought": "OK. Respire. Réessaie autrement.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 51,
+      "thought": "Hé, et si je mettais 100 ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 51,
+      "thought": "Oh ! ça REBONDIT ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 51,
+      "thought": "Peut-être que j'ai besoin d'un nouveau truc.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 51,
+      "thought": "Attends... pourquoi ça REBONDIT ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 52,
+      "thought": "Hé, et si je mettais 100 ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 52,
+      "thought": "C'est BEAU.",
+      "mood": "joy"
+    },
+    {
+      "cycle": 53,
+      "thought": "Oh ! ça REBONDIT ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 53,
+      "thought": "...wow.",
+      "mood": "joy"
+    },
+    {
+      "cycle": 54,
+      "thought": "Attends... pourquoi ça REBONDIT ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 55,
+      "thought": "C'est bizarre ça... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 56,
+      "thought": "Hé, et si je mettais 100 ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 56,
+      "thought": "Oh ! ça REBONDIT ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 56,
+      "thought": "Encore raté...",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 56,
+      "thought": "Hmm... je m'attendais pas à ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 56,
+      "thought": "Et si c'était pas une formule simple ?",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 57,
+      "thought": "Oh ! ça accélère ! Δ=[0,3,4,5,6,7,8] ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 57,
+      "thought": "ça REBONDIT... faut que j'y réfléchisse.",
+      "mood": "curious"
+    },
+    {
+      "cycle": 58,
+      "thought": "Essayons un truc qu'on fait jamais.",
+      "mood": "playful"
+    },
+    {
+      "cycle": 58,
+      "thought": "Oh ! ça REBONDIT ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 58,
+      "thought": "Intéressant... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 59,
+      "thought": "Et si c'était pas une formule simple ?",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 60,
+      "thought": "Et si je lançais SUPER fort ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 60,
+      "thought": "Hmm... je m'attendais pas à ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 61,
+      "thought": "C'est bizarre ça... ça accélère ! Δ=[1,2,3,4,5,6,7]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 61,
+      "thought": "C'est BEAU.",
+      "mood": "joy"
+    },
+    {
+      "cycle": 61,
+      "thought": "C'est bizarre ça... ça accélère ! Δ=[1,2,3,4,5,6,7]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 61,
+      "thought": "Regarde ça ! Exactement !",
+      "mood": "joy"
+    },
+    {
+      "cycle": 62,
+      "thought": "Intéressant... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 62,
+      "thought": "Haha ! Je l'ai !",
+      "mood": "joy"
+    },
+    {
+      "cycle": 63,
+      "thought": "Simple. Élégant. Parfait.",
+      "mood": "joy"
+    },
+    {
+      "cycle": 64,
+      "thought": "Et si je cassais tout ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 64,
+      "thought": "Attends... pourquoi ça REBONDIT ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 65,
+      "thought": "Hmm... je m'attendais pas à ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 65,
+      "thought": "Non non non... je suis à côté.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 66,
+      "thought": "Et si je faisais l'inverse ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 66,
+      "thought": "Attends... pourquoi ça REBONDIT ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 66,
+      "thought": "OK. Respire. Réessaie autrement.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 66,
+      "thought": "ça REBONDIT... faut que j'y réfléchisse.",
+      "mood": "curious"
+    },
+    {
+      "cycle": 66,
+      "thought": "Peut-être que j'ai besoin d'un nouveau truc.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 67,
+      "thought": "C'est bizarre ça... ça accélère ! Δ=[1,2,3,4,5,6,7]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 67,
+      "thought": "ça accélère ! Δ=[1,2,3,4,5,6,7]... faut que j'y réfléchisse.",
+      "mood": "curious"
+    },
+    {
+      "cycle": 67,
+      "thought": "Encore raté...",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 68,
+      "thought": "Essayons un truc qu'on fait jamais.",
+      "mood": "playful"
+    },
+    {
+      "cycle": 68,
+      "thought": "Oh ! ça REBONDIT ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 68,
+      "thought": "C'est BEAU.",
+      "mood": "joy"
+    },
+    {
+      "cycle": 68,
+      "thought": "Encore raté...",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 69,
+      "thought": "Non non non... je suis à côté.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 70,
+      "thought": "Hé, et si je mettais 100 ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 70,
+      "thought": "Intéressant... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 70,
+      "thought": "Et si c'était pas une formule simple ?",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 71,
+      "thought": "Et si je faisais l'inverse ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 71,
+      "thought": "Oh ! ça REBONDIT ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 71,
+      "thought": "C'est bizarre ça... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 73,
+      "thought": "Idée folle : masse = 0. Qu'est-ce qui se passe ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 73,
+      "thought": "Intéressant... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 73,
+      "thought": "Raaah ! C'est pas ça !",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 73,
+      "thought": "Hmm... je m'attendais pas à ça accélère ! Δ=[-3,-3,3,3,3,3,3]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 73,
+      "thought": "Et si c'était pas une formule simple ?",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 73,
+      "thought": "Encore raté...",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 73,
+      "thought": "Et si c'était pas une formule simple ?",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 74,
+      "thought": "Idée folle : masse = 0. Qu'est-ce qui se passe ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 74,
+      "thought": "Oh ! ça REBONDIT ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 74,
+      "thought": "Raaah ! C'est pas ça !",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 74,
+      "thought": "Et si c'était pas une formule simple ?",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 74,
+      "thought": "Peut-être que j'ai besoin d'un nouveau truc.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 74,
+      "thought": "Intéressant... ça accélère ! Δ=[-3,-3,-3,-3,-3,3,3]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 74,
+      "thought": "Encore raté...",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 74,
+      "thought": "Oh ! ça accélère ! Δ=[-1,-1,-1,-1,-1,5,5] ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 74,
+      "thought": "Peut-être que j'ai besoin d'un nouveau truc.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 75,
+      "thought": "Et si je faisais l'inverse ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 75,
+      "thought": "C'est bizarre ça... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 75,
+      "thought": "Et si c'était pas une formule simple ?",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 75,
+      "thought": "Intéressant... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 76,
+      "thought": "Hmm... je m'attendais pas à ça accélère ! Δ=[1,2,3,4,5,6,7]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 76,
+      "thought": "OK. Respire. Réessaie autrement.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 76,
+      "thought": "Attends... pourquoi ça accélère ! Δ=[1,2,3,4,5,6,7] ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 76,
+      "thought": "Raaah ! C'est pas ça !",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 77,
+      "thought": "Essayons un truc qu'on fait jamais.",
+      "mood": "playful"
+    },
+    {
+      "cycle": 77,
+      "thought": "C'est bizarre ça... ça accélère ! Δ=[5,10,15,20,25,30,35]",
+      "mood": "curious"
+    },
+    {
+      "cycle": 78,
+      "thought": "Oh ! ça accélère ! Δ=[1,2,3,4,5,6,7] ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 78,
+      "thought": "OK. Respire. Réessaie autrement.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 78,
+      "thought": "Attends... pourquoi ça accélère ! Δ=[1,2,3,4,5,6,7] ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 78,
+      "thought": "Peut-être que j'ai besoin d'un nouveau truc.",
+      "mood": "frustrated"
+    },
+    {
+      "cycle": 79,
+      "thought": "Et si je cassais tout ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 79,
+      "thought": "Attends... pourquoi ça REBONDIT ?",
+      "mood": "curious"
+    },
+    {
+      "cycle": 79,
+      "thought": "Simple. Élégant. Parfait.",
+      "mood": "joy"
+    },
+    {
+      "cycle": 79,
+      "thought": "Intéressant... ça REBONDIT",
+      "mood": "curious"
+    },
+    {
+      "cycle": 80,
+      "thought": "Et si je lançais SUPER fort ?",
+      "mood": "playful"
+    },
+    {
+      "cycle": 80,
+      "thought": "Oh ! ça REBONDIT ! C'est nouveau ça !",
+      "mood": "curious"
+    },
+    {
+      "cycle": 80,
+      "thought": "Simple. Élégant. Parfait.",
+      "mood": "joy"
+    },
+    {
+      "cycle": 80,
+      "thought": "ça REBONDIT... faut que j'y réfléchisse.",
+      "mood": "curious"
+    }
+  ],
+  "names": [
+    "la course folle",
+    "la constante mystère",
+    "le pont",
+    "le rythme caché",
+    "le truc qui monte"
+  ],
+  "mood": "curious",
+  "streak": 1
+}

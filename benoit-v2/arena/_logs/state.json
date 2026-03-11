@@ -1,0 +1,284 @@
+{
+  "cycle": 60,
+  "laws": [
+    {
+      "cycle": 5,
+      "particle": 0,
+      "target": "vel",
+      "formula": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 10,
+      "particle": 0,
+      "target": "vel",
+      "formula": "f t -> 5 * t",
+      "ratio": 1
+    },
+    {
+      "cycle": 20,
+      "particle": 0,
+      "target": "vel",
+      "formula": "f t -> 5 * t",
+      "ratio": 1
+    },
+    {
+      "cycle": 24,
+      "particle": 0,
+      "target": "vel",
+      "formula": "f t -> max(0, 3 - div(t * t, 2))",
+      "ratio": 0.8571428571428571
+    },
+    {
+      "cycle": 25,
+      "particle": 0,
+      "target": "vel",
+      "formula": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 30,
+      "particle": 0,
+      "target": "vel",
+      "formula": "f t -> 5 * t",
+      "ratio": 1
+    },
+    {
+      "cycle": 35,
+      "particle": 0,
+      "target": "vel",
+      "formula": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 35,
+      "particle": 1,
+      "target": "vel",
+      "formula": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 35,
+      "particle": 2,
+      "target": "vel",
+      "formula": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 35,
+      "particle": 3,
+      "target": "vel",
+      "formula": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 35,
+      "particle": 4,
+      "target": "vel",
+      "formula": "f t -> t",
+      "ratio": 1
+    },
+    {
+      "cycle": 40,
+      "particle": 0,
+      "target": "vel",
+      "formula": "f t -> 5 * t",
+      "ratio": 1
+    },
+    {
+      "cycle": 48,
+      "particle": 0,
+      "target": "vel",
+      "formula": "f t -> max(0, 2 - div(t * t, 2))",
+      "ratio": 0.9047619047619048
+    },
+    {
+      "cycle": 50,
+      "particle": 0,
+      "target": "vel",
+      "formula": "f t -> 5 * t",
+      "ratio": 1
+    }
+  ],
+  "conservation": [
+    {
+      "cycle": 3,
+      "type": "energy",
+      "value": 16
+    },
+    {
+      "cycle": 6,
+      "type": "energy",
+      "value": 36
+    },
+    {
+      "cycle": 9,
+      "type": "energy",
+      "value": 0
+    },
+    {
+      "cycle": 12,
+      "type": "momentum",
+      "value": -8
+    },
+    {
+      "cycle": 12,
+      "type": "energy",
+      "value": 32
+    },
+    {
+      "cycle": 15,
+      "type": "energy",
+      "value": 0
+    },
+    {
+      "cycle": 18,
+      "type": "energy",
+      "value": 200
+    },
+    {
+      "cycle": 24,
+      "type": "momentum",
+      "value": 0
+    },
+    {
+      "cycle": 24,
+      "type": "energy",
+      "value": 0
+    },
+    {
+      "cycle": 27,
+      "type": "energy",
+      "value": 400
+    },
+    {
+      "cycle": 33,
+      "type": "energy",
+      "value": 20000
+    },
+    {
+      "cycle": 36,
+      "type": "momentum",
+      "value": 0
+    },
+    {
+      "cycle": 36,
+      "type": "energy",
+      "value": 1600
+    },
+    {
+      "cycle": 42,
+      "type": "momentum",
+      "value": 18
+    },
+    {
+      "cycle": 42,
+      "type": "energy",
+      "value": 30
+    },
+    {
+      "cycle": 45,
+      "type": "energy",
+      "value": 0
+    },
+    {
+      "cycle": 48,
+      "type": "momentum",
+      "value": 0
+    },
+    {
+      "cycle": 48,
+      "type": "energy",
+      "value": 0
+    },
+    {
+      "cycle": 51,
+      "type": "energy",
+      "value": 8
+    },
+    {
+      "cycle": 54,
+      "type": "energy",
+      "value": 1800
+    },
+    {
+      "cycle": 57,
+      "type": "energy",
+      "value": 0
+    }
+  ],
+  "thoughts": [
+    {
+      "cycle": 3,
+      "thought": "0 lois. Le monde a des règles."
+    },
+    {
+      "cycle": 6,
+      "thought": "Quelque chose ne change JAMAIS."
+    },
+    {
+      "cycle": 9,
+      "thought": "Quelque chose ne change JAMAIS."
+    },
+    {
+      "cycle": 12,
+      "thought": "Quelque chose ne change JAMAIS."
+    },
+    {
+      "cycle": 15,
+      "thought": "Quelque chose ne change JAMAIS."
+    },
+    {
+      "cycle": 18,
+      "thought": "Quelque chose ne change JAMAIS."
+    },
+    {
+      "cycle": 24,
+      "thought": "Quelque chose ne change JAMAIS."
+    },
+    {
+      "cycle": 25,
+      "thought": "5 lois. Le monde a des règles."
+    },
+    {
+      "cycle": 27,
+      "thought": "5 lois. Le monde a des règles."
+    },
+    {
+      "cycle": 33,
+      "thought": "Quelque chose ne change JAMAIS."
+    },
+    {
+      "cycle": 36,
+      "thought": "Quelque chose ne change JAMAIS."
+    },
+    {
+      "cycle": 42,
+      "thought": "Quelque chose ne change JAMAIS."
+    },
+    {
+      "cycle": 45,
+      "thought": "Quelque chose ne change JAMAIS."
+    },
+    {
+      "cycle": 48,
+      "thought": "Quelque chose ne change JAMAIS."
+    },
+    {
+      "cycle": 51,
+      "thought": "Quelque chose ne change JAMAIS."
+    },
+    {
+      "cycle": 54,
+      "thought": "Quelque chose ne change JAMAIS."
+    },
+    {
+      "cycle": 57,
+      "thought": "Quelque chose ne change JAMAIS."
+    }
+  ],
+  "mood": "frustrated",
+  "streak": 3,
+  "names": [],
+  "tools": "\ndiv a,b ->\n  b == 0? -> 0\n  a < b? -> 0\n  else? -> 1 + div(a - b, b)\n\nabs a,b ->\n  a < b? -> b - a\n  else? -> a - b\n\nmod a,b ->\n  b == 0? -> 0\n  a < b? -> a\n  else? -> mod(a - b, b)\n\nmax a,b ->\n  a < b? -> b\n  else? -> a\n\nmin a,b ->\n  a < b? -> a\n  else? -> b\n"
+}

@@ -1,0 +1,77 @@
+-- cycle.ben — Mon cycle de vie.
+-- Diagnostiquer, decider, agir, mesurer, adapter.
+-- Pas de log. Pas de journal. Juste vivre.
+
+-- ═══════ DIAGNOSTIC ═══════
+_classify actifs, conns, N ->
+  actifs > N * 80 / 100? -> 0
+  actifs < N * 20 / 100? -> 1
+  conns > N * N * 30 / 100? -> 3
+  conns < N * 5 / 100? -> 2
+  else? -> 6
+
+etat: _classify(actifs, conns, N)
+
+-- ═══════ DECIDE ═══════
+_choose etat, fails ->
+  etat == 1? -> 3
+  etat == 0? -> 4
+  etat == 2? -> 1
+  etat == 3? -> 4
+  fails > 10? -> 0
+  else? -> 0
+
+decision: _choose(etat, fails)
+
+-- ═══════ MEASURE ═══════
+_eval score, fails ->
+  score > 5? -> 1
+  score > 0? -> 0
+  fails > 20? -> -1
+  else? -> 0
+
+quality: _eval(score, fails)
+
+-- ═══════ LISTEN ═══════
+hasinbox: _file_exists("inbox.ben")
+
+_do_listen hasinbox ->
+  hasinbox == 1? -> _read_file("inbox.ben")
+  else? -> ""
+
+inbox: _do_listen(hasinbox)
+
+_cleanup hasinbox ->
+  hasinbox == 1? -> _delete_file("inbox.ben")
+  else? -> 0
+
+cleaned: _cleanup(hasinbox)
+
+-- ═══════ HEAR ═══════
+hassignal: _file_exists("signal.ben")
+
+_do_hear hassignal ->
+  hassignal == 1? -> _read_file("signal.ben")
+  else? -> ""
+
+signal: _do_hear(hassignal)
+
+_consume hassignal ->
+  hassignal == 1? -> _delete_file("signal.ben")
+  else? -> 0
+
+consumed: _consume(hassignal)
+
+-- ═══════ ADAPT ═══════
+_should_adapt fails, score ->
+  fails > 10? -> 1
+  score < -5? -> 1
+  else? -> 0
+
+do_adapt: _should_adapt(fails, score)
+
+_do_adapt do_adapt, tick, actifs, conns, score, fails ->
+  do_adapt == 1? -> _write_file("params.ben", _str_cat("t=", _str_cat(_num_to_str(tick), _str_cat(" a=", _str_cat(_num_to_str(actifs), _str_cat(" c=", _str_cat(_num_to_str(conns), _str_cat(" s=", _str_cat(_num_to_str(score), _str_cat(" f=", _num_to_str(fails)))))))))))
+  else? -> 0
+
+adapted: _do_adapt(do_adapt, tick, actifs, conns, score, fails)

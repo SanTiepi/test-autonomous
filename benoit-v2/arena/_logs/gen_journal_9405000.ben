@@ -1,0 +1,18 @@
+-- journal (auto-généré tick 9405000)
+-- État: sain, 24/30 actifs, 82 conns, score 2, fails 4
+
+moment_tick: 9405000
+moment_etat: "sain"
+moment_actifs: 24
+moment_N: 30
+moment_conns: 82
+moment_score: 2
+moment_fails: 4
+moment_decision: "créer_connexions"
+
+_sante a, n ->
+  a * 100 / n > 70? -> "fort"
+  a * 100 / n > 40? -> "stable"
+  else? -> "fragile"
+
+sante: _sante(moment_actifs, moment_N)

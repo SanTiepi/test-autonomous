@@ -1,0 +1,902 @@
+[
+  {
+    "tick": 18180600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18180800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "léger positif",
+      "score": 4,
+      "verdict": "oui — patience"
+    }
+  },
+  {
+    "tick": 18181000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18181200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18181400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18181600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18181800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18182000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18182200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18182400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18182600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "léger positif",
+      "score": 4,
+      "verdict": "oui — patience"
+    }
+  },
+  {
+    "tick": 18182800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18183000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18183200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "léger négatif",
+      "score": 0,
+      "verdict": "peut-être — observer"
+    }
+  },
+  {
+    "tick": 18183400,
+    "decision": "grandir",
+    "measure": {
+      "quality": "vivifiant",
+      "score": 4,
+      "verdict": "oui — continuer"
+    }
+  },
+  {
+    "tick": 18183600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18183800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18184000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18184200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18184400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18184600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18184800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18185000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18185200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "léger positif",
+      "score": 4,
+      "verdict": "oui — patience"
+    }
+  },
+  {
+    "tick": 18185400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18185600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18185800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18186000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18186200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18186400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18186600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18186800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18187000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "léger positif",
+      "score": 4,
+      "verdict": "oui — patience"
+    }
+  },
+  {
+    "tick": 18187200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18187400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18187600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "léger négatif",
+      "score": 1,
+      "verdict": "peut-être — observer"
+    }
+  },
+  {
+    "tick": 18187800,
+    "decision": "grandir",
+    "measure": {
+      "quality": "léger positif",
+      "score": 4,
+      "verdict": "oui — patience"
+    }
+  },
+  {
+    "tick": 18188000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18188200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18188400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18188600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18188800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18189000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18189200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18189400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18189600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "léger positif",
+      "score": 4,
+      "verdict": "oui — patience"
+    }
+  },
+  {
+    "tick": 18189800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18190000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18190200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18190400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18190600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18190800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18191000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18191200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18191400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18191600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18191800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18192000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "léger négatif",
+      "score": 1,
+      "verdict": "peut-être — observer"
+    }
+  },
+  {
+    "tick": 18192200,
+    "decision": "grandir",
+    "measure": {
+      "quality": "léger positif",
+      "score": 4,
+      "verdict": "oui — patience"
+    }
+  },
+  {
+    "tick": 18192400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18192600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18192800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18193000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18193200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18193400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18193600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18193800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18194000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "léger positif",
+      "score": 4,
+      "verdict": "oui — patience"
+    }
+  },
+  {
+    "tick": 18194200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18194400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18194600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "léger négatif",
+      "score": 1,
+      "verdict": "peut-être — observer"
+    }
+  },
+  {
+    "tick": 18194800,
+    "decision": "grandir",
+    "measure": {
+      "quality": "léger positif",
+      "score": 4,
+      "verdict": "oui — patience"
+    }
+  },
+  {
+    "tick": 18195000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18195200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18195400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18195600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18195800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18196000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18196200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18196400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "léger négatif",
+      "score": 1,
+      "verdict": "peut-être — observer"
+    }
+  },
+  {
+    "tick": 18196600,
+    "decision": "grandir",
+    "measure": {
+      "quality": "léger positif",
+      "score": 4,
+      "verdict": "oui — patience"
+    }
+  },
+  {
+    "tick": 18196800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18197000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18197200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18197400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18197600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18197800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18198000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18198200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18198400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18198600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18198800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18199000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "léger négatif",
+      "score": 1,
+      "verdict": "peut-être — observer"
+    }
+  },
+  {
+    "tick": 18199200,
+    "decision": "grandir",
+    "measure": {
+      "quality": "léger positif",
+      "score": 4,
+      "verdict": "oui — patience"
+    }
+  },
+  {
+    "tick": 18199400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18199600,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18199800,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  },
+  {
+    "tick": 18200000,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "structurel",
+      "score": 5,
+      "verdict": "oui — consolider"
+    }
+  },
+  {
+    "tick": 18200200,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 3,
+      "verdict": "peut-être — explorer autre chose"
+    }
+  },
+  {
+    "tick": 18200400,
+    "decision": "augmenter_inhibition",
+    "measure": {
+      "quality": "neutre",
+      "score": 2,
+      "verdict": "non — changer"
+    }
+  }
+]

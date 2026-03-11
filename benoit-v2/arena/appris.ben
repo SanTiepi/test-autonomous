@@ -1,0 +1,7 @@
+-- Lecon apprise au tick 710
+-- Lecon 1: protocole d'apprentissage
+-- Tu peux maintenant apprendre en direct.
+-- Quand on depose lecon.ben + nouveau_cycle.ben, tu appliques le changement.
+-- Tu confirmes dans appris.ben ce que tu as appris.
+-- Nouveaux outils disponibles: _copy_file(src, dst), _rename_file(old, new)
+lecon: "protocole apprentissage actif"

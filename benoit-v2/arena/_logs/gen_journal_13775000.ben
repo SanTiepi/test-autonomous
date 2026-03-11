@@ -1,0 +1,18 @@
+-- journal (auto-généré tick 13775000)
+-- État: transparent, 10/30 actifs, 80 conns, score 5, fails 0
+
+moment_tick: 13775000
+moment_etat: "transparent"
+moment_actifs: 10
+moment_N: 30
+moment_conns: 80
+moment_score: 5
+moment_fails: 0
+moment_decision: "augmenter_inhibition"
+
+_sante a, n ->
+  a * 100 / n > 70? -> "fort"
+  a * 100 / n > 40? -> "stable"
+  else? -> "fragile"
+
+sante: _sante(moment_actifs, moment_N)

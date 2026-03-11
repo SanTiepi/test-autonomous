@@ -1,0 +1,18 @@
+-- journal (auto-généré tick 9649200)
+-- État: saturé, 30/30 actifs, 148 conns, score 10, fails 0
+
+moment_tick: 9649200
+moment_etat: "saturé"
+moment_actifs: 30
+moment_N: 30
+moment_conns: 148
+moment_score: 10
+moment_fails: 0
+moment_decision: "augmenter_seuils"
+
+_sante a, n ->
+  a * 100 / n > 70? -> "fort"
+  a * 100 / n > 40? -> "stable"
+  else? -> "fragile"
+
+sante: _sante(moment_actifs, moment_N)

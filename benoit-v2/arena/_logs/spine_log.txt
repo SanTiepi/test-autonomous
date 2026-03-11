@@ -1,0 +1,3 @@
+[23:00:56] tick 1000 a=20 c=356 abs=0.6% solved=1 found=1
+[23:05:49] tick 1000 a=22 c=373 abs=1.1% solved=4 found=3
+[23:09:30] tick 1000 a=16 c=211 abs=4.9% solved=3 found=3

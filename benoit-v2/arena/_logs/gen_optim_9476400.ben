@@ -1,0 +1,14 @@
+-- optimize (auto-généré tick 9476400)
+-- État: saturé, 45/45 actifs, 485 conns, score 7, fails 0
+
+actifs: 23
+N: 30
+conns: 83
+
+_should_prune a, n, c ->
+  a * 100 / n > 85? -> "urgent"
+  c > n * 9? -> "recommandé"
+  a * 100 / n > 75? -> "léger"
+  else? -> "non"
+
+action: _should_prune(actifs, N, conns)

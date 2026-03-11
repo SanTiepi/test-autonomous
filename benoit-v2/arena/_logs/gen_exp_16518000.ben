@@ -1,0 +1,18 @@
+-- experiment (auto-généré tick 16518000)
+-- État: transparent, 9/30 actifs, 70 conns, score 1, fails 1
+
+score_before: 0
+score_after: 0
+seuil_change: -1
+
+_helped b, a ->
+  a > b? -> "oui"
+  a == b? -> "neutre"
+  else? -> "non"
+
+_should_change s, m ->
+  s < 3? -> "changer"
+  else? -> "garder"
+
+verdict: _helped(score_before, score_after)
+action: _should_change(score_before, 1)

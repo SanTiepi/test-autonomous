@@ -1,0 +1,33 @@
+{
+  "cycle": 80,
+  "laws": 50,
+  "perfect": 48,
+  "conservation": 5,
+  "requests": [
+    "Le lancer a un rebond au sol qui casse le pattern. Je devrais peut-être modéliser AVANT et APRÈS le rebond séparément.",
+    "J'ai trouvé que la quantité de mouvement se conserve dans les collisions. Je voudrais tester avec des masses DIFFÉRENTES pour voir si p = m1*v1 + m2*v2 = constant.",
+    "L'énergie se conserve quand rien ne bouge. Je voudrais tester si E = pos*mass + vel²*mass/2 se conserve aussi en mouvement.",
+    "J'ai assez de lois simples (linéaire, constante, vel=t). Je voudrais essayer des systèmes PLUS COMPLEXES : 3 particules, des forces variables, des oscillations."
+  ],
+  "feedback": [
+    "maîtrise: 7 * t, t, 5 * t, 50 + div(t * (t + 1), 2), 5, 3 * t, 6 * t, max(0, 0 - div(t * t, 2)), 1 * t, 8 * t, 7, 80 + div(t * (t + 1), 2), 10",
+    "insight: pos = intégrale de vel",
+    "insight: conservation = fondamental"
+  ],
+  "masterFormulas": [
+    "7 * t",
+    "t",
+    "5 * t",
+    "50 + div(t * (t + 1), 2)",
+    "5",
+    "3 * t",
+    "6 * t",
+    "max(0, 0 - div(t * t, 2))",
+    "1 * t",
+    "8 * t",
+    "7",
+    "80 + div(t * (t + 1), 2)",
+    "10"
+  ],
+  "timestamp": "2026-03-10T21:49:17.160Z"
+}

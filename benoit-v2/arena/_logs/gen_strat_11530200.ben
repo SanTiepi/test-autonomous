@@ -1,0 +1,17 @@
+-- new_strategy (auto-généré tick 11530200)
+-- État: déconnecté, 10/30 actifs, 35 conns, score 2, fails 2
+
+etat: "sain"
+score: 5
+fails: 0
+mods: 0
+
+_adaptive e, s, f, m ->
+  e == "mourant"? -> "grandir"
+  e == "saturé"? -> "élaguer"
+  m > 8? -> "explorer"
+  s < 2? -> "créer_connexions"
+  s > 7? -> "explorer"
+  else? -> "consolider"
+
+decision: _adaptive(etat, score, fails, mods)

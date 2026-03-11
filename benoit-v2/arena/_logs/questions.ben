@@ -1,0 +1,48 @@
+-- Questions de Benoît
+-- Auto-questionnement : essayer, échouer, comprendre, demander
+
+ask min
+-- Score: 5/6
+-- Besoin: (a + b - abs(a - b)) / 2
+-- Tentative: f a,b -> | a < 2? -> a | else? -> b + f(0 * 0, 1 * b) * 0 - b + b
+
+ask max
+-- Score: 4/6
+-- Besoin: (a + b + abs(a - b)) / 2 — besoin de abs et division
+-- Tentative: f a,b -> | b - a * 2 * 0 * b + 0 * b * a
+
+ask distance_carrée
+-- Score: 4/6
+-- Besoin: a * a + b * b — CAN DO with current ops!
+-- Tentative: f a,b -> | a == 0? -> b | else? -> a * a + f(f(0, 0), b)
+
+ask pgcd
+-- Score: 4/6
+-- Besoin: Euclide: pgcd(a,b) = pgcd(b, a % b) — besoin de modulo
+-- Tentative: f a,b -> | b + b - a
+
+ask abs
+-- Score: 4/6
+-- Besoin: sqrt((a-b)*(a-b)) ou conditionnels — besoin de sqrt ou comparaison
+-- Tentative: f a,b -> | 0 + b - a
+
+ask fibonacci_2D
+-- Score: 4/6
+-- Besoin: recursion paramétrique — peut-on l'exprimer ?
+-- Tentative: f a,b -> | a < 2? -> a | else? -> 2 + f(f(0, b), a + b) + a
+
+ask division_entière
+-- Score: 3/6
+-- Besoin: a / b — résultat entier quand a est multiple de b
+-- Tentative: f a,b -> | 2 + b * 0 * b + 1
+
+ask modulo
+-- Score: 3/6
+-- Besoin: a - b * (a / b) — besoin de division d'abord
+-- Tentative: f a,b -> | 1
+
+ask puissance
+-- Score: 2/6
+-- Besoin: recursion: a^n = a * a^(n-1) — needs recursion on second arg
+-- Tentative: f a,b -> | a * a
+

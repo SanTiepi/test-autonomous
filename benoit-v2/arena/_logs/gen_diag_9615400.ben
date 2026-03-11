@@ -1,0 +1,23 @@
+-- diagnostic_patch (auto-généré tick 9615400)
+-- État: saturé, 30/30 actifs, 203 conns, score 2, fails 4
+
+tick: 0
+actifs: 23
+N: 30
+conns: 83
+absorbed: 75
+
+ratio_actifs: actifs * 100 / N
+ratio_conns: conns * 100 / (N * N)
+
+-- Seuils ajustés (moins agressifs après 4 échecs)
+_diagnostic ra, rc, ab ->
+  ra > 80? -> "saturé"
+  ra < 20? -> "mourant"
+  rc < 8? -> "déconnecté"
+  rc > 25? -> "encombré"
+  ab > 250? -> "étouffé"
+  ab < 15? -> "transparent"
+  else? -> "sain"
+
+etat: _diagnostic(ratio_actifs, ratio_conns, absorbed)

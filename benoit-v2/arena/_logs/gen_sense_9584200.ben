@@ -1,0 +1,21 @@
+-- new_sense (auto-généré tick 9584200)
+-- État: mourant, 0/46 actifs, 0 conns, score 7, fails 0
+
+tick: 0
+actifs: 23
+N: 30
+conns: 83
+score: 5
+prev_score: 5
+
+_velocite s, ps ->
+  s > ps? -> "progresse"
+  s == ps? -> "stagne"
+  else? -> "régresse"
+
+_densite a, c ->
+  c == 0? -> 0
+  else? -> a * 100 / c
+
+velocite: _velocite(score, prev_score)
+densite: _densite(actifs, conns)
