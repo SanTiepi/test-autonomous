@@ -48,7 +48,12 @@ codex exec --full-auto "Projet: [CONTEXTE]. BRAINSTORM: [IDÉE]. Inspecte le cod
 codex exec --full-auto "Projet: [CONTEXTE]. BRAINSTORM PROFOND: [IDÉE]. Inspecte le code en profondeur pour comprendre ce qui existe, ce qui manque, et les opportunités cachées. Challenge chaque hypothèse. Réponds en français, sois brutal ET visionnaire. FORCES. FAIBLESSES. RISQUES (court + long terme). ANGLES INEXPLORÉS: pistes auxquelles personne n'a pensé — sois créatif. MEILLEURE VERSION DE L'IDÉE: reformule en mieux. VERDICT: go/pivot/kill. EFFORT. IMPACT. DÉPENDANCES."
 ```
 
-Si Codex ne répond pas en 60s, fais le brainstorm seul avec "(Codex indisponible)".
+**Timeout et fallback :**
+- **Quick** : ne lance PAS Codex. Tu réponds seul — c'est plus rapide et Codex n'ajoute rien sur du trivial.
+- **Standard** : timeout Codex 45s. S'il ne répond pas, tranche seul et présente. Si Codex arrive en retard, ajoute un "Addendum Codex" en dessous.
+- **Deep** : Codex obligatoire, même si lent. Attends jusqu'à 90s. Sans Codex, le Deep perd sa valeur.
+
+**Cache contexte :** Si `.claude/codex_context.md` existe, passe son contenu en prefix au lieu de re-décrire le projet à chaque appel. Crée ce fichier après le premier brainstorm du projet avec un résumé de 5 lignes (nom, stack, état, contraintes, objectif).
 
 ## Étape 3 — Ton avis
 
