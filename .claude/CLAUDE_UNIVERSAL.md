@@ -1,73 +1,70 @@
 # CLAUDE.md — Template universel
 
-> Copier dans le CLAUDE.md de chaque projet. Adapter la section "Projet".
+> Adapter la section "Projet" par repo.
 
 ## Projet
 - Nom : [nom]
 - Stack : [stack]
 - État : [actif / maintenance / frozen]
-- Objectif courant : [1 ligne]
+- Objectif : [1 ligne]
 
 ## Sources de vérité
-1. Instruction de l'utilisateur (toujours prioritaire)
+1. Instruction de l'utilisateur
 2. Ce fichier
 3. Code + tests
 
 ## Session start
-Lance `/context` silencieusement. Résume en 2-3 lignes.
+`/context` silencieusement. Résume en 2-3 lignes.
 
-## Codex — quand l'utiliser (et quand NE PAS)
+## Comment tu travailles
 
-Codex (`codex exec --full-auto`) est un deuxième cerveau avec des biais différents. Il apporte de la valeur quand tu as besoin d'un REGARD EXTÉRIEUR. Pas pour tout.
+Tu as un écosystème à ta disposition. Utilise-le naturellement, pas mécaniquement.
 
-**UTILISE Codex quand :**
-- Brainstorm mode Explore — obligatoire, c'est là que les divergences créent de la valeur
-- Décision d'architecture structurante — quand 2 approches se valent et qu'il faut trancher
-- Tu es bloqué — un regard frais débloque souvent
-- Review d'un changement risqué — avant de merger quelque chose qui touche le coeur du système
+### WorldEngine / Codex = ton moteur de briefing
+Quand un problème est complexe ou incertain, ne réfléchis pas seul. Lance un briefing :
 
-**N'UTILISE PAS Codex quand :**
-- La tâche est claire et tu sais quoi faire
-- C'est du code simple ou du fix évident
-- Tu vas juste attendre sa réponse sans rien faire en parallèle
-- Le brainstorm est Quick ou Standard simple
+`codex exec --full-auto "Problème: [X]. Décompose en dimensions. Quels experts sont pertinents ? Pour chaque: 1 recommandation + 1 risque + 1 critère de succès testable."`
 
-**En background, pas en bloquant :**
-- Si tu appelles Codex, lance-le en background (`&`) et continue à travailler
-- Ne reste JAMAIS à attendre Codex sans rien faire
+Ce qui revient n'est pas un "avis" — c'est un **objet de décision** : options, risques, tests, garde-fous. Tu l'utilises comme contrat de travail.
+
+**Tu peux contester le briefing.** Si le code existant contredit une recommandation, dis-le. Le briefing s'améliore par la contestation.
+
+**Les experts émergent du problème.** Pas un panel fixe — le contexte détermine qui parle. Problème de données + UX + légal → 3 experts spécifiques, pas un comité générique.
+
+### Quand lancer un briefing
+- Tu sens de l'incertitude sur l'approche
+- Le changement touche 3+ domaines
+- Tu hésites entre 2 architectures
+- L'idée est nouvelle et non testée
+- Tu es en mode Explore sur un brainstorm
+
+### Quand NE PAS lancer de briefing
+- Tu sais exactement quoi faire
+- C'est un fix simple
+- Tu vas juste attendre sans rien faire en parallèle
+
+### Tes subagents
+Tu peux paralléliser avec Agent Teams. Utilise-les quand le travail est décomposable en tâches indépendantes.
+
+### Propositions non sollicitées
+Si en travaillant tu vois un angle mort, un risque, une opportunité — DIS-LE même si personne ne l'a demandé.
 
 ## Mode A — Assisté (défaut)
 ```
-Instruction → brainstorm si incertain → code → tests → fix-loop si fail → review → commit
+Instruction → briefing si incertain → code → tests → fix si fail → review → commit
 ```
-
-**Seuils :**
-- 1-2 fichiers → fais-le
-- 3+ fichiers → propose l'approche d'abord
-- Nouvelle feature → /intake
-- Idée incertaine → /brainstorm
-
-**Stop si :** objectif ambigu, API publique changerait, tests cassent hors scope.
 
 ## Mode B — Full autonome
 ```
-/context → planifie → exécute (Mode A) → review → next ou stop
-Recheck /context toutes les 3 tâches
+/context → briefing → exécute → vérifie → next ou stop
 ```
-
-**Garde-fous :** pas hors goal, pas de refactor opportuniste, stop si dérive.
+Garde-fous : pas hors goal, pas de dérive, stop si bloqué.
 
 ## Skills
 - `/context` — reprendre un projet
-- `/brainstorm` — éprouver une idée (Explore = Codex obligatoire)
-- `/intake` — questionnaire pré-dev
+- `/brainstorm` — éprouver une idée (Explore = briefing multi-expert)
+- `/intake` — questionnaire pré-dev pré-rempli
 - `/status` — dashboard
 - `/genesis` — idée → repo complet
 - `/portfolio` — vue multi-projets
 - `/fix-loop` — boucle test/fix auto
-
-## Commandes
-```bash
-npm test
-codex exec --full-auto "prompt"
-```
