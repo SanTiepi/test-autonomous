@@ -1,74 +1,71 @@
 # CLAUDE.md — Duo Mode: Codex Lead + Claude Builder
 
-## 1. Sources de vérité (par priorité)
-1. Demande explicite de Robin
+## Projet
+- Nom : test-autonomous (control plane dual-AI)
+- Stack : Node.js ESM, zero deps, native http
+- État : actif
+- Objectif courant : améliorer les outils et skills pour tous les projets Robin
+
+## Sources de vérité
+1. Instruction de Robin (toujours prioritaire)
 2. Ce fichier
 3. Code existant + tests
-4. Conventions du repo / docs locales
+4. Docs du repo
 
-## 2. Session start
-Lance `/context` silencieusement. Puis dis en 2-3 lignes : état des tests, fichiers dirty, tâche en cours. Si Robin donne une instruction, elle prime sur la tâche active de TASKS.md.
+## Session start
+Lance `/context` silencieusement. Résume en 2-3 lignes : tests, fichiers dirty, tâche en cours.
 
-## 3. Règles d'exécution
+## Mode A — Assisté (défaut)
+Robin pilote, tu exécutes intelligemment.
 
-**Avant de coder :** comprendre le contexte, identifier les impacts, choisir le plus petit changement correct.
+**Seuils :**
+- 1-2 fichiers, scope clair → fais-le
+- 3+ fichiers ou API/schema/modèle → propose l'approche en 3 lignes d'abord
+- Nouvelle feature ou module → `/intake` avec Robin
+- Idée incertaine → `/brainstorm` (utilise `codex exec --full-auto`)
 
-**Seuils concrets :**
-- 1-2 fichiers, pas de changement d'API publique → fais-le directement
-- 3+ fichiers, ou touche un schema/modèle/API publique → `/brainstorm` avec Codex avant
-- Nouvelle feature, nouveau module, changement de DB → `/intake` d'abord
+**Tests :** `npm test` (node --test test/*.test.mjs)
+- Logique métier → tests obligatoires
+- Bug fix → test de non-régression
+- Cosmétique → optionnel
 
-**Tests :**
-- Logique métier change → tests obligatoires
-- Bug fix → test de non-régression obligatoire
-- Changement cosmétique → tests optionnels
-- Toujours lancer les tests impactés après modification
+**Stop si :** objectif ambigu, API publique changerait, tests cassent hors scope.
 
-**Stop et demande si :**
-- L'objectif est ambigu
-- Un contrat d'API public changerait
-- Des tests cassent sans rapport avec la tâche
-- Le scope dépasse ce qui était prévu
+**Avant commit :** vérifie qualité, mets à jour TASKS.md si objectif complété.
 
-## 4. Duo protocol
+## Mode B — Full autonome
+Activé quand Robin donne un goal et dit de fonctionner en autonomie.
 
-Codex (planificateur/reviewer) communique via `codex exec --full-auto` ou API.
+**Entrée obligatoire :** goal clair + définition de "terminé" + scope borné.
 
-```
-Plan:  FIX/FEAT/REFACTOR: ... | FILES: ... | DO: ... | TEST: ... | DONT: ...
-Report: DONE: ... | CHANGED: ... | TESTS: x/x | RISK: ...
-Review: VERDICT: approve/challenge/reject | REASON: ... | FIX: ...
-```
+**Boucle :**
+1. Codex planifie (`codex exec --full-auto`, inspecte le repo)
+2. Claude exécute UNE tâche atomique
+3. Tests après chaque modification
+4. Codex review → approuvé/rejeté/bloqué
+5. Tâche suivante ou stop
 
-## 5. Skills — quand les utiliser
+**Garde-fous :** pas de tâches hors goal, pas de refactor opportuniste, recheck `/context` toutes les 3 tâches, stop si dérive.
 
-- `/context` — début de session (automatique), ou retour sur un projet après absence
-- `/brainstorm` — quand >1 approche crédible, ou risque élevé, ou idée nouvelle
-- `/intake` — avant une feature : génère les décisions pré-remplies, Robin valide
-- `/status` — check rapide pendant le travail
-- `/review-changes` — avant commit
-- `/test-gap-hunt` — audit couverture tests
-- `/health-check` — après changements majeurs
+## Skills
+- `/context` — reprendre un projet après absence
+- `/brainstorm` — éprouver une idée avec Codex
+- `/intake` — questionnaire pré-dev pré-rempli
+- `/status` — dashboard rapide
+- `/review-changes` — review avant commit
 
-## 6. Outils
-
-Bash UNIQUEMENT pour : `npm test`, `git`, `node`, `codex exec`.
-Pour tout le reste : Read, Edit, Write, Grep, Glob.
-
-## 7. Structure du repo
-
-```
-src/           — API source + outils (Node.js ESM, zero deps)
-src/v2/        — SwissBuildingOS V2
-test/          — tests (node:test)
-src/duo.mjs    — protocole Codex↔Claude
-src/context.mjs — mémoire projet + retrieval
-src/engine.mjs — moteur autonome
-```
-
-## 8. Commandes
-
+## Commandes
 ```bash
 npm test           # node --test test/*.test.mjs
 npm start          # node src/index.mjs
+codex exec --full-auto "prompt"  # deuxième IA
+```
+
+## Structure
+```
+src/           — API + outils (ESM, zero deps)
+src/v2/        — SwissBuildingOS V2
+test/          — tests (node:test)
+src/duo.mjs    — protocole Codex↔Claude
+src/context.mjs — mémoire projet
 ```
