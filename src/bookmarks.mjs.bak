@@ -1,0 +1,84 @@
+// --- In-memory bookmark store ---
+const bookmarks = new Map();
+let nextBookmarkId = 1;
+
+function validateBookmark(body) {
+  const errors = [];
+  if (typeof body.url !== "string" || body.url.trim().length < 1) {
+    errors.push("url: required non-empty string");
+  }
+  if (typeof body.title !== "string" || body.title.trim().length < 1) {
+    errors.push("title: required non-empty string");
+  }
+  if (body.tags !== undefined) {
+    if (!Array.isArray(body.tags)) {
+      errors.push("tags: must be an array");
+    } else if (!body.tags.every((t) => typeof t === "string")) {
+      errors.push("tags: all items must be strings");
+    }
+  }
+  return errors;
+}
+
+function createBookmark(body) {
+  const id = String(nextBookmarkId++);
+  const bookmark = {
+    id,
+    url: body.url.trim(),
+    title: body.title.trim(),
+    tags: Array.isArray(body.tags) ? body.tags.map((t) => t.trim()) : [],
+    created_at: new Date().toISOString(),
+  };
+  bookmarks.set(id, bookmark);
+  return bookmark;
+}
+
+function getBookmarkById(id) {
+  return bookmarks.get(id) || null;
+}
+
+function listBookmarks(tag) {
+  const all = [...bookmarks.values()];
+  if (tag) {
+    const lower = tag.toLowerCase();
+    return all.filter(b => b.tags.some(t => t.toLowerCase() === lower));
+  }
+  return all;
+}
+
+function updateBookmark(id, body) {
+  const existing = bookmarks.get(id);
+  if (!existing) return null;
+  existing.url = body.url.trim();
+  existing.title = body.title.trim();
+  existing.tags = Array.isArray(body.tags) ? body.tags.map((t) => t.trim()) : [];
+  return existing;
+}
+
+function deleteBookmark(id) {
+  if (!bookmarks.has(id)) return false;
+  bookmarks.delete(id);
+  return true;
+}
+
+function importBookmarks(items) {
+  if (!Array.isArray(items)) {
+    return { error: "Body must be a JSON array", details: null, created: null };
+  }
+  const allErrors = [];
+  for (let i = 0; i < items.length; i++) {
+    const errors = validateBookmark(items[i] || {});
+    if (errors.length) allErrors.push({ index: i, errors });
+  }
+  if (allErrors.length) {
+    return { error: "Validation failed", details: allErrors, created: null };
+  }
+  const created = items.map(item => createBookmark(item));
+  return { error: null, details: null, created };
+}
+
+function exportBookmarks() {
+  return [...bookmarks.values()];
+}
+
+export { bookmarks, validateBookmark, createBookmark, getBookmarkById, listBookmarks, updateBookmark, deleteBookmark, importBookmarks, exportBookmarks };

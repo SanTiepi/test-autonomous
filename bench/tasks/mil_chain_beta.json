@@ -1,0 +1,82 @@
+[
+  {
+    "id": "mil_bugfix_response_cost_validation",
+    "module": "src/lang/mil.mjs",
+    "symbol": "decodeResponse",
+    "kind": "bugfix",
+    "prompt": "Make decodeResponse reject COST when it is not a non-negative integer. COST 0 must stay valid.",
+    "acceptance": [
+      "decodeResponse throws on COST nope",
+      "decodeResponse throws on negative COST values",
+      "decodeResponse accepts COST 0"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task mil_bugfix_response_cost_validation --workspace .",
+    "allowed_paths": ["src/lang/mil.mjs"],
+    "chain_group": "mil_chain_beta",
+    "chain_index": 1
+  },
+  {
+    "id": "mil_bugfix_duplicate_response_fields",
+    "module": "src/lang/mil.mjs",
+    "symbol": "decodeResponse",
+    "kind": "bugfix",
+    "prompt": "Reject duplicate STATUS, DATA, NEXT, or COST fields in decodeResponse() with an explicit duplicate-field error.",
+    "acceptance": [
+      "decodeResponse throws on duplicate STATUS lines",
+      "decodeResponse throws on duplicate DATA lines",
+      "Valid MIL responses still decode"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task mil_bugfix_duplicate_response_fields --workspace .",
+    "allowed_paths": ["src/lang/mil.mjs"],
+    "chain_group": "mil_chain_beta",
+    "chain_index": 2
+  },
+  {
+    "id": "mil_feature_decode_batch",
+    "module": "src/lang/mil.mjs",
+    "symbol": "decode",
+    "kind": "feature",
+    "prompt": "Add exported decodeBatch(rawMessages) that splits MIL messages on blank lines and returns an array of decoded request objects.",
+    "acceptance": [
+      "decodeBatch is exported from mil.mjs",
+      "decodeBatch decodes two request messages separated by a blank line",
+      "decodeBatch reuses decode semantics for each message"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task mil_feature_decode_batch --workspace .",
+    "allowed_paths": ["src/lang/mil.mjs"],
+    "chain_group": "mil_chain_beta",
+    "chain_index": 3
+  },
+  {
+    "id": "mil_feature_benchmark_numeric_ratios",
+    "module": "src/lang/mil.mjs",
+    "symbol": "benchmark",
+    "kind": "feature",
+    "prompt": "Extend benchmark() to also return numeric mil_vs_prose_ratio and mil_vs_json_ratio values alongside the existing percentage strings.",
+    "acceptance": [
+      "benchmark returns numeric mil_vs_prose_ratio",
+      "benchmark returns numeric mil_vs_json_ratio",
+      "Existing savings_vs_prose and savings_vs_json strings remain present"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task mil_feature_benchmark_numeric_ratios --workspace .",
+    "allowed_paths": ["src/lang/mil.mjs"],
+    "chain_group": "mil_chain_beta",
+    "chain_index": 4
+  },
+  {
+    "id": "mil_refactor_encode_response_order",
+    "module": "src/lang/mil.mjs",
+    "symbol": "encodeResponse",
+    "kind": "refactor",
+    "prompt": "Refactor encodeResponse() so optional field emission is driven by RESP_ORDER instead of hard-coded pushes, while preserving current output behavior.",
+    "acceptance": [
+      "encodeResponse references RESP_ORDER as its ordering source",
+      "Response output remains unchanged for STATUS/DATA/NEXT/COST combinations",
+      "COST still stays optional"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task mil_refactor_encode_response_order --workspace .",
+    "allowed_paths": ["src/lang/mil.mjs"],
+    "chain_group": "mil_chain_beta",
+    "chain_index": 5
+  }
+]

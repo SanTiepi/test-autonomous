@@ -1,0 +1,21 @@
+mod todo_validation v1
+exp validateTodo
+
+blk validateTodo (body) -> (errors)
+  get t0 body "title"
+  is t1 t0 str
+  brf t1 :no_title
+  trim t2 t0
+  len t3 t2
+  lt t4 t3 1
+  brt t4 :bad_title
+  gt t5 t3 200
+  brt t5 :bad_title
+  arr errors
+  ret errors
+:no_title
+  arr errors "title: required string, 1-200 chars"
+  ret errors
+:bad_title
+  arr errors "title: required string, 1-200 chars"
+  ret errors

@@ -1,0 +1,1 @@
+- 2026-03-29 [standard] [pivot] Hot-reload tests duo mode — brancher au protocole de tour, pas au filesystem. Effort 1j, impact fort.

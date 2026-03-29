@@ -1,0 +1,15 @@
+{
+  "id": "feat-notes-field",
+  "category": "feature",
+  "brief": "Add optional notes string field to bookmarks. Include in create, update, get, list, import, and export.",
+  "acceptance_criteria": [
+    "POST /bookmarks accepts optional notes field",
+    "GET /bookmarks/:id returns notes",
+    "PUT /bookmarks/:id can update notes",
+    "notes defaults to empty string when omitted",
+    "import/export preserves notes"
+  ],
+  "oracle_test": "POST with notes='my note', GET back, verify notes='my note'. POST without notes, GET back, verify notes=''.",
+  "budget_max": 60000,
+  "timebox_max": 360
+}

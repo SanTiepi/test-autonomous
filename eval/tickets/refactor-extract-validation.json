@@ -1,0 +1,14 @@
+{
+  "id": "refactor-extract-validation",
+  "category": "refactor",
+  "brief": "Extract JSON body parsing and validation logic shared between POST, PUT, and import into a reusable parseAndValidate function.",
+  "acceptance_criteria": [
+    "Shared parseAndValidate function exists and is exported",
+    "All three endpoints use it",
+    "No behavioral changes — all existing tests pass",
+    "Measurable reduction in duplicated code"
+  ],
+  "oracle_test": "All existing bookmark tests pass unchanged. parseAndValidate is exported and called by create, update, and import handlers.",
+  "budget_max": 45000,
+  "timebox_max": 300
+}

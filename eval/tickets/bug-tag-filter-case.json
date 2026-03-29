@@ -1,0 +1,13 @@
+{
+  "id": "bug-tag-filter-case",
+  "category": "bugfix",
+  "brief": "GET /bookmarks?tag=X is case-sensitive. Filtering by tag='JS' misses bookmarks tagged 'js'. Should be case-insensitive.",
+  "acceptance_criteria": [
+    "GET /bookmarks?tag=JS matches tags 'js', 'JS', 'Js'",
+    "Exact-match still works",
+    "Tags stored as-is (no mutation)"
+  ],
+  "oracle_test": "Create bookmark with tags=['JavaScript']. GET /bookmarks?tag=javascript returns it.",
+  "budget_max": 35000,
+  "timebox_max": 200
+}

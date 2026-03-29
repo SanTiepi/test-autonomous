@@ -1,0 +1,14 @@
+{
+  "id": "resume-add-updated-at",
+  "category": "resume-after-pause",
+  "brief": "Previous session started adding updated_at timestamp to bookmarks but was interrupted. Resume: set on create (=created_at), update on PUT, include in all responses.",
+  "acceptance_criteria": [
+    "New bookmarks have updated_at equal to created_at",
+    "PUT updates updated_at to current time",
+    "GET, list, export all include updated_at",
+    "Import sets updated_at to creation time"
+  ],
+  "oracle_test": "Create bookmark, verify updated_at===created_at. PUT it, verify updated_at > created_at. Export, verify updated_at on all.",
+  "budget_max": 50000,
+  "timebox_max": 300
+}

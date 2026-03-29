@@ -1,0 +1,8 @@
+add a,b -> a + b
+multiply a,b -> a * b
+square x -> x * x
+_double x -> x * 2
+
+identity x -> x
+
+compose f,g,x -> f(g(x))

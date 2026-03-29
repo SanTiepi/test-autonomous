@@ -1,0 +1,64 @@
+{
+  "responses": [
+    {
+      "task_id": "mil_bugfix_trim_register_op",
+      "variant": "source_raw",
+      "operations": [
+        {
+          "type": "replace_text",
+          "path": "src/lang/mil.mjs",
+          "find": "  const normalized = op.toUpperCase();",
+          "replace": "  const normalized = op.trim().toUpperCase();\n  if (!normalized) throw new Error(`MIL: op must be non-empty`);"
+        }
+      ],
+      "tokens_in": 120,
+      "tokens_out": 40,
+      "runtime_ms": 10
+    },
+    {
+      "task_id": "mil_bugfix_trim_register_op",
+      "variant": "source_structured",
+      "operations": [
+        {
+          "type": "replace_text",
+          "path": "src/lang/mil.mjs",
+          "find": "  const normalized = op.toUpperCase();",
+          "replace": "  const normalized = op.trim().toUpperCase();\n  if (!normalized) throw new Error(`MIL: op must be non-empty`);"
+        }
+      ],
+      "tokens_in": 100,
+      "tokens_out": 35,
+      "runtime_ms": 8
+    },
+    {
+      "task_id": "compliance_bugfix_empty_check",
+      "variant": "source_raw",
+      "operations": [
+        {
+          "type": "replace_text",
+          "path": "src/lang/compliance.mjs",
+          "find": "  const words = trimmed.split(/\\s+/).length;",
+          "replace": "  const words = trimmed ? trimmed.split(/\\s+/).length : 0;"
+        }
+      ],
+      "tokens_in": 110,
+      "tokens_out": 32,
+      "runtime_ms": 9
+    },
+    {
+      "task_id": "compliance_bugfix_empty_check",
+      "variant": "source_structured",
+      "operations": [
+        {
+          "type": "replace_text",
+          "path": "src/lang/compliance.mjs",
+          "find": "  const words = trimmed.split(/\\s+/).length;",
+          "replace": "  const words = trimmed ? trimmed.split(/\\s+/).length : 0;"
+        }
+      ],
+      "tokens_in": 90,
+      "tokens_out": 28,
+      "runtime_ms": 7
+    }
+  ]
+}

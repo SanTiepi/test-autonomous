@@ -1,0 +1,13 @@
+{
+  "id": "review-import-response",
+  "category": "review-correction",
+  "brief": "POST /bookmarks/import returns a bare array on success. Wrap in {data: [...], count: N} for consistency with other endpoints.",
+  "acceptance_criteria": [
+    "Success response is {data: [...], count: N} with status 201",
+    "Error responses unchanged",
+    "Export format unchanged"
+  ],
+  "oracle_test": "Import 3 bookmarks. Response is {data: [...], count: 3}. Each item has id, url, title, tags, created_at.",
+  "budget_max": 35000,
+  "timebox_max": 200
+}

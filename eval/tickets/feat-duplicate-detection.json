@@ -1,0 +1,14 @@
+{
+  "id": "feat-duplicate-detection",
+  "category": "feature",
+  "brief": "Reject bookmark creation when a bookmark with the same URL already exists. Apply to POST /bookmarks and POST /bookmarks/import.",
+  "acceptance_criteria": [
+    "POST /bookmarks returns 409 if URL already exists",
+    "POST /bookmarks/import rejects batch if any URL duplicates existing or within batch",
+    "Duplicate check is exact match on trimmed URL",
+    "Error response includes the duplicate URL"
+  ],
+  "oracle_test": "Create bookmark url=https://a.com. POST same url again, expect 409. Import [https://b.com, https://b.com], expect 400.",
+  "budget_max": 50000,
+  "timebox_max": 300
+}

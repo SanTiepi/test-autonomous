@@ -1,0 +1,13 @@
+{
+  "id": "bug-export-headers",
+  "category": "bugfix",
+  "brief": "GET /bookmarks/export does not set Content-Disposition header for file download. Should indicate a downloadable JSON file.",
+  "acceptance_criteria": [
+    "Content-Disposition: attachment; filename=bookmarks.json is set",
+    "Content-Type is application/json",
+    "Response body unchanged"
+  ],
+  "oracle_test": "GET /bookmarks/export. Verify Content-Disposition is 'attachment; filename=bookmarks.json'.",
+  "budget_max": 30000,
+  "timebox_max": 180
+}

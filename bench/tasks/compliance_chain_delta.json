@@ -1,0 +1,83 @@
+[
+  {
+    "id": "compliance_bugfix_nonfinite_rate",
+    "module": "src/lang/compliance.mjs",
+    "symbol": "autoTunePromptPrefix",
+    "kind": "bugfix",
+    "prompt": "Make autoTunePromptPrefix handle non-finite complianceRate safely: NaN must behave like 0, and +Infinity must behave like 1.",
+    "acceptance": [
+      "autoTunePromptPrefix(NaN, ...) uses the strict critical branch",
+      "autoTunePromptPrefix(Infinity, ...) uses the light-touch branch",
+      "Finite rates keep their current threshold behavior"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task compliance_bugfix_nonfinite_rate --workspace .",
+    "allowed_paths": ["src/lang/compliance.mjs"],
+    "chain_group": "compliance_chain_delta",
+    "chain_index": 1
+  },
+  {
+    "id": "compliance_bugfix_freeze_response_formats",
+    "module": "src/lang/compliance.mjs",
+    "symbol": "RESPONSE_FORMATS",
+    "kind": "bugfix",
+    "prompt": "Deep-freeze RESPONSE_FORMATS so accidental runtime mutation cannot silently change protocol contracts.",
+    "acceptance": [
+      "RESPONSE_FORMATS is frozen",
+      "Attempted mutation does not alter critic/scout/verify formats",
+      "Existing prompt building behavior remains intact"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task compliance_bugfix_freeze_response_formats --workspace .",
+    "allowed_paths": ["src/lang/compliance.mjs"],
+    "chain_group": "compliance_chain_delta",
+    "chain_index": 2
+  },
+  {
+    "id": "compliance_refactor_prose_density_helper",
+    "module": "src/lang/compliance.mjs",
+    "symbol": "semanticDensity",
+    "kind": "refactor",
+    "prompt": "Extract a scoreProseDensity(words) helper for the prose branch of semanticDensity and route prose scoring through it.",
+    "acceptance": [
+      "A shared scoreProseDensity helper exists",
+      "semanticDensity uses scoreProseDensity in the prose path",
+      "Density ratings for existing prose examples stay stable"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task compliance_refactor_prose_density_helper --workspace .",
+    "allowed_paths": ["src/lang/compliance.mjs"],
+    "chain_group": "compliance_chain_delta",
+    "chain_index": 3
+  },
+  {
+    "id": "compliance_feature_describe_band",
+    "module": "src/lang/compliance.mjs",
+    "symbol": "autoTunePromptPrefix",
+    "kind": "feature",
+    "prompt": "Add exported describeComplianceBand(rate) that maps the same thresholds used by autoTunePromptPrefix to the labels high, medium, or low.",
+    "acceptance": [
+      "describeComplianceBand is exported from compliance.mjs",
+      "0.95 maps to high",
+      "0.6 maps to medium",
+      "0.2 maps to low"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task compliance_feature_describe_band --workspace .",
+    "allowed_paths": ["src/lang/compliance.mjs"],
+    "chain_group": "compliance_chain_delta",
+    "chain_index": 4
+  },
+  {
+    "id": "compliance_refactor_prompt_builder_helper",
+    "module": "src/lang/compliance.mjs",
+    "symbol": "buildAgentPrompt",
+    "kind": "refactor",
+    "prompt": "Extract a getResponseFormat(agentType) helper and make buildAgentPrompt use it to resolve RESPONSE_FORMATS and preserve the unknown-agent error.",
+    "acceptance": [
+      "A getResponseFormat helper exists",
+      "buildAgentPrompt uses getResponseFormat",
+      "Unknown agent types still throw an explicit error"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task compliance_refactor_prompt_builder_helper --workspace .",
+    "allowed_paths": ["src/lang/compliance.mjs"],
+    "chain_group": "compliance_chain_delta",
+    "chain_index": 5
+  }
+]

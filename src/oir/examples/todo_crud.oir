@@ -1,0 +1,125 @@
+mod todo_crud v1
+exp createTodo listTodos getTodo updateTodo deleteTodo searchTodos
+st todos:map
+
+blk createTodo (body) -> (result)
+  call errors validateBody body
+  len t0 errors
+  gt t1 t0 0
+  brt t1 :invalid
+  uuid id
+  get t2 body "title"
+  trim t3 t2
+  obj todo id:id title:t3 completed:false
+  st_set todos id todo
+  emit result 201 todo
+  ret result
+:invalid
+  lit t9 "Validation failed"
+  obj err error:t9 details:errors
+  emit result 400 err
+  ret result
+
+blk listTodos () -> (result)
+  st_vals t0 todos
+  emit result 200 t0
+  ret result
+
+blk getTodo (id) -> (result)
+  st_has t0 todos id
+  brf t0 :notfound
+  st_get todo todos id
+  emit result 200 todo
+  ret result
+:notfound
+  lit t9 "Todo not found"
+  obj err error:t9
+  emit result 404 err
+  ret result
+
+blk updateTodo (id body) -> (result)
+  st_has t0 todos id
+  brf t0 :notfound
+  st_get todo todos id
+  get t1 body "title"
+  is t2 t1 str
+  brf t2 :skip_title
+  trim t3 t1
+  len t4 t3
+  lt t5 t4 1
+  brt t5 :bad_title
+  gt t6 t4 200
+  brt t6 :bad_title
+  set todo "title" t3
+:skip_title
+  get t7 body "completed"
+  is t8 t7 bool
+  brf t8 :skip_completed
+  set todo "completed" t7
+:skip_completed
+  st_set todos id todo
+  emit result 200 todo
+  ret result
+:notfound
+  lit t9 "Todo not found"
+  obj err error:t9
+  emit result 404 err
+  ret result
+:bad_title
+  lit t9 "title: string, 1-200 chars"
+  obj err error:t9
+  emit result 400 err
+  ret result
+
+blk deleteTodo (id) -> (result)
+  st_has t0 todos id
+  brf t0 :notfound
+  st_del todos id
+  emit result 204 nil
+  ret result
+:notfound
+  lit t9 "Todo not found"
+  obj err error:t9
+  emit result 404 err
+  ret result
+
+blk searchTodos (query) -> (result)
+  st_vals t0 todos
+  lower t1 query
+  arr matches
+  lit idx 0
+  len t2 t0
+:loop
+  lt t3 idx t2
+  brf t3 :done
+  get t4 t0 idx
+  get t5 t4 "title"
+  lower t6 t5
+  includes t7 t6 t1
+  brf t7 :next
+  push matches t4
+:next
+  add idx idx 1
+  br :loop
+:done
+  emit result 200 matches
+  ret result
+
+blk validateBody (body) -> (errors)
+  arr errors
+  get t0 body "title"
+  is t1 t0 str
+  brt t1 :check_len
+  arr errors "title: required string, 1-200 chars"
+  ret errors
+:check_len
+  trim t2 t0
+  len t3 t2
+  lt t4 t3 1
+  brt t4 :bad
+  gt t5 t3 200
+  brt t5 :bad
+  ret errors
+:bad
+  arr errors "title: required string, 1-200 chars"
+  ret errors

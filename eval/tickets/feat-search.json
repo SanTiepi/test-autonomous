@@ -1,0 +1,14 @@
+{
+  "id": "feat-search",
+  "category": "feature",
+  "brief": "Add full-text search to GET /bookmarks via ?q= query parameter. Search matches against title and url, case-insensitive.",
+  "acceptance_criteria": [
+    "GET /bookmarks?q=term returns only bookmarks where title or url contains term",
+    "Search is case-insensitive",
+    "Empty or missing q returns all bookmarks",
+    "Works in combination with existing ?tag= filter"
+  ],
+  "oracle_test": "Create 3 bookmarks with distinct titles. GET /bookmarks?q=<substring> returns only matching ones. GET /bookmarks?q=UPPER matches lowercase.",
+  "budget_max": 50000,
+  "timebox_max": 300
+}

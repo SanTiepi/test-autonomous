@@ -1,0 +1,82 @@
+[
+  {
+    "id": "mil_bugfix_trim_register_op",
+    "module": "src/lang/mil.mjs",
+    "symbol": "registerOp",
+    "kind": "bugfix",
+    "prompt": "Make registerOp trim surrounding whitespace before uppercasing, and reject whitespace-only names with Error('MIL: op must be non-empty').",
+    "acceptance": [
+      "registerOp trims surrounding whitespace before duplicate checks",
+      "Whitespace-only names throw Error('MIL: op must be non-empty')",
+      "Existing duplicate detection behavior remains intact"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task mil_bugfix_trim_register_op --workspace .",
+    "allowed_paths": ["src/lang/mil.mjs"],
+    "chain_group": "mil_chain_alpha",
+    "chain_index": 1
+  },
+  {
+    "id": "mil_refactor_split_lines",
+    "module": "src/lang/mil.mjs",
+    "symbol": "decode",
+    "kind": "refactor",
+    "prompt": "Extract a shared splitMilLines(raw) helper that trims, splits, and filters lines, and make both decode and decodeResponse use it.",
+    "acceptance": [
+      "A shared splitMilLines helper exists in mil.mjs",
+      "decode uses splitMilLines(raw)",
+      "decodeResponse uses splitMilLines(raw)"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task mil_refactor_split_lines --workspace .",
+    "allowed_paths": ["src/lang/mil.mjs"],
+    "chain_group": "mil_chain_alpha",
+    "chain_index": 2
+  },
+  {
+    "id": "mil_bugfix_duplicate_fields",
+    "module": "src/lang/mil.mjs",
+    "symbol": "decode",
+    "kind": "bugfix",
+    "prompt": "Reject duplicate top-level MIL fields in decode(). Repeating OP, TGT, ROOT, CTX, ARG, OUT, or PRI must throw an explicit duplicate-field error.",
+    "acceptance": [
+      "decode throws on duplicate TGT lines",
+      "decode throws on duplicate OP lines",
+      "Existing valid messages still decode correctly"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task mil_bugfix_duplicate_fields --workspace .",
+    "allowed_paths": ["src/lang/mil.mjs"],
+    "chain_group": "mil_chain_alpha",
+    "chain_index": 3
+  },
+  {
+    "id": "mil_feature_get_core_ops",
+    "module": "src/lang/mil.mjs",
+    "symbol": "getOps",
+    "kind": "feature",
+    "prompt": "Add exported getCoreOps() that returns a stable array copy of the original CORE_OPS only, excluding runtime-added OPs.",
+    "acceptance": [
+      "getCoreOps is exported from mil.mjs",
+      "getCoreOps returns the built-in CORE_OPS only",
+      "Runtime-added ops do not appear in getCoreOps"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task mil_feature_get_core_ops --workspace .",
+    "allowed_paths": ["src/lang/mil.mjs"],
+    "chain_group": "mil_chain_alpha",
+    "chain_index": 4
+  },
+  {
+    "id": "mil_refactor_encode_field_order",
+    "module": "src/lang/mil.mjs",
+    "symbol": "encode",
+    "kind": "refactor",
+    "prompt": "Refactor encode() so optional field emission is driven by FIELD_ORDER instead of hard-coded per-field pushes, while preserving current output behavior.",
+    "acceptance": [
+      "encode references FIELD_ORDER as its ordering source",
+      "encode output for fully populated messages remains unchanged",
+      "Optional fields still appear in canonical order"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task mil_refactor_encode_field_order --workspace .",
+    "allowed_paths": ["src/lang/mil.mjs"],
+    "chain_group": "mil_chain_alpha",
+    "chain_index": 5
+  }
+]

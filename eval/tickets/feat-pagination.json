@@ -1,0 +1,14 @@
+{
+  "id": "feat-pagination",
+  "category": "feature",
+  "brief": "Add pagination to GET /bookmarks with ?page=N&limit=M query parameters. Default limit=20, page=1. Response wraps data in {data, total, page, limit}.",
+  "acceptance_criteria": [
+    "GET /bookmarks?page=1&limit=2 returns first 2 bookmarks",
+    "Response shape: { data: [...], total: N, page: N, limit: N }",
+    "Defaults: page=1, limit=20",
+    "Invalid page/limit returns 400"
+  ],
+  "oracle_test": "Create 5 bookmarks. GET /bookmarks?page=1&limit=2 returns 2 items with total=5. GET /bookmarks?page=3&limit=2 returns 1 item.",
+  "budget_max": 50000,
+  "timebox_max": 300
+}

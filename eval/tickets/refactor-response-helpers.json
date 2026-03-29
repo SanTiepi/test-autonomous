@@ -1,0 +1,14 @@
+{
+  "id": "refactor-response-helpers",
+  "category": "refactor",
+  "brief": "Create jsonResponse(res, status, data) and errorResponse(res, status, message, details) helpers. Refactor all bookmark endpoints to use them.",
+  "acceptance_criteria": [
+    "jsonResponse and errorResponse helpers exist",
+    "All bookmark endpoints use the helpers",
+    "All existing tests pass",
+    "Content-Type application/json set consistently"
+  ],
+  "oracle_test": "All existing tests pass. No direct res.writeHead/res.end in bookmark handlers. Helpers are exported.",
+  "budget_max": 45000,
+  "timebox_max": 300
+}

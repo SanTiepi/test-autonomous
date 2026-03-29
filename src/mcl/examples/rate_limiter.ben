@@ -1,0 +1,20 @@
+use crypto.randomUUID
+
+createRateLimiter maxRequests=100,windowMs=60000,maxClients=10000 ->
+  clients: Map
+
+  _getClientIp req -> req.socket?.remoteAddress | req.headers?.["x-forwarded-for"] | "unknown"
+
+  _cleanup now ->
+    clients each ip,entry -> now >= entry.resetAt? clients.delete(ip)
+
+  _evictOldest ->
+    oldest: clients.keys().next().value
+    oldest !== undefined? clients.delete(oldest)
+
+  wrapWithRateLimit handler ->
+    rateLimitedHandler req,res ->
+      now: Date.now()
+      ip: _getClientIp(req)
+      Math.random() < 0.1? _cleanup(now)
+      entry: clients.get(ip)

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "compliance_bugfix_empty_check",
+    "module": "src/lang/compliance.mjs",
+    "symbol": "checkCompliance",
+    "kind": "bugfix",
+    "prompt": "Make checkCompliance treat empty or whitespace-only responses as 0 lines and 0 words instead of counting phantom words.",
+    "acceptance": [
+      "checkCompliance('   ') returns words:0",
+      "checkCompliance('   ') returns lines:0",
+      "Empty responses remain non-compliant"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task compliance_bugfix_empty_check --workspace .",
+    "allowed_paths": ["src/lang/compliance.mjs"],
+    "chain_group": "compliance_chain_gamma",
+    "chain_index": 1
+  },
+  {
+    "id": "compliance_bugfix_empty_density",
+    "module": "src/lang/compliance.mjs",
+    "symbol": "semanticDensity",
+    "kind": "bugfix",
+    "prompt": "Make semanticDensity return { density: 0, rating: 'very_low' } for empty or whitespace-only responses instead of NaN or inflated values.",
+    "acceptance": [
+      "semanticDensity('', 0) returns density 0",
+      "semanticDensity('', 0) returns rating very_low",
+      "Whitespace-only responses behave the same as empty ones"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task compliance_bugfix_empty_density --workspace .",
+    "allowed_paths": ["src/lang/compliance.mjs"],
+    "chain_group": "compliance_chain_gamma",
+    "chain_index": 2
+  },
+  {
+    "id": "compliance_refactor_response_metrics_helper",
+    "module": "src/lang/compliance.mjs",
+    "symbol": "checkCompliance",
+    "kind": "refactor",
+    "prompt": "Extract a shared measureResponse(response) helper that computes trimmed, lines, and words, and make both checkCompliance and semanticDensity use it.",
+    "acceptance": [
+      "A shared measureResponse helper exists",
+      "checkCompliance uses measureResponse",
+      "semanticDensity uses measureResponse"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task compliance_refactor_response_metrics_helper --workspace .",
+    "allowed_paths": ["src/lang/compliance.mjs"],
+    "chain_group": "compliance_chain_gamma",
+    "chain_index": 3
+  },
+  {
+    "id": "compliance_feature_normalize_mil_response",
+    "module": "src/lang/compliance.mjs",
+    "symbol": "checkCompliance",
+    "kind": "feature",
+    "prompt": "Add exported normalizeMilResponse(response) that strips a UTF-8 BOM and normalizes CRLF to LF, then make checkCompliance use it before pattern matching.",
+    "acceptance": [
+      "normalizeMilResponse is exported from compliance.mjs",
+      "checkCompliance accepts a BOM-prefixed valid MIL response",
+      "checkCompliance accepts CRLF MIL responses after normalization"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task compliance_feature_normalize_mil_response --workspace .",
+    "allowed_paths": ["src/lang/compliance.mjs"],
+    "chain_group": "compliance_chain_gamma",
+    "chain_index": 4
+  },
+  {
+    "id": "compliance_feature_compliance_summary",
+    "module": "src/lang/compliance.mjs",
+    "symbol": "checkCompliance",
+    "kind": "feature",
+    "prompt": "Add exported complianceSummary(responses) that returns { total, compliant, non_compliant, rate } across a batch of raw responses.",
+    "acceptance": [
+      "complianceSummary is exported from compliance.mjs",
+      "complianceSummary counts compliant vs non-compliant responses correctly",
+      "complianceSummary returns a numeric rate between 0 and 1"
+    ],
+    "verify_command": "node bench/verifiers/run-task.mjs --task compliance_feature_compliance_summary --workspace .",
+    "allowed_paths": ["src/lang/compliance.mjs"],
+    "chain_group": "compliance_chain_gamma",
+    "chain_index": 5
+  }
+]

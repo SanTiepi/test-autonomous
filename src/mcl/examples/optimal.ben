@@ -1,0 +1,58 @@
+-- Benoît v0.3 syntax exploration: maximum density
+-- Goal: every character carries information
+
+-- Current v0.1: 6 tokens
+-- add a,b -> a + b
+
+-- Could be v0.3: 5 tokens (= instead of ->)
+-- add a b = a + b
+
+-- Current: verbose for closures
+-- multiplier factor ->
+--   _apply x -> x * factor
+--   _apply
+
+-- Could be v0.3: lambda syntax with \
+-- multiplier factor = \x -> x * factor
+
+-- Or even shorter with implicit curry:
+-- multiplier = \factor x -> factor * x
+-- multiplier 2 => \x -> 2 * x (partial application)
+
+-- Pattern matching v0.3 proposal:
+-- classify x =
+--   | x < 0  => "negative"
+--   | x == 0 => "zero"
+--   | _      => "positive"
+
+-- Pipe v0.3:
+-- result = data > filter isValid > map transform > reduce sum 0
+
+-- Type annotations (optional, for AI reasoning):
+-- add : Num Num -> Num
+-- add a b = a + b
+
+-- The ultimate density test:
+-- Full rate limiter in v0.3 Benoît:
+--
+-- limiter max=100 win=60000 cap=10000 =
+--   ips : Map
+--   ip req = req.socket?.remoteAddress | req.headers?.xff | "unknown"
+--   expired e now = now >= e.resetAt
+--   cleanup now = ips > filter \k e -> !expired e now
+--   evict = ips.size > 0 => ips > deleteFirst
+--   check ip now =
+--     e = ips.get ip
+--     | expired e now => ips > maybeEvict cap > set ip (fresh now win) > get ip
+--     | e             => e
+--     | _             => ips > maybeEvict cap > set ip (fresh now win) > get ip
+--     e.count + 1 > max => Reject (retryAfter e now)
+--     | _ => Pass
+
+-- That's 15 lines for a complete rate limiter with:
+-- - LRU eviction
+-- - IP tracking
+-- - Window-based reset
+-- - Pattern matching on entry state
+-- - Pipe-based collection operations
+-- - Type-safe fallback chains

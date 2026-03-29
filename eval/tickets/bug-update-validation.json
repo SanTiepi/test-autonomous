@@ -1,0 +1,13 @@
+{
+  "id": "bug-update-validation",
+  "category": "bugfix",
+  "brief": "PUT /bookmarks/:id does not run validateBookmark before saving. Sending url=123 (number) causes a crash instead of returning 400.",
+  "acceptance_criteria": [
+    "PUT with invalid body returns 400 with validation errors",
+    "Validation matches POST /bookmarks rules",
+    "No crash or unhandled exception on malformed input"
+  ],
+  "oracle_test": "Create a bookmark. PUT with {url: 123, title: 456}. Expect 400, not 500 or crash.",
+  "budget_max": 40000,
+  "timebox_max": 240
+}

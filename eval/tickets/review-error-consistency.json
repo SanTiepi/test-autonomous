@@ -1,0 +1,13 @@
+{
+  "id": "review-error-consistency",
+  "category": "review-correction",
+  "brief": "Error responses are inconsistent: some return {error}, others {error, details}. Normalize all to {error: string, details: array|null}.",
+  "acceptance_criteria": [
+    "All 400 responses include error and details fields",
+    "All 404 responses include {error, details: null}",
+    "Existing tests updated to match new format"
+  ],
+  "oracle_test": "GET /bookmarks/999 returns {error: 'Bookmark not found', details: null}. POST /bookmarks with missing url returns {error, details: [...]}.",
+  "budget_max": 40000,
+  "timebox_max": 240
+}
