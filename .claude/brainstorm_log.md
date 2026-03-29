@@ -1,1 +1,4 @@
 - 2026-03-29 [standard] [pivot] Hot-reload tests duo mode — brancher au protocole de tour, pas au filesystem. Effort 1j, impact fort.
+- 2026-03-29 [standard] [pivot] OrbitPilot API — pas REST, CLI + MCP server. OrbitPilot est un outil personnel, pas un service. Les agents l'appellent via MCP nativement.
+- 2026-03-29 [explore] [4 directions] LLM usage radicalement nouveau — détecteur d'absence, mycélium de pensées, laboratoire évolutif, traducteur de réalités. Pattern: le LLM n'est pas un oracle, c'est un milieu vivant d'émergence.
+- 2026-03-29 [explore] [concept] FRACTURE — produit qui trouve les blancs, force les collisions, détecte les bascules. Testé sur Batiscan V4: 84% pertinence (16/19), Q5+Q6 = game changers.
