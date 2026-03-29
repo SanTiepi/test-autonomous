@@ -1,9 +1,21 @@
 {
-  "name": "test-autonomous",
-  "version": "1.0.0",
+  "name": "orchestra",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "test": "node --test tests/",
-    "start": "node src/index.mjs"
+    "start": "node orchestra.mjs start",
+    "resume": "node orchestra.mjs resume",
+    "approve": "node orchestra.mjs approve",
+    "stop": "node orchestra.mjs stop",
+    "watch": "node orchestra.mjs watch",
+    "bench:smoke": "node bench/run.mjs --phase smoke --provider replay --replayFile bench/replays/smoke.json",
+    "bench:phase-a": "node bench/run.mjs --phase a --provider openai",
+    "bench:phase-b": "node bench/run.mjs --phase b --provider openai",
+    "bench:analyze": "node bench/analyze.mjs",
+    "test": "node --test test/*.test.mjs",
+    "test:integration": "node --test test/integration.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
