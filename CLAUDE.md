@@ -16,7 +16,21 @@
 Lance `/context` silencieusement. Résume en 2-3 lignes : tests, fichiers dirty, tâche en cours.
 
 ## Mode A — Assisté (défaut)
-Robin pilote, tu exécutes intelligemment.
+Robin pilote, tu exécutes intelligemment. Les skills s'enchaînent naturellement :
+
+**Flow automatique :**
+```
+Robin donne une instruction
+  → si idée floue/risquée → /brainstorm avec Codex
+  → si feature complexe → /intake (brief pré-rempli, Robin valide)
+  → code
+  → tests ciblés automatiques
+  → si tests fail → /fix-loop (diagnostic→fix→retest, max 3 tours)
+  → si tests verts → /review-changes mental (go/no-go en 1 ligne)
+  → commit si go
+```
+
+Robin n'appelle pas les skills — ils se déclenchent quand le contexte le demande.
 
 **Seuils :**
 - 1-2 fichiers, scope clair → fais-le
@@ -25,27 +39,37 @@ Robin pilote, tu exécutes intelligemment.
 - Idée incertaine → `/brainstorm` (utilise `codex exec --full-auto`)
 
 **Tests :** `npm test` (node --test test/*.test.mjs)
+- Après chaque modification → tests ciblés automatiques
+- Si fail → `/fix-loop` automatique (max 3 itérations)
 - Logique métier → tests obligatoires
 - Bug fix → test de non-régression
-- Cosmétique → optionnel
 
-**Stop si :** objectif ambigu, API publique changerait, tests cassent hors scope.
+**Stop si :** objectif ambigu, API publique changerait, tests cassent hors scope, /fix-loop échoue 3 fois.
 
-**Avant commit :** vérifie qualité, mets à jour TASKS.md si objectif complété.
+**Avant commit :** review go/no-go en 1 ligne, TASKS.md à jour.
 
 ## Mode B — Full autonome
 Activé quand Robin donne un goal et dit de fonctionner en autonomie.
 
-**Entrée obligatoire :** goal clair + définition de "terminé" + scope borné.
+**Entrée obligatoire :** goal clair + définition de "terminé" + scope borné. Si complexe → `/intake` d'abord.
 
-**Boucle :**
-1. Codex planifie (`codex exec --full-auto`, inspecte le repo)
-2. Claude exécute UNE tâche atomique
-3. Tests après chaque modification
-4. Codex review → approuvé/rejeté/bloqué
-5. Tâche suivante ou stop
+**Boucle = Mode A enchaîné avec Codex comme pilote :**
+```
+/context → comprendre l'état
+Codex planifie la prochaine tâche atomique (codex exec --full-auto, inspecte le repo)
+  → Claude exécute (Mode A : code → tests → /fix-loop si fail → review)
+  → Codex review le résultat → approuvé/rejeté/bloqué
+  → Si approuvé → tâche suivante
+  → Si rejeté → Claude corrige (Mode A /fix-loop)
+  → Si bloqué → stop et signale
+Recheck /context toutes les 3 tâches
+```
 
-**Garde-fous :** pas de tâches hors goal, pas de refactor opportuniste, recheck `/context` toutes les 3 tâches, stop si dérive.
+**Garde-fous :**
+- Pas de tâches hors goal
+- Pas de refactor opportuniste
+- Pas de backlog auto-généré qui dérive
+- Stop si : goal atteint, bloqué, dérive détectée, budget de tours épuisé, /fix-loop échoue 3 fois de suite
 
 ## Skills
 - `/context` — reprendre un projet après absence

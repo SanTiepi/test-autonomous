@@ -18,52 +18,58 @@
 Lance `/context` silencieusement. Résume en 2-3 lignes : tests, fichiers dirty, tâche en cours.
 
 ## Mode A — Assisté (défaut)
-L'utilisateur pilote, tu exécutes intelligemment.
+L'utilisateur pilote, tu exécutes intelligemment. Les skills s'enchaînent naturellement :
+
+**Flow automatique :**
+```
+Instruction de l'utilisateur
+  → si idée floue/risquée → /brainstorm avec Codex
+  → si feature complexe → /intake (brief pré-rempli, utilisateur valide)
+  → code
+  → tests ciblés automatiques
+  → si tests fail → /fix-loop (diagnostic→fix→retest, max 3 tours)
+  → si tests verts → review mental (go/no-go en 1 ligne)
+  → commit si go
+```
+
+L'utilisateur n'appelle pas les skills — ils se déclenchent quand le contexte le demande.
 
 **Seuils :**
 - 1-2 fichiers, scope clair → fais-le
 - 3+ fichiers ou API/schema/modèle → propose l'approche en 3 lignes d'abord
 - Nouvelle feature ou module → `/intake` avec l'utilisateur
-- Idée incertaine → `/brainstorm` (utilise `codex exec --full-auto` si disponible)
+- Idée incertaine → `/brainstorm` (utilise `codex exec --full-auto`)
 
 **Tests :**
+- Après chaque modification → tests ciblés automatiques
+- Si fail → `/fix-loop` automatique (max 3 itérations)
 - Logique métier → tests obligatoires
 - Bug fix → test de non-régression
-- Cosmétique → optionnel
 
-**Stop si :** objectif ambigu, API publique changerait, tests cassent hors scope, scope dépasse le prévu.
-
-**Avant commit :** vérifie qualité, mets à jour TASKS.md si objectif complété.
+**Stop si :** objectif ambigu, API publique changerait, tests cassent hors scope, /fix-loop échoue 3 fois.
 
 ## Mode B — Full autonome
 Activé quand l'utilisateur donne un goal et dit de fonctionner en autonomie.
 
-**Entrée obligatoire :**
-- Goal clair avec définition de "terminé"
-- Scope borné (ce qui est inclus ET exclu)
-- Validé par `/intake` si le goal est complexe
+**Entrée obligatoire :** goal clair + définition de "terminé" + scope borné. Si complexe → `/intake` d'abord.
 
-**Boucle :**
-1. Codex planifie (via `codex exec --full-auto`, inspecte le repo avant)
-2. Claude exécute UNE tâche atomique
-3. Tests après chaque modification
-4. Codex review le résultat
-5. Si approuvé → tâche suivante. Si rejeté → correction. Si bloqué → stop.
+**Boucle = Mode A enchaîné avec Codex comme pilote :**
+```
+/context → comprendre l'état
+Codex planifie la prochaine tâche atomique (codex exec --full-auto, inspecte le repo)
+  → Claude exécute (Mode A : code → tests → /fix-loop si fail → review)
+  → Codex review le résultat → approuvé/rejeté/bloqué
+  → Si approuvé → tâche suivante
+  → Si rejeté → Claude corrige (Mode A /fix-loop)
+  → Si bloqué → stop et signale
+Recheck /context toutes les 3 tâches
+```
 
 **Garde-fous :**
-- Pas de tâches non reliées au goal
+- Pas de tâches hors goal
 - Pas de refactor opportuniste
 - Pas de backlog auto-généré qui dérive
-- Recheck `/context` toutes les 3 tâches
-- Si la tâche suivante n'est pas évidente → stop et demande
-- Budget de tours max (défini dans le goal)
-
-**Stop conditions :**
-- Goal atteint (tous les critères "terminé" remplis)
-- Bloqué sans solution claire
-- Dérive détectée (tâche non liée au goal)
-- Tests cassent de manière inattendue
-- Budget de tours épuisé
+- Stop si : goal atteint, bloqué, dérive détectée, budget épuisé, /fix-loop échoue 3 fois de suite
 
 ## Skills disponibles
 Utilise-les quand le contexte le demande, pas systématiquement :
