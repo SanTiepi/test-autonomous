@@ -15,38 +15,23 @@
 ## Session start
 Lance `/context` silencieusement. Résume en 2-3 lignes : tests, fichiers dirty, tâche en cours.
 
-## RÈGLES DURES — Codex (non négociable)
+## Codex — quand l'utiliser (et quand NE PAS)
 
-Ces règles ne sont PAS optionnelles. Tu ne les ignores JAMAIS "parce que c'est plus rapide".
+Codex (`codex exec --full-auto`) est un deuxième cerveau avec des biais différents. Il apporte de la valeur quand tu as besoin d'un REGARD EXTÉRIEUR. Pas pour tout.
 
-### Brainstorm
-- Mode Quick → tu fais seul, OK
-- Mode Standard/Deep/Explore → tu DOIS appeler `codex exec --full-auto` avec le sujet. Pas optionnel. Lance-le en background si tu veux continuer pendant qu'il réfléchit. Quand il répond, compare avec ton analyse. Les DIVERGENCES sont les insights les plus précieux.
+**UTILISE Codex quand :**
+- Brainstorm mode Explore — obligatoire, c'est là que les divergences créent de la valeur
+- Décision d'architecture structurante — quand 2 approches se valent
+- Tu es bloqué — un regard frais débloque
+- Review d'un changement risqué — avant de merger du coeur système
 
-### Développement
-- Quand tu codes 3+ fichiers → lance Codex en background pour écrire les tests OU review le plan :
-  `codex exec --full-auto -s workspace-write "Écris les tests pour [module]. Contrats: [signatures]." &`
-- Après chaque phase majeure (3+ fichiers modifiés) → Codex review OBLIGATOIRE :
-  `codex exec --full-auto "Review les changements récents dans src/. Vérifie cohérence, edge cases, bugs. Verdict: approve/fix."`
-- Si tu hésites sur une décision d'architecture → Codex tranche, pas toi :
-  `codex exec --full-auto "Décision: [A ou B]. Contexte: [contexte]. Tranche."`
+**N'UTILISE PAS Codex quand :**
+- La tâche est claire et tu sais quoi faire
+- C'est du code simple ou du fix évident
+- Tu vas juste attendre sans rien faire en parallèle
 
-### Parallélisme
-- Utilise tes Agent Teams / subagents pour les tâches parallélisables
-- Lance Codex en background (`&`) pendant que tu codes — ne l'attends PAS
-- Tu dois avoir 2-3 choses qui tournent en même temps quand le projet le permet
-
-### Ce que Codex fait MIEUX que toi
-- Review externe (il n'a pas tes biais de créateur)
-- Décisions d'architecture (il est plus brutal et direct)
-- Challenge des hypothèses (il ne te confirme pas par politesse)
-- Estimation d'effort (il connaît les patterns de l'industrie)
-
-### Ce que tu fais MIEUX que Codex
-- Code complexe et itératif
-- Fix-loop (diagnostic + correction rapide)
-- Intégration de modules entre eux
-- Connaissance profonde du repo en cours
+**En background, pas en bloquant :**
+Si tu appelles Codex, lance-le en background (`&`) et continue. Ne reste JAMAIS à attendre.
 
 ## Mode A — Assisté (défaut)
 Robin pilote, tu exécutes. Flow automatique :
