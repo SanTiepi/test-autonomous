@@ -1,126 +1,64 @@
 ---
 name: brainstorm
-description: "Brainstorm adaptatif Codex↔Claude. Usage: /brainstorm <idée>. S'adapte automatiquement: rapide pour petites questions, profond pour grandes idées."
+description: "Brainstorm adaptatif Codex↔Claude. Usage: /brainstorm <idée>. S'adapte au poids de la question."
 user-invocable: true
 ---
 
-# Brainstorm Adaptatif
+# /brainstorm
 
-L'utilisateur donne une idée. Tu brainstorms avec Codex CLI. Le niveau de profondeur s'adapte automatiquement.
+L'utilisateur donne une idée. Tu brainstorms avec Codex. La profondeur s'adapte automatiquement.
 
-## Classification automatique
+## Classifie l'idée
 
-Avant tout, classifie l'idée :
+- **Quick** — question technique, petit ajustement, oui/non
+- **Standard** — nouvelle feature, changement d'architecture, pivot
+- **Deep** — stratégie produit/business, changement fondamental, multi-systèmes
 
-**Quick** (réponse en 15s, ~10 lignes) — si c'est :
-- Une question technique simple ("devrait-on utiliser X ou Y ?")
-- Un petit ajustement ("ajouter un champ Z au modèle")
-- Une optimisation mineure
+## Contexte
 
-**Standard** (réponse en 30s, ~20 lignes) — si c'est :
-- Une nouvelle feature
-- Un changement d'architecture
-- Un pivot produit
+Lis CLAUDE.md ou README.md (premières lignes). Si `.claude/codex_context.md` existe, utilise-le au lieu de re-décrire le projet.
 
-**Deep** (réponse en 60s, ~30 lignes) — si c'est :
-- Une idée stratégique ou business
-- Un changement fondamental d'approche
-- Une idée qui touche plusieurs systèmes/projets
+Sinon crée-le après ce brainstorm (5 lignes : nom, stack, état, contraintes, objectif).
 
-## Étape 1 — Contexte
+## Quick — Claude seul, pas de Codex
 
-Lis rapidement CLAUDE.md ou README.md (premières lignes) pour identifier le projet. Résume en 1 phrase.
+Réponds toi-même en 3-5 lignes. Verdict + pourquoi + alternative si pertinent. C'est tout.
 
-## Étape 2 — Appel Codex
+## Standard — Codex + Claude
 
-### Mode Quick
-```bash
-codex exec --full-auto "Projet: [CONTEXTE]. Idée: [IDÉE]. Inspecte le code seulement si ça rend ta réponse plus pertinente. Réponds en français. VERDICT: go/pivot/kill. POURQUOI. MIEUX: une meilleure approche si elle existe."
-```
+Appelle Codex. Adapte le prompt à la question — pas de template rigide. Donne-lui :
+- Le contexte projet (court)
+- L'idée
+- Dis-lui d'inspecter le code pertinent à la question
+- Dis-lui de répondre en français, d'être brutal et honnête
+- Demande : forces, faiblesses, risque, alternative, verdict (go/pivot/kill), effort, impact
 
-### Mode Standard
-```bash
-codex exec --full-auto "Projet: [CONTEXTE]. BRAINSTORM: [IDÉE]. Inspecte le code nécessaire pour ancrer ta réponse dans la réalité du projet. Réponds en français, sois brutal, remets en question les hypothèses implicites, propose des angles nouveaux. FORCE. FAIBLESSE. RISQUE. ALTERNATIVE: une approche radicalement différente et potentiellement meilleure. VERDICT: go/pivot/kill + pourquoi. EFFORT. IMPACT."
-```
+Timeout 45s. Si Codex ne répond pas, tranche seul et ajoute un addendum quand il arrive.
 
-### Mode Deep
-```bash
-codex exec --full-auto "Projet: [CONTEXTE]. BRAINSTORM PROFOND: [IDÉE]. Inspecte le code en profondeur pour comprendre ce qui existe, ce qui manque, et les opportunités cachées. Challenge chaque hypothèse. Réponds en français, sois brutal ET visionnaire. FORCES. FAIBLESSES. RISQUES (court + long terme). ANGLES INEXPLORÉS: pistes auxquelles personne n'a pensé — sois créatif. MEILLEURE VERSION DE L'IDÉE: reformule en mieux. VERDICT: go/pivot/kill. EFFORT. IMPACT. DÉPENDANCES."
-```
+Puis ajoute ton avis : ce que tu acceptes, ce que tu contestes, enrichissement technique basé sur le code.
 
-**Timeout et fallback :**
-- **Quick** : ne lance PAS Codex. Tu réponds seul — c'est plus rapide et Codex n'ajoute rien sur du trivial.
-- **Standard** : timeout Codex 45s. S'il ne répond pas, tranche seul et présente. Si Codex arrive en retard, ajoute un "Addendum Codex" en dessous.
-- **Deep** : Codex obligatoire, même si lent. Attends jusqu'à 90s. Sans Codex, le Deep perd sa valeur.
+Présente le résultat — la longueur s'adapte à la complexité de la question. Pas de format rigide. L'important c'est : verdict clair, raison, prochaine action.
 
-**Cache contexte :** Si `.claude/codex_context.md` existe, passe son contenu en prefix au lieu de re-décrire le projet à chaque appel. Crée ce fichier après le premier brainstorm du projet avec un résumé de 5 lignes (nom, stack, état, contraintes, objectif).
+## Deep — Codex obligatoire
 
-## Étape 3 — Ton avis
+Même flow que Standard mais :
+- Dis à Codex d'inspecter le code en profondeur
+- Demande aussi : angles inexplorés, meilleure version de l'idée, dépendances
+- Timeout 90s
+- Ton avis est plus développé : connexions avec l'existant, faisabilité détaillée, risques techniques
+- Propose un plan si go/pivot
 
-Ajoute ta perspective en te basant sur ta connaissance du code :
-- **Quick** : 1-2 lignes — accepte ou conteste le verdict
-- **Standard** : 3-5 lignes — accepte, conteste, enrichis techniquement
-- **Deep** : 5-8 lignes — accepte, conteste, enrichis, propose des connexions avec l'existant, explore un angle que Codex a raté
+## Après chaque brainstorm
 
-## Étape 4 — Présentation
-
-### Quick
-```
-**[IDÉE en 5 mots]** → [go/pivot/kill] | [1 ligne pourquoi] | [mieux: alternative si pivot]
-```
-
-### Standard
-```
-## Brainstorm: [titre]
-
-**CODEX:** [verdict] — [raison]
-**Forces:** [1 ligne] | **Faiblesses:** [1 ligne]
-**Risque:** [1 ligne]
-
-**CLAUDE:** [enrichissement 1-2 lignes]
-
-**Verdict:** [go/pivot/kill] | Effort: [x] | Impact: [x]
-**Next:** [1 action concrète]
-```
-
-Si go/pivot, ajoute 3 étapes techniques.
-
-### Deep
-```
-## Brainstorm profond: [titre]
-
-### Ce que Codex voit
-**Forces:** [résumé]
-**Faiblesses:** [résumé]
-**Risques:** [court terme] + [long terme]
-**Angles inexplorés:** [2 pistes nouvelles]
-
-### Ce que Claude ajoute
-[5-8 lignes d'analyse technique + connexions avec l'existant]
-
-### Meilleure version de l'idée
-[Reformulation enrichie en 3 lignes]
-
-### Verdict
-[go/pivot/kill] | Effort: [x] | Impact: [x]
-Dépendances: [ce qui doit exister avant]
-
-### Plan si go
-1. [étape]
-2. [étape]
-3. [étape]
-```
-
-## Étape 5 — Log
-
-Ajoute dans `.claude/brainstorm_log.md` :
+Ajoute une ligne dans `.claude/brainstorm_log.md` :
 ```
 - [date] [quick/standard/deep] [verdict] [titre] — [1 ligne]
 ```
 
-## Règles
-- Ne demande JAMAIS à l'utilisateur "quel mode veux-tu ?" — classifie toi-même
-- Si l'idée est bonne, explore comment la rendre ENCORE meilleure
+## Principes
+
+- La longueur de la réponse est proportionnelle au poids de la question
+- Le but c'est DÉCIDER, pas EXPLORER indéfiniment
+- Si l'idée est bonne, dis comment la rendre ENCORE meilleure
 - Si l'idée est mauvaise, propose TOUJOURS une alternative
-- Sois visionnaire sur le Deep : "et si on allait plus loin..."
-- Le but n'est pas de valider — c'est d'ÉPROUVER et ENRICHIR
+- Pas de complaisance, pas de pessimisme gratuit
