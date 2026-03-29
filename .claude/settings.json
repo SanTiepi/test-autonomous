@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "Before finishing, verify: (1) Were all tasks in the TodoList completed? (2) Were tests run after code changes? (3) Was TASKS.md updated if an objective was completed? Reply {\"ok\": true} if all good, or {\"ok\": false, \"reason\": \"what was missed\"} if something was forgotten."
+            "prompt": "Before finishing: (1) Were all tasks completed? (2) Were tests run after code changes? (3) Was TASKS.md updated? (4) Are there uncommitted changes that should be committed? Reply {\"ok\": true} or {\"ok\": false, \"reason\": \"what was missed\"}."
           }
         ]
       }
