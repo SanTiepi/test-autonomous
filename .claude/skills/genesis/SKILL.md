@@ -102,20 +102,26 @@ export function nomFonction() { throw new Error('Not implemented'); }
 git init && git add -A && git commit -m "genesis: [nom] — repo prêt pour construction"
 ```
 
-### 5. Présentation finale
+### 5. Lancer la construction automatiquement
 
-Montre à l'utilisateur :
-- Le nom du projet
-- La vision (1 ligne)
-- L'architecture (arborescence)
-- Les contrats (signatures)
-- Le nombre de modules et tests
-- Le prompt pour lancer la construction :
+Après le commit initial, lance la construction en background :
 
+```bash
+cd [chemin du repo] && claude -p "You are a senior autonomous engineer for this repo. Read CLAUDE.md. Build it. Use agents for parallelism. Ship when npm test is green." --dangerously-skip-permissions --output-format json > .genesis_build.log 2>&1 &
 ```
-Ouvre Claude Code dans [chemin]. Le repo est prêt.
-Prompt: "You are a senior autonomous engineer for this repo. Build it."
+
+Puis dis à l'utilisateur :
 ```
+✅ Repo [nom] créé dans [chemin]
+🚀 Construction lancée en autonomie
+📊 [X] modules, [Y] tests à faire passer
+⏱️ Estimation: [Z] minutes
+
+Tu peux suivre l'avancement: tail -f [chemin]/.genesis_build.log
+Ou attendre — je te dirai quand c'est fini.
+```
+
+Si `claude -p` n'est pas disponible (session imbriquée), propose le prompt à copier-coller.
 
 ## Principes
 
