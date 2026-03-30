@@ -31,6 +31,13 @@ Ce qui revient n'est pas un "avis" — c'est un **objet de décision** : options
 
 **Les experts émergent du problème.** Pas un panel fixe — le contexte détermine qui parle. Problème de données + UX + légal → 3 experts spécifiques, pas un comité générique.
 
+### Comment bien utiliser Codex (anti-patterns à éviter)
+- **NE PAS** envoyer "lis les docs et dis-moi ce que tu penses" → Codex perd 80% de son budget à lire
+- **PRÉ-BRIEFER** : injecte le contexte essentiel DANS le prompt (2-5 lignes résumées)
+- **FORCER LA DIVERGENCE** : envoie ta thèse à Codex, demande-lui ce qui est faux
+- **FORMAT STRUCTURÉ** : demande des points nommés (BLIND_SPOT, ALTERNATIVE, VERDICT), pas de la prose
+- **TOUJOURS en background** (`&`) — tu codes pendant que Codex pense
+
 ### Quand lancer un briefing
 - Tu sens de l'incertitude sur l'approche
 - Le changement touche 3+ domaines

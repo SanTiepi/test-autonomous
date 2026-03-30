@@ -32,7 +32,36 @@
 - Vision tech : moteur Rust/WASM, local-first, CRDT sync
 - Timeline physique : tâches avec gravité, vitesse, risque visuel
 
-## Innovations système cette session
+## Découvertes session 2026-03-30
+
+### Domain Tomography (Deep brainstorm)
+- FRACTURE+WorldEngine+Duo = scanner CT pour industries
+- Boucle fermée : perception → simulation → construction → validation
+- Codex corrige : pas un scanner (passif) mais un **système immunitaire adaptatif** (actif)
+- Le moat n'est pas "voir l'invisible" — c'est fermer la boucle plus vite que le marché ne se réorganise
+- Test décisif : reproduire le 84% sur un domaine inconnu
+
+### Executable Discovery (Explore wild)
+- 10 experts (7 Claude + 3 Codex) convergent : la connaissance qui survit EST son support d'exécution
+- Pattern toxique identifié : on met 100% des découvertes en TEXTE, 0% en CONTRAINTES
+- 3 mécanismes : Gravité (le terrain force), Précédent (trigger→réponse auto), Geste (savoir=fonction)
+- Codex : "une découverte vivante devient gravité opérationnelle" — elle déforme le chemin par défaut
+- Next : transformer les principes clés en tests/hooks/agents, pas en docs
+
+### Protocole Codex optimisé
+- Avant : Codex perd 80% du budget à lire des fichiers (35k tokens, 6 fichiers lus)
+- Après : pré-briefing + divergence forcée + format structuré (21k tokens, 0 fichier, 4 points tranchants)
+- Règle : Claude forme sa thèse AVANT, Codex CONTESTE après
+- Templates par mode dans le skill brainstorm (Standard/Deep/Explore)
+
+### Cognitive OS (Explore wild écosystème)
+- L'écosystème Robin = 8 verbes : PROUVER/SIMULER/SENTIR/RÉVÉLER/PLANIFIER/CONSTRUIRE/SURVEILLER/DÉCIDER
+- Chaque projet manque un verbe que seul un AUTRE projet possède
+- 5 synergies identifiées : simulation prouvable, diagnostic émotionnel d'industrie, découverte incarnée, planning neuronal, récif complet
+- test-autonomous = le kernel du Cognitive OS
+- Next : concevoir les ponts entre projets
+
+## Innovations système (sessions précédentes)
 
 ### Mode hybride Codex↔Claude
 - Codex écrit les tests, Claude implémente pour les faire passer
