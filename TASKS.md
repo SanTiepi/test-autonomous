@@ -5,7 +5,7 @@
 - `OrbitPilot` — orchestrateur de priorités, en pause (focus WorldEngine)
 
 ## Décisions clés (2026-03-30)
-- **Focus > Abstraction** : 1 produit mature > 8 projets embryonnaires. WorldEngine est le seul actif avec 262 tests + démo LLM réelle.
+- **Focus > Abstraction** : 1 produit mature > 8 projets embryonnaires. WorldEngine = 287 tests + démo LLM réelle + 4 presets immobiliers.
 - **WorldEngine ≠ feature SwissBuilding** : repo/CLI/API/pricing séparés. SwissBuilding = premier client, pas propriétaire.
 - **Wedge vertical** : préparation avant interaction coûteuse (négo immobilière, présentation diagnostic). Pas de marché horizontal.
 - **Marché validé** : Aaru ($1B valuation), Synthetic Users (Gartner leader). Le créneau vertical immobilier est ouvert.
@@ -14,7 +14,7 @@
 ## Projets actifs
 | Projet | État | Description |
 |---|---|---|
-| **WorldEngine** | building | Simulateur universel — agents LLM qui simulent clients, experts, marchés, équipes |
+| **WorldEngine** | **building — FOCUS** | 287 tests, 22 modules, 11 presets (7 corporate + 4 immobilier), CLI complet, LLM intégré |
 | **OrbitPilot** | building | Orchestrateur de priorités pour dev solo — planification probabiliste |
 | **PulseOps** | done v1 | Observatoire santé repos Git — 25 tests, 6 modules |
 | **test-autonomous** | stable | Control plane — skills, duo mode, outils |
