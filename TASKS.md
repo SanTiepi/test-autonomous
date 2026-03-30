@@ -1,8 +1,15 @@
 # Tasks — Control Plane
 
 ## En cours
-- `WorldEngine` — simulateur de réalité universel, en construction autonome
-- `OrbitPilot` — orchestrateur de priorités, en construction autonome
+- `WorldEngine` — **FOCUS PRINCIPAL** — produit-noyau standalone, distribué via SwissBuilding (modèle Stripe)
+- `OrbitPilot` — orchestrateur de priorités, en pause (focus WorldEngine)
+
+## Décisions clés (2026-03-30)
+- **Focus > Abstraction** : 1 produit mature > 8 projets embryonnaires. WorldEngine est le seul actif avec 262 tests + démo LLM réelle.
+- **WorldEngine ≠ feature SwissBuilding** : repo/CLI/API/pricing séparés. SwissBuilding = premier client, pas propriétaire.
+- **Wedge vertical** : préparation avant interaction coûteuse (négo immobilière, présentation diagnostic). Pas de marché horizontal.
+- **Marché validé** : Aaru ($1B valuation), Synthetic Users (Gartner leader). Le créneau vertical immobilier est ouvert.
+- **Protocole Codex optimisé** : pré-briefing + thèse Claude + divergence forcée = -41% tokens, 4x insights.
 
 ## Projets actifs
 | Projet | État | Description |
