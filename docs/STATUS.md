@@ -3,7 +3,7 @@
 ## Resume Point
 1. Active : WorldEngine + OrbitPilot en construction autonome
 2. Just completed : brainstorm vision WorldEngine, mode hybride Codex↔Claude
-3. Next : vérifier les builds, itérer sur WorldEngine v1, tester /simulate
+3. Next : continuer WorldEngine v1 et monitorer crons OpenClaw
 4. Blockers : aucun
 5. Vision : WorldEngine = "moteur de mondes" / simulateur de réalité universel
 
@@ -36,6 +36,6 @@
 - PulseOps : done v1 (santé repos Git)
 
 ## Quality
-- test-autonomous : 611+ tests / 166+ suites / 0 fail
+- test-autonomous : 479 tests / 111 suites / 0 fail
 - PulseOps : 25/25 tests
 - Skills : déployés dans 6 repos

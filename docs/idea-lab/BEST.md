@@ -115,6 +115,27 @@ Assurance paramétriqe déclenchée par biomarqueurs de sueur — patch cutané 
 
 ---
 
-*Dernière mise à jour : 2026-04-01 — 90/110 idées compilées, 2 batches en cours*
-*Score moyen global : 16.9/20*
-*Domaines croisés : médecine×bâtiment, océan×crypto, cuisine×cybersécurité, sport×assurance, archéologie×robotique, parfumerie×data, justice×game design, agriculture×neurosciences, mode×ingénierie, musique×urbanisme, apiculture×crypto, volcanologie×théâtre*
+## Score 17/20 (Nouvelles — 2026-04-01)
+
+### DiagnostiChain — Diagnostic × Blockchain
+Rapports de diagnostic amiante/polluants bloqués blockchain avec preuve immuable: photos géolocalisées, timestamps, signature cryptographique diagnostiqueur. Trace audit complète pour contests juridiques.
+
+---
+
+## Score 16/20 (Nouvelles — 2026-04-01)
+
+### EmbodiedCarbon.Pass — Durabilité × Certification SaaS
+PKI décentralisée où chaque matériau bâtiment porte "Carbon Passport" cryptographique: origines → processing → shipping → installation. Automatise certification ESG + scoring impact carbone lifecycle (regulatory mandate 2026).
+
+---
+
+## Score 15/20 (Nouvelles — 2026-04-01)
+
+### VenueGuard — Événementiel × Prédiction Structurelle
+SaaS temps réel pour salles événements: capteurs IoT → modèle charge+fatigue matériaux → alert équipe sécurité AVANT risque. Réduit assurance, répond à regulatory tightening 2026.
+
+---
+
+*Dernière mise à jour : 2026-04-01 — 93/110 idées compilées, 1 batch en cours*
+*Score moyen global : 16.85/20*
+*Domaines croisés : diagnostic×blockchain, durabilité×SaaS, événementiel×prédiction, médecine×bâtiment, océan×crypto, cuisine×cybersécurité, sport×assurance, archéologie×robotique, parfumerie×data, justice×game design, agriculture×neurosciences, mode×ingénierie, musique×urbanisme, apiculture×crypto, volcanologie×théâtre*
