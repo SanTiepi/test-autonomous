@@ -3,6 +3,15 @@
 ## En cours
 - `WorldEngine` — **FOCUS PRINCIPAL** — produit-noyau standalone, distribué via SwissBuilding (modèle Stripe)
 - `OrbitPilot` — orchestrateur de priorités, en pause (focus WorldEngine)
+- `OpenClaw` — intégration en cours. 3 agents (main, swissbuilding, idea-lab), 6 crons configurés
+
+## OpenClaw — État intégration (2026-04-01)
+- **Gateway** : OK, `ws://127.0.0.1:18789`, version 2026.3.31
+- **Agents** : main (Sonnet 4.6), swissbuilding (Sonnet 4.6), idea-lab (Sonnet 4.6)
+- **Crons fixés** : delivery channel `last` → `log` (6 jobs), health-check sur Haiku (économie rate limit)
+- **Fallback** : Sonnet → Haiku → Codex GPT-5.4 (plus de doublon Sonnet)
+- **À tester** : redémarrer OpenClaw et vérifier que les crons passent sans erreur
+- **Next** : connecter un canal Discord/Telegram pour notifications, explorer les skills OpenClaw utiles
 
 ## Décisions clés (2026-03-30)
 - **Focus > Abstraction** : 1 produit mature > 8 projets embryonnaires. WorldEngine = 287 tests + démo LLM réelle + 4 presets immobiliers.
