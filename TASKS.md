@@ -5,13 +5,51 @@
 - `OrbitPilot` — orchestrateur de priorités, en pause (focus WorldEngine)
 - `OpenClaw` — intégration en cours. 3 agents (main, swissbuilding, idea-lab), 6 crons configurés
 
-## OpenClaw — État intégration (2026-04-01)
+## OpenClaw — Intégration complète (2026-04-01)
+
+### Architecture
 - **Gateway** : OK, `ws://127.0.0.1:18789`, version 2026.3.31
-- **Agents** : main (Sonnet 4.6), swissbuilding (Sonnet 4.6), idea-lab (Sonnet 4.6)
-- **Crons fixés** : delivery channel `last` → `log` (6 jobs), health-check sur Haiku (économie rate limit)
-- **Fallback** : Sonnet → Haiku → Codex GPT-5.4 (plus de doublon Sonnet)
-- **À tester** : redémarrer OpenClaw et vérifier que les crons passent sans erreur
-- **Next** : connecter un canal Discord/Telegram pour notifications, explorer les skills OpenClaw utiles
+- **Heartbeat** : activé, 30min, Haiku, lightContext
+- **Fallback** : Sonnet → Haiku → Codex GPT-5.4
+
+### Agents (3)
+| Agent | Modèle | Workspace | SOUL.md | Exec |
+|---|---|---|---|---|
+| main | Sonnet 4.6 | default | generic | full |
+| swissbuilding | Sonnet 4.6 | SwissBuilding | custom (tour de contrôle) | allowlist (15 cmds) |
+| idea-lab | **Haiku** | test-autonomous | **custom (IdeaForge)** | full (**) |
+
+### Crons (7)
+| Cron | Agent | Schedule | Modèle | lightContext |
+|---|---|---|---|---|
+| **morning-brief** | main | 7h00 daily | Sonnet | oui |
+| standup | swissbuilding | 7h30 daily | Haiku | oui |
+| health-check | swissbuilding | /4h | Haiku | oui |
+| weekly-review | swissbuilding | lundi 8h | Sonnet | non |
+| daily-ideas | idea-lab | 2h00 daily | Haiku | oui |
+| weekly-deep-ideas | idea-lab | dimanche 3h | Sonnet | non |
+| monthly-trends | idea-lab | 1er du mois 4h | Sonnet | non |
+
+### Fichiers configurés
+- SOUL.md : rewritten pour idea-lab (IdeaForge identity)
+- USER.md : Robin, Europe/Zurich, préférences
+- IDENTITY.md : IdeaForge, telescope emoji
+- HEARTBEAT.md : checklist repo health + idea quality + trend freshness
+- BOOTSTRAP.md : supprimé (post-setup)
+
+### Fixes appliqués
+- delivery `announce/last` → `none` (pas de canal configuré)
+- idea-lab exec permissions : `**` (était vide)
+- dates hardcodées supprimées dans les prompts cron
+- prompts enrichis avec commandes git/gh explicites
+- health-check timeout 120s → 600s (SwissBuilding = 7150+ tests)
+- memorySearch désactivé (pas d'embedding provider)
+
+### Next
+- Connecter Discord ou Telegram comme canal de notification
+- Vérifier TAVILY_API_KEY pour veille concurrentielle
+- Tester le morning-brief demain 7h00
+- Considérer clawhub install pour skills marketplace
 
 ## Décisions clés (2026-03-30)
 - **Focus > Abstraction** : 1 produit mature > 8 projets embryonnaires. WorldEngine = 287 tests + démo LLM réelle + 4 presets immobiliers.
