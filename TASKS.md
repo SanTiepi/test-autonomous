@@ -1,17 +1,18 @@
 # Studio Robin — Tableau de bord
 
-> Dernière mise à jour : 2026-04-03
+> Dernière mise à jour : 2026-04-06
 > Ce fichier est la source de vérité pour tous les projets.
 
 ## Priorités (dans l'ordre)
 
 | # | Projet | Action immédiate | Pourquoi |
 |---|--------|-----------------|----------|
-| 1 | **SwissBuilding** | Web check-up pour amis propriétaires | Premier feedback utilisateur réel |
-| 2 | **NegotiateAI** | Web app + bot Telegram pour amis | Feedback réel sur le produit |
-| 3 | **Batiscan-V4** | Maintenance, mails Infomaniak | Business existant, clients réels |
-| 4 | **WorldEngine** | Stabiliser orchestrate/compose | Brique de simulation pour SB + NA |
-| 5 | **test-autonomous** | Stabiliser le pipeline, ce fichier | Infrastructure du studio |
+| 1 | **Batiscan-V4** | pgvector + Whisper + Marker + compta interne | Business qui paie, quick wins stack existante |
+| 2 | **SwissBuilding** | Web check-up + Swisstopo API étendue | Premier feedback utilisateur réel |
+| 3 | **Suxe** | PeerShield + Coffre-Fort Incident (MVP Habiter) | Nouveau produit, repositionné "safety solo meetings" |
+| 4 | **NegotiateAI** | Web app + bot Telegram pour amis | Feedback réel sur le produit |
+| 5 | **WorldEngine** | Stabiliser orchestrate/compose | Brique de simulation pour SB + NA |
+| 6 | **test-autonomous** | Fractal V2 implémenté, pipeline diet | Infrastructure du studio |
 
 ## État des projets
 
@@ -22,7 +23,8 @@
 | Batiscan-V4 | 3056 (pytest) | main | 30h | Prod — maintenance |
 | WorldEngine | 573 | master | 12h | Dev actif — MCP + presets |
 | test-autonomous | 479 | master | 2j | Stable — control plane |
-| Suxe | 148 | main | 10j | **Pivot ShieldWork** — 6 modules à ajouter, Dead Man Switch priorité #1 |
+| Suxe | 148 | main | 10j | **Pivot safety solo meetings** — PeerShield + Coffre-Fort priorité |
+| Habiter | 0 | master | nouveau | **Copilote domestique OS** — capteurs + IA + preuve + action, MVP app-first |
 | OrbitPilot | 62 | master | 5j | En pause |
 | PulseOps | 25 | master | 5j | Done v1 |
 
@@ -32,8 +34,7 @@
 |--------|--------|--------|
 | EpistemicLayer | Abandonné | babel-epistemic + clarity-gate le remplacent |
 | NeuralShop | 3 sem sans commit | À archiver si pas de plan |
-| Suxe | 8j sans commit | À clarifier |
-| benoit-ecosystem | 1 commit | À archiver |
+| benoit-v2 / benoit-ecosystem | Abandonné | N'apporte rien qu'une lib TS ne fait pas (décision 2026-04-06) |
 | batiscan (ancien) | 4 sem | Remplacé par Batiscan-V4 |
 
 ## Pipeline autonome (OpenClaw)
@@ -73,6 +74,12 @@
 | 2026-04-01 | USE don't BUILD : chercher 30 min avant de coder 1 ligne |
 | 2026-04-01 | Focus > Abstraction : 1 produit mature > 8 embryonnaires |
 | 2026-03-30 | WorldEngine = produit standalone, distribué via SwissBuilding (modèle Stripe) |
+| 2026-04-06 | Habiter = nouveau projet, copilote domestique open source, capteurs + IA + preuve + action |
+| 2026-04-06 | Benoit lang abandonné — n'apporte rien qu'une lib TS ne fait pas |
+| 2026-04-06 | Suxe repositionné "safety for solo meetings" (pas escort/TdS) |
+| 2026-04-06 | Batiscan : 12 nouvelles tâches (TASK-253 à 264), pgvector + Whisper + Marker + compta interne |
+| 2026-04-06 | Écosystème = 1 graphe, 6 surfaces, pas 6 produits séparés |
+| 2026-04-06 | Fractal V2 implémenté — kill-first, court, parallèle Claude+Codex |
 
 ## Comment lancer un agent Claude Code sur un projet
 
