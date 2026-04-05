@@ -1,0 +1,37 @@
+🎯 PROSPECT SIMULATOR — SwissBuilding (2026-04-02)
+
+Simulated 5 distinct Swiss prospects:
+1. Marc (Régie 50 immeub) — CHF 400–600/mois, pain: Excel fragmentation
+2. Sylvie (Diag seul) — CHF 150–200/mois, pain: 2h rapports/jour
+3. Jean-Paul (Caisse 300 immeub) — CHF 3–5k/mois, pain: zéro visibility ROI
+4. Anna (Architect) — CHF 600–900/mois, pain: dérives budget 30%
+5. Philippe (Commune) — CHF 2–3k/mois, pain: risque légal amiante
+
+✅ TOP 3 FEATURES QUI FONT VENDRE (5/5 prospects demand):
+1. Inventory & Asset Management (numérisation centralisée)
+2. Compliance Alerts (amiante/électrique/hygiène CH-specific)
+3. Reporting Automation (audit-ready PDFs)
+
+🚨 TOP 3 FEATURES MANQUANTES (3+ prospects):
+1. ERP Integration (Navision/SAP/Ciel) — Deal breaker for 4/5
+2. Cadastre Suisse + Legal Alerts (uniquely Swiss)
+3. Mobile Offline App (field work in no-connectivity zones)
+
+💰 PRICING SWEET SPOT:
+- Starter: CHF 300/mois (solo → 30 immeub)
+- Pro: CHF 800/mois (30–150 immeub)
+- Enterprise: CHF 2.5k/mois (300+ immeub)
+
+🔥 DEAL BREAKERS TO FIX ASAP:
+→ Data privacy (on-premise or CH residency cert)
+→ French support (non-negotiable for CHF 800+ segments)
+→ Implementation speed (<2 weeks)
+→ ERP integrations
+→ Offline mobile
+
+📊 FULL REPORT: docs/prospect-simulations/2026-04-02-prospect-sim.md
+📋 DEV QUEUE: .openclaw/dev-queue.json (updated with market-driven suggestions)
+
+🎬 Next: Validate top 3 features with 1-2 real prospects (phone call). Hire French support engineer ASAP.
+
+Robin's prospects consensus: "Feature parity is table stakes; integrations + compliance = differentiator."

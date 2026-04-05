@@ -1,0 +1,121 @@
+{
+  "lastUpdated": "2026-04-02T00:33Z",
+  "source": "prospect-simulator",
+  "suggestions": [
+    {
+      "priority": "P0-critical",
+      "feature": "ERP Integration (Navision, SAP, Ciel)",
+      "demandedBy": 4,
+      "personas": ["Marc (Régie)", "Jean-Paul (Caisse)", "Anna (Architect)", "Philippe (Commune)"],
+      "rationale": "Accounting sync = deal-breaker for all SMB+ segments",
+      "estimatedImpact": "CHF 40k-70k/year savings per prospect",
+      "estimatedDevDays": 60,
+      "proposedQ": "Q3 2026"
+    },
+    {
+      "priority": "P0-critical",
+      "feature": "French Support & Documentation",
+      "demandedBy": 3,
+      "personas": ["Jean-Paul", "Philippe", "Anna"],
+      "rationale": "CHF 800+/month segments will NOT sign without French support",
+      "estimatedImpact": "Unlock CHF 150k+ ARR in large accounts",
+      "estimatedDevDays": "1 FTE (ongoing)",
+      "proposedQ": "ASAP (April 2026)"
+    },
+    {
+      "priority": "P1-high",
+      "feature": "Mobile App - Offline Mode",
+      "demandedBy": 3,
+      "personas": ["Marc (Régie)", "Sylvie (Diag)", "Anna (Architect)"],
+      "rationale": "Alpine/rural sites = zero connectivity. Required for field inspections.",
+      "estimatedImpact": "Enable diagnostician + architect segments",
+      "estimatedDevDays": 45,
+      "proposedQ": "Q2-Q3 2026"
+    },
+    {
+      "priority": "P1-high",
+      "feature": "Cadastre Suisse Integration (Cantonal API)",
+      "demandedBy": 3,
+      "personas": ["Jean-Paul", "Anna", "Philippe"],
+      "rationale": "Auto-sync building data, zones constructibles, legal alerts. Swiss-specific moat.",
+      "estimatedImpact": "Differentiate vs Immomig/emonitor",
+      "estimatedDevDays": 40,
+      "proposedQ": "Q3 2026"
+    },
+    {
+      "priority": "P1-high",
+      "feature": "Compliance Alert Engine (Amiante/Electrique/Hygiène)",
+      "demandedBy": 5,
+      "personas": ["All"],
+      "rationale": "Unique value = predict legal issues before audits. Major risk reduction.",
+      "estimatedImpact": "Justify CHF 500-5000/month pricing",
+      "estimatedDevDays": 50,
+      "proposedQ": "Q2-Q3 2026"
+    },
+    {
+      "priority": "P2-medium",
+      "feature": "Data Privacy: On-Premise or CH Data Residency Cert",
+      "demandedBy": 4,
+      "personas": ["Sylvie", "Philippe", "Jean-Paul", "Marc"],
+      "rationale": "Deal-breaker for data-sensitive segments (public sector, diagnostics)",
+      "estimatedImpact": "Enable commune + solo diagnostician segments",
+      "estimatedDevDays": 30,
+      "proposedQ": "Q2 2026"
+    },
+    {
+      "priority": "P2-medium",
+      "feature": "White-Label Reporting Engine",
+      "demandedBy": 4,
+      "personas": ["Marc", "Sylvie", "Anna", "Philippe"],
+      "rationale": "Custom templates per use-case (régie vs commune vs architect). Saves implementation time.",
+      "estimatedImpact": "Reduce implementation from 2 weeks to 2 days",
+      "estimatedDevDays": 35,
+      "proposedQ": "Q2-Q3 2026"
+    },
+    {
+      "priority": "P3-nice-to-have",
+      "feature": "Predictive Maintenance (ML on historical data)",
+      "demandedBy": 1,
+      "personas": ["Jean-Paul (Caisse)"],
+      "rationale": "Anticipate equipment failure (lifts, HVAC) 6-12 months ahead",
+      "estimatedImpact": "Justify premium pricing for large portfolios",
+      "estimatedDevDays": 60,
+      "proposedQ": "Q4 2026+"
+    },
+    {
+      "priority": "P3-nice-to-have",
+      "feature": "Benchmark Suite (Compare portfolio vs Swiss averages)",
+      "demandedBy": 1,
+      "personas": ["Jean-Paul (Caisse)"],
+      "rationale": "Help justify reno investments to board",
+      "estimatedImpact": "Niche advantage for pension fund segment",
+      "estimatedDevDays": 40,
+      "proposedQ": "Q3-Q4 2026"
+    }
+  ],
+  "pricingRecommendation": {
+    "tiered": true,
+    "starter": {
+      "monthlyChf": 300,
+      "targetSize": "up-to-30-properties",
+      "features": ["Inventory", "Basic reporting"]
+    },
+    "pro": {
+      "monthlyChf": 800,
+      "targetSize": "up-to-150-properties",
+      "features": ["Inventory", "Compliance alerts", "Reporting", "Mobile"]
+    },
+    "enterprise": {
+      "monthlyChf": 2500,
+      "targetSize": "300+-properties",
+      "features": ["All Pro", "Integrations", "SLA 99.9%", "Support FR"]
+    }
+  },
+  "dealBreakersToResolve": [
+    "Data privacy/sovereignty (on-premise or CH residency cert)",
+    "Implementation speed (<2 weeks mandatory)",
+    "French support & documentation",
+    "ERP integration depth (Navision, SAP, Ciel)",
+    "Offline mobile capability for field work"
+  ]
+}

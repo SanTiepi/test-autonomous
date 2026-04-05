@@ -1,155 +1,85 @@
-# Tasks — Control Plane
+# Studio Robin — Tableau de bord
 
-## En cours
-- `WorldEngine` — **FOCUS PRINCIPAL** — produit-noyau standalone, distribué via SwissBuilding (modèle Stripe)
-- `OrbitPilot` — orchestrateur de priorités, en pause (focus WorldEngine)
-- `OpenClaw` — intégration en cours. 3 agents (main, swissbuilding, idea-lab), 6 crons configurés
+> Dernière mise à jour : 2026-04-03
+> Ce fichier est la source de vérité pour tous les projets.
 
-## OpenClaw — Intégration complète (2026-04-01)
+## Priorités (dans l'ordre)
 
-### Architecture
-- **Gateway** : OK, `ws://127.0.0.1:18789`, version 2026.3.31
-- **Heartbeat** : activé, 30min, Haiku, lightContext
-- **Fallback** : Sonnet → Haiku → Codex GPT-5.4
+| # | Projet | Action immédiate | Pourquoi |
+|---|--------|-----------------|----------|
+| 1 | **SwissBuilding** | Web check-up pour amis propriétaires | Premier feedback utilisateur réel |
+| 2 | **NegotiateAI** | Web app + bot Telegram pour amis | Feedback réel sur le produit |
+| 3 | **Batiscan-V4** | Maintenance, mails Infomaniak | Business existant, clients réels |
+| 4 | **WorldEngine** | Stabiliser orchestrate/compose | Brique de simulation pour SB + NA |
+| 5 | **test-autonomous** | Stabiliser le pipeline, ce fichier | Infrastructure du studio |
 
-### Agents (3)
-| Agent | Modèle | Workspace | SOUL.md | Exec |
-|---|---|---|---|---|
-| main | Sonnet 4.6 | default | generic | full |
-| swissbuilding | Sonnet 4.6 | SwissBuilding | custom (tour de contrôle) | allowlist (15 cmds) |
-| idea-lab | **Haiku** | test-autonomous | **custom (IdeaForge)** | full (**) |
+## État des projets
 
-### Crons (7)
-| Cron | Agent | Schedule | Modèle | lightContext |
-|---|---|---|---|---|
-| **morning-brief** | main | 7h00 daily | Sonnet | oui |
-| standup | swissbuilding | 7h30 daily | Haiku | oui |
-| health-check | swissbuilding | /4h | Haiku | oui |
-| weekly-review | swissbuilding | lundi 8h | Sonnet | non |
-| daily-ideas | idea-lab | 2h00 daily | Haiku | oui |
-| weekly-deep-ideas | idea-lab | dimanche 3h | Sonnet | non |
-| monthly-trends | idea-lab | 1er du mois 4h | Sonnet | non |
+| Projet | Tests | Branche | Dernier commit | État |
+|--------|-------|---------|----------------|------|
+| SwissBuilding | 8000+ (pytest) | building-life-os | 12h | Dev actif — 36 programmes livrés, wave 16 |
+| NegotiateAI | 400 | master | 12h | Dev actif — web app + 20 scénarios |
+| Batiscan-V4 | 3056 (pytest) | main | 30h | Prod — maintenance |
+| WorldEngine | 573 | master | 12h | Dev actif — MCP + presets |
+| test-autonomous | 479 | master | 2j | Stable — control plane |
+| OrbitPilot | 62 | master | 5j | En pause |
+| PulseOps | 25 | master | 5j | Done v1 |
 
-### Fichiers configurés
-- SOUL.md : rewritten pour idea-lab (IdeaForge identity)
-- USER.md : Robin, Europe/Zurich, préférences
-- IDENTITY.md : IdeaForge, telescope emoji
-- HEARTBEAT.md : checklist repo health + idea quality + trend freshness
-- BOOTSTRAP.md : supprimé (post-setup)
+## Projets archivés / dormants
 
-### Fixes appliqués
-- delivery `announce/last` → `none` (pas de canal configuré)
-- idea-lab exec permissions : `**` (était vide)
-- dates hardcodées supprimées dans les prompts cron
-- prompts enrichis avec commandes git/gh explicites
-- health-check timeout 120s → 600s (SwissBuilding = 7150+ tests)
-- memorySearch désactivé (pas d'embedding provider)
+| Projet | Statut | Action |
+|--------|--------|--------|
+| EpistemicLayer | Abandonné | babel-epistemic + clarity-gate le remplacent |
+| NeuralShop | 3 sem sans commit | À archiver si pas de plan |
+| Suxe | 8j sans commit | À clarifier |
+| benoit-ecosystem | 1 commit | À archiver |
+| batiscan (ancien) | 4 sem | Remplacé par Batiscan-V4 |
 
-### Next
-- Connecter Discord ou Telegram comme canal de notification
-- Vérifier TAVILY_API_KEY pour veille concurrentielle
-- Tester le morning-brief demain 7h00
-- Considérer clawhub install pour skills marketplace
+## Pipeline autonome (OpenClaw)
 
-## Décisions clés (2026-03-30)
-- **Focus > Abstraction** : 1 produit mature > 8 projets embryonnaires. WorldEngine = 287 tests + démo LLM réelle + 4 presets immobiliers.
-- **WorldEngine ≠ feature SwissBuilding** : repo/CLI/API/pricing séparés. SwissBuilding = premier client, pas propriétaire.
-- **Wedge vertical** : préparation avant interaction coûteuse (négo immobilière, présentation diagnostic). Pas de marché horizontal.
-- **Marché validé** : Aaru ($1B valuation), Synthetic Users (Gartner leader). Le créneau vertical immobilier est ouvert.
-- **Protocole Codex optimisé** : pré-briefing + thèse Claude + divergence forcée = -41% tokens, 4x insights.
+**Statut : ARRÊTÉ** (consomme trop de tokens Anthropic)
 
-## Projets actifs
-| Projet | État | Description |
-|---|---|---|
-| **WorldEngine** | **building — FOCUS** | 287 tests, 22 modules, 11 presets (7 corporate + 4 immobilier), CLI complet, LLM intégré |
-| **OrbitPilot** | building | Orchestrateur de priorités pour dev solo — planification probabiliste |
-| **PulseOps** | done v1 | Observatoire santé repos Git — 25 tests, 6 modules |
-| **test-autonomous** | stable | Control plane — skills, duo mode, outils |
-| **SwissBuilding** | maintenance | Building intelligence SaaS — duo mode archivé, Wave 2 done |
-| **Batiscan V4** | prod | ERP diagnostic polluants — en maintenance |
+Quand relancé, 6 agents (main, swissbuilding, idea-lab, worldengine, negotiateai, batiscan) avec :
+- 3 dev-runners (/10 min) — code SwissBuilding, WorldEngine, NegotiateAI
+- Idea hunter (/2h) — recherche d'innovations via GPT-5.4
+- Auto-triage (/6h) — détecte et fixe les bugs
+- Code-review + auto-push (6h45) — review matinal
+- Morning brief (7h) + standup (7h30) — rapports Telegram
 
-## Vision produit découverte en session
+**Leçons apprises :**
+- OpenClaw mange les tokens 5-10x plus vite que Claude Code direct
+- Le meta-CTO (agent superviseur) est dangereux — il modifie la config des autres
+- Les dev-runners qui boucle sur "docs: refresh soul" = pattern toxique à surveiller
+- Le brief-first (v4) fonctionne : 2 min/tâche au lieu de 10
 
-### WorldEngine — "Le moteur de mondes"
-- Simuler N'IMPORTE QUI : clients, experts, concurrents, régulateurs, équipes, marchés
-- Chaque agent = un LLM avec rôle, personnalité, biais, objectifs
-- Cas d'usage : focus group virtuel, stress test stratégique, préparation négociation, audit compliance, simulation d'équipe, test pricing
-- Promesse : "Teste tes décisions avant de les vivre"
-- Potentiel : remplace études de marché, consultants stratégie, panels utilisateurs
-- Architecture : CLI + MCP server (pas REST)
+## Décisions clés
 
-### OrbitPilot — "Le copilote qui dit la vérité"
-- Planification probabiliste : "ton plan a 62% de chances de tenir"
-- Energy-aware : place les tâches complexes aux bons moments cognitifs
-- Anti-burnout : détecte la surcharge avant le crash
-- Apprentissage personnel : apprend TES biais d'estimation
-- Vision tech : moteur Rust/WASM, local-first, CRDT sync
-- Timeline physique : tâches avec gravité, vitesse, risque visuel
+| Date | Décision |
+|------|----------|
+| 2026-04-02 | SwissBuilding ≠ BIM. C'est l'ordonnance du bâtiment, pas la maquette |
+| 2026-04-02 | Position B→C→A : régies d'abord, autorités ensuite, plugin BIM en option |
+| 2026-04-02 | Tester avec amis propriétaires avant prospection commerciale |
+| 2026-04-01 | USE don't BUILD : chercher 30 min avant de coder 1 ligne |
+| 2026-04-01 | Focus > Abstraction : 1 produit mature > 8 embryonnaires |
+| 2026-03-30 | WorldEngine = produit standalone, distribué via SwissBuilding (modèle Stripe) |
 
-## Découvertes session 2026-03-30
+## Comment lancer un agent Claude Code sur un projet
 
-### Domain Tomography (Deep brainstorm)
-- FRACTURE+WorldEngine+Duo = scanner CT pour industries
-- Boucle fermée : perception → simulation → construction → validation
-- Codex corrige : pas un scanner (passif) mais un **système immunitaire adaptatif** (actif)
-- Le moat n'est pas "voir l'invisible" — c'est fermer la boucle plus vite que le marché ne se réorganise
-- Test décisif : reproduire le 84% sur un domaine inconnu
+```bash
+# Ouvrir Claude Code dans le dossier du projet
+cd "C:\PROJET IA\[projet]"
+claude
 
-### Executable Discovery (Explore wild)
-- 10 experts (7 Claude + 3 Codex) convergent : la connaissance qui survit EST son support d'exécution
-- Pattern toxique identifié : on met 100% des découvertes en TEXTE, 0% en CONTRAINTES
-- 3 mécanismes : Gravité (le terrain force), Précédent (trigger→réponse auto), Geste (savoir=fonction)
-- Codex : "une découverte vivante devient gravité opérationnelle" — elle déforme le chemin par défaut
-- Next : transformer les principes clés en tests/hooks/agents, pas en docs
+# L'agent lit automatiquement CLAUDE.md et sait quoi faire.
+# Pour un mode autonome non-interactif :
+claude --permission-mode bypassPermissions --print "Lis CLAUDE.md, identifie la prochaine priorité, implémente-la, teste, commit."
+```
 
-### Protocole Codex optimisé
-- Avant : Codex perd 80% du budget à lire des fichiers (35k tokens, 6 fichiers lus)
-- Après : pré-briefing + divergence forcée + format structuré (21k tokens, 0 fichier, 4 points tranchants)
-- Règle : Claude forme sa thèse AVANT, Codex CONTESTE après
-- Templates par mode dans le skill brainstorm (Standard/Deep/Explore)
+## Règles communes (tous les projets)
 
-### Cognitive OS (Explore wild écosystème)
-- L'écosystème Robin = 8 verbes : PROUVER/SIMULER/SENTIR/RÉVÉLER/PLANIFIER/CONSTRUIRE/SURVEILLER/DÉCIDER
-- Chaque projet manque un verbe que seul un AUTRE projet possède
-- 5 synergies identifiées : simulation prouvable, diagnostic émotionnel d'industrie, découverte incarnée, planning neuronal, récif complet
-- test-autonomous = le kernel du Cognitive OS
-- Next : concevoir les ponts entre projets
-
-## Innovations système (sessions précédentes)
-
-### Mode hybride Codex↔Claude
-- Codex écrit les tests, Claude implémente pour les faire passer
-- Les tests = contrat vivant entre les deux agents
-- Boucles courtes module par module
-- Optimisation : Codex en background, Claude code en parallèle
-
-### Pensée divergente dans /brainstorm
-- Frame breaking : nommer le cadre implicite, le casser
-- Contraire vrai : "et si l'opposé était correct ?"
-- Analogie forcée : comparer à un domaine complètement différent
-- Multi-expert panel : physicien, game designer, neurologue, économiste, chorégraphe
-
-### Panel multi-expert (innovation clé)
-- Un LLM peut être N'IMPORTE QUI — pas juste un assistant
-- Simuler 1000 clients, un marché entier, un concurrent, un régulateur
-- Combinaisons impossibles : "architecte-neuroscientifique", "régulateur du futur"
-- C'est ce qui a donné naissance à WorldEngine
-
-### Skills universels déployés dans 6+ repos
-- /brainstorm — éprouver une idée avec pensée divergente
-- /intake — questionnaire pré-dev pré-rempli
-- /context — reprise de projet instantanée
-- /status — dashboard universel humain + machine
-- /fix-loop — boucle test/fix automatique
-
-### Outils installés
-- rg (ripgrep), fd, bat, uv, gh CLI, Codex CLI
-- GitHub MCP, Playwright MCP (à configurer)
-- Schemathesis, pytest-snapshot (pour projets Python)
-
-## Stats session marathon
-- 611+ tests / 166+ suites (test-autonomous seul)
-- 25 tests PulseOps, OrbitPilot en cours, WorldEngine en cours
-- ~$0.50 total API cost
-- 3 produits lancés en autonomie
-- Skills déployés dans 6 repos
+1. **Langue** : code/commits en anglais, docs/rapports en français avec accents
+2. **Tests** : toujours verts avant de commit. Si rouge, fix d'abord.
+3. **Commits** : 1 commit = 1 feature/fix. Message clair : `feat:`, `fix:`, `docs:`
+4. **Ne pas push** sans review (sauf auto-push via code-review cron)
+5. **Pas de dépendances inutiles** : vérifier si ça existe dans le stack avant d'ajouter
+6. **Pas de refactor opportuniste** : rester dans le scope de la tâche

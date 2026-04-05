@@ -115,10 +115,23 @@ Assurance paramétriqe déclenchée par biomarqueurs de sueur — patch cutané 
 
 ---
 
-## Score 17/20 (Nouvelles — 2026-04-01)
+## Score 18/20 (Nouvelles — 2026-04-02)
+
+### BioSenseBuilding — Diagnostic × Physical AI × Immobilier
+Flotte de robots autonomes (Physical AI) qui patrouillent en continu dans bâtiments suisses pour diagnostic amiante/polluants/IAQ temps-réel. Rapports blockchain auto-scellés. Seul à croiser expertise diagnostic 15 ans + robotique physique; régulation avril 2026 suisse crée urgence.
+
+### NegotiateVault — NegotiationAI × Legal Tech × Privacy EU
+SaaS européen (servers EU only) où agents IA simulent négociation immobilière adversaire avant la vraie. Conforme RGPD + Colorado AI Act (juin 2026). Seul à maîtriser expertise négociation immobilière + compliance data privacy non-négociable 2026.
+
+---
+
+## Score 17/20 (Nouvelles — 2026-04-01 & 2026-04-02)
 
 ### DiagnostiChain — Diagnostic × Blockchain
 Rapports de diagnostic amiante/polluants bloqués blockchain avec preuve immuable: photos géolocalisées, timestamps, signature cryptographique diagnostiqueur. Trace audit complète pour contests juridiques.
+
+### StructureGuard — Humanoid Robots × Building Inspection × IoT
+Humanoid robots inspecte façades/toitures—détecte micro-fissures (vision 3D), déploie micro-capteurs pour monitoring contraintes en temps-réel; alerte AVANT rupture. Humanoids = #1 trend 2026, expertise bâtiment suisse = moat rare.
 
 ---
 
@@ -136,6 +149,19 @@ SaaS temps réel pour salles événements: capteurs IoT → modèle charge+fatig
 
 ---
 
-*Dernière mise à jour : 2026-04-01 — 93/110 idées compilées, 1 batch en cours*
-*Score moyen global : 16.85/20*
-*Domaines croisés : diagnostic×blockchain, durabilité×SaaS, événementiel×prédiction, médecine×bâtiment, océan×crypto, cuisine×cybersécurité, sport×assurance, archéologie×robotique, parfumerie×data, justice×game design, agriculture×neurosciences, mode×ingénierie, musique×urbanisme, apiculture×crypto, volcanologie×théâtre*
+## Score 18/20 (Nouvelles — 2026-04-03)
+
+### PPE Consensus Twin — PPE × Négociation × Diagnostic
+Jumeau décisionnel de PPE qui simule avant l’assemblée les objections, coalitions et concessions probables des copropriétaires pour débloquer rénovations énergétiques, conformité et financement. Ce n’est pas un ERP ni un chatbot : c’est un moteur de convergence collective nourri par expertise diagnostic bâtiment + immobilier suisse + négociation IA. Angle mort réel du marché : tout le monde automatise la paperasse, presque personne n’optimise le consentement.
+
+## Score 17/20 (Nouvelles — 2026-04-03)
+
+### ImmunoTriage Habitat — Gestion locative × Pathologies bâtiment × IA
+Moteur de tri incident pour régies qui classe les plaintes comme un système immunitaire : bruit, irritation, menace réelle, urgence cachée. Il détecte les signaux faibles à forte gravité (moisissures, humidité chronique, polluants, conformité) et prescrit la séquence optimale : diagnostic, intervention, communication et preuve. Plus profond qu’un ticketing IA classique.
+
+### ObjectionProof Twin — Densification × Habitabilité × Négociation réglementaire
+Moteur de preuve pour projets de densification/rénovation qui simule, avant dépôt ou assemblée, si un immeuble restera réellement vivable malgré bruit, chaleur, qualité d’air et contraintes réglementaires. Il combine diagnostic terrain, scénarios de travaux, contre-arguments automatiques aux objections et dossier de preuve habitable pour régies, PPE, promoteurs et communes. Le contraire vrai : le goulot d’étranglement n’est pas l’idée du projet, mais sa capacité à survivre aux objections techniques et humaines.
+
+*Dernière mise à jour : 2026-04-03 — 101/118 idées compilées (3 nouvelles avril 2026)*
+*Score moyen global : 16.93/20*
+*Tendances dominantes (avril 2026) : Physical AI robots, humanoid robots commerciaux, Legal AI EU-compliance, ESG/Climate urgence suisse, Diagnostic×Robotique (expertise Robin), NegotiationAI×Privacy, Building Inspection autonome, PPE decision intelligence, preuve d’habitabilité réglementaire*
