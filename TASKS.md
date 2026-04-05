@@ -22,6 +22,7 @@
 | Batiscan-V4 | 3056 (pytest) | main | 30h | Prod — maintenance |
 | WorldEngine | 573 | master | 12h | Dev actif — MCP + presets |
 | test-autonomous | 479 | master | 2j | Stable — control plane |
+| Suxe | 148 | main | 10j | **Pivot ShieldWork** — 6 modules à ajouter, Dead Man Switch priorité #1 |
 | OrbitPilot | 62 | master | 5j | En pause |
 | PulseOps | 25 | master | 5j | Done v1 |
 
