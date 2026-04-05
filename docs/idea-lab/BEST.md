@@ -162,6 +162,18 @@ Moteur de tri incident pour régies qui classe les plaintes comme un système im
 ### ObjectionProof Twin — Densification × Habitabilité × Négociation réglementaire
 Moteur de preuve pour projets de densification/rénovation qui simule, avant dépôt ou assemblée, si un immeuble restera réellement vivable malgré bruit, chaleur, qualité d’air et contraintes réglementaires. Il combine diagnostic terrain, scénarios de travaux, contre-arguments automatiques aux objections et dossier de preuve habitable pour régies, PPE, promoteurs et communes. Le contraire vrai : le goulot d’étranglement n’est pas l’idée du projet, mais sa capacité à survivre aux objections techniques et humaines.
 
-*Dernière mise à jour : 2026-04-03 — 101/118 idées compilées (3 nouvelles avril 2026)*
-*Score moyen global : 16.93/20*
-*Tendances dominantes (avril 2026) : Physical AI robots, humanoid robots commerciaux, Legal AI EU-compliance, ESG/Climate urgence suisse, Diagnostic×Robotique (expertise Robin), NegotiationAI×Privacy, Building Inspection autonome, PPE decision intelligence, preuve d’habitabilité réglementaire*
+---
+
+## Score 19/20 (Nouvelles — 2026-04-05)
+
+### ShieldWork — Infrastructure de protection pour travailleuses du sexe (Suisse)
+Plateforme complète de sécurité pour TdS en Suisse romande, construite sur la base existante de Suxe (148 tests, 21 migrations, auth+RBAC+billing+modération+audit). Combine ce que font Smooci (booking GPS), Rendevu (reviews bilatérales), National Ugly Mugs (bad date list), SafetyNets (alertes temps réel) et l’industrie lone worker (dead man switch) — mais en un seul produit intégré. 6 modules additionnels : SafetyNet Engine (SOS + dead man switch + GPS bidirectionnel), TrustScore (scoring client + audit salon — expertise diagnostic Robin), FinanceShield (escrow suisse + micro-assurance CHF 2/session), CantonBridge (conformité multi-cantonale automatisée — moteur SwissBuilding), PeerShield (réseau pair-à-pair), ContentVault (monétisation + anti-revenge-porn). Marché CHF 3 milliards en Suisse, zéro concurrent intégré, 60% du code réutilisé depuis Suxe, estimé 10-12 semaines. Le contraire vrai : le problème n’est pas la moralité ni la légalité, c’est l’absence d’infrastructure opérationnelle.
+
+## Score 18/20 (Nouvelles — 2026-04-05)
+
+### TrustScore Salon — Diagnostic de conformité pour lieux de travail du sexe
+Score composite A-F pour salons : audit physique (ventilation, sorties, salubrité, bouton alerte), audit social (contrat, % loyer, heures, droit de refus), audit sanitaire (préservatifs, accès médecin, protocole IST). Publié anonymement pour que les TdS choisissent en connaissance de cause. Certification payée par les exploitants (CHF 500/an). C’est littéralement le métier de Robin (diagnostic bâtiment) appliqué à un segment ignoré. Premier contact : Fleur de Pavé (Lausanne) ou Aspasie (Genève).
+
+*Dernière mise à jour : 2026-04-05 — 103/120 idées compilées (2 nouvelles avril 2026)*
+*Score moyen global : 16.95/20*
+*Tendances dominantes (avril 2026) : Physical AI robots, humanoid robots commerciaux, Legal AI EU-compliance, ESG/Climate urgence suisse, Diagnostic×Robotique (expertise Robin), NegotiationAI×Privacy, Building Inspection autonome, PPE decision intelligence, preuve d’habitabilité réglementaire, SafetyTech×SexWork (infrastructure protection)*
