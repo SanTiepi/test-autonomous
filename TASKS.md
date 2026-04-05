@@ -42,7 +42,7 @@
 4 jobs actifs (vs 14 avant) :
 - `dev-runner-diet` (3h, 1x/jour, Sonnet) — 1 brief SwissBuilding/nuit, 30 min max
 - `health-check` (8h, 1x/jour, Haiku) — tests SwissBuilding, issue si rouge
-- `weekly-ideas` (dimanche 3h, 1x/sem, Sonnet) — 1 domaine aléatoire, collisions avec Robin
+- `idea-machine` (toutes les 2h, 12x/jour, Haiku) — idées produits uniques, croisements domaines
 - `weekly-review` (lundi 8h, 1x/sem, Sonnet) — bilan hebdo SwissBuilding
 
 **Garde-fous :**
