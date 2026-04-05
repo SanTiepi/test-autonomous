@@ -37,20 +37,30 @@
 
 ## Pipeline autonome (OpenClaw)
 
-**Statut : ARRÊTÉ** (consomme trop de tokens Anthropic)
+**Statut : DIET MODE** (relancé 2026-04-05 — 4 crons légers, ~850k tokens/semaine)
 
-Quand relancé, 6 agents (main, swissbuilding, idea-lab, worldengine, negotiateai, batiscan) avec :
-- 3 dev-runners (/10 min) — code SwissBuilding, WorldEngine, NegotiateAI
-- Idea hunter (/2h) — recherche d'innovations via GPT-5.4
-- Auto-triage (/6h) — détecte et fixe les bugs
-- Code-review + auto-push (6h45) — review matinal
-- Morning brief (7h) + standup (7h30) — rapports Telegram
+4 jobs actifs (vs 14 avant) :
+- `dev-runner-diet` (3h, 1x/jour, Sonnet) — 1 brief SwissBuilding/nuit, 30 min max
+- `health-check` (8h, 1x/jour, Haiku) — tests SwissBuilding, issue si rouge
+- `weekly-ideas` (dimanche 3h, 1x/sem, Sonnet) — 1 domaine aléatoire, collisions avec Robin
+- `weekly-review` (lundi 8h, 1x/sem, Sonnet) — bilan hebdo SwissBuilding
 
-**Leçons apprises :**
+**Garde-fous :**
+- Zéro self-relaunch, zéro meta-CTO, zéro boucle haute fréquence
+- lightContext: true partout, timeouts stricts (300-1800s)
+- Si 3 erreurs consécutives → désactiver le job
+- 25 briefs SwissBuilding prêts dans `.openclaw/tasks/`
+
+**Leçons v1 (à ne pas répéter) :**
 - OpenClaw mange les tokens 5-10x plus vite que Claude Code direct
 - Le meta-CTO (agent superviseur) est dangereux — il modifie la config des autres
-- Les dev-runners qui boucle sur "docs: refresh soul" = pattern toxique à surveiller
+- Les dev-runners qui bouclent sur "docs: refresh soul" = pattern toxique
 - Le brief-first (v4) fonctionne : 2 min/tâche au lieu de 10
+
+**Scaling (si budget OK après 2 semaines) :**
+- Phase 2 : ajouter prospect-sim (mercredi) + 2e dev-runner (15h)
+- Phase 3 : ajouter monthly-trends (1er du mois)
+- Jamais dépasser 7 jobs
 
 ## Décisions clés
 
