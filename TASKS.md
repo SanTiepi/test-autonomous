@@ -7,24 +7,26 @@
 
 | # | Projet | Action immédiate | Pourquoi |
 |---|--------|-----------------|----------|
-| 1 | **Batiscan-V4** | pgvector + Whisper + Marker + compta interne | Business qui paie, quick wins stack existante |
-| 2 | **SwissBuilding** | Web check-up + Swisstopo API étendue | Premier feedback utilisateur réel |
-| 3 | **Suxe** | PeerShield + Coffre-Fort Incident (MVP Habiter) | Nouveau produit, repositionné "safety solo meetings" |
+| 1 | **Habiter** | Frontend + dossier preuve PDF + 20 testeurs Morges/Lausanne | Produit citoyen, crée le marché, open source, volume |
+| 2 | **Batiscan-V4** | pgvector + Whisper + Marker + compta interne | Business qui paie, quick wins stack existante |
+| 3 | **Suxe** | PeerShield + Coffre-Fort Incident | Safety solo meetings, repositionné |
 | 4 | **NegotiateAI** | Web app + bot Telegram pour amis | Feedback réel sur le produit |
-| 5 | **WorldEngine** | Stabiliser orchestrate/compose | Brique de simulation pour SB + NA |
-| 6 | **test-autonomous** | Fractal V2 implémenté, pipeline diet | Infrastructure du studio |
+| 5 | **WorldEngine** | Stabiliser orchestrate/compose | Brique de simulation |
+| 6 | **test-autonomous** | Pipeline diet + Fractal V2 | Infrastructure du studio |
+
+**GELÉ :** SwissBuilding — infrastructure prête, en attente de données Habiter + Batiscan. Renaît quand Habiter a 1000+ utilisateurs.
 
 ## État des projets
 
 | Projet | Tests | Branche | Dernier commit | État |
 |--------|-------|---------|----------------|------|
-| SwissBuilding | 8000+ (pytest) | building-life-os | 12h | Dev actif — 36 programmes livrés, wave 16 |
+| SwissBuilding | 8000+ (pytest) | building-life-os | gelé | **GELÉ** — infra prête, attend données Habiter+Batiscan |
 | NegotiateAI | 400 | master | 12h | Dev actif — web app + 20 scénarios |
 | Batiscan-V4 | 3056 (pytest) | main | 30h | Prod — maintenance |
 | WorldEngine | 573 | master | 12h | Dev actif — MCP + presets |
 | test-autonomous | 479 | master | 2j | Stable — control plane |
-| Suxe | 148 | main | 10j | **Pivot safety solo meetings** — PeerShield + Coffre-Fort priorité |
-| Habiter | 0 | master | nouveau | **Copilote domestique OS** — capteurs + IA + preuve + action, MVP app-first |
+| Suxe | 148 | main | 10j | Pivot safety solo meetings — PeerShield + Coffre-Fort |
+| Habiter | 12 | master | actif | **PRIORITÉ #1** — copilote domestique OS, MVP app-first, OpenClaw 1x/h |
 | OrbitPilot | 62 | master | 5j | En pause |
 | PulseOps | 25 | master | 5j | Done v1 |
 
@@ -80,6 +82,11 @@
 | 2026-04-06 | Batiscan : 12 nouvelles tâches (TASK-253 à 264), pgvector + Whisper + Marker + compta interne |
 | 2026-04-06 | Écosystème = 1 graphe, 6 surfaces, pas 6 produits séparés |
 | 2026-04-06 | Fractal V2 implémenté — kill-first, court, parallèle Claude+Codex |
+| 2026-04-06 | SwissBuilding GELÉ — infra prête, renaît quand Habiter a 1000+ users |
+| 2026-04-06 | Habiter = priorité #1 — produit citoyen, crée le marché pour Batiscan + SwissBuilding |
+| 2026-04-06 | Architecture : Habiter (entrée citoyen) → Batiscan (production pro) → SwissBuilding (dashboard B2B) |
+| 2026-04-06 | Habiter open source MIT, Batiscan propriétaire, SwissBuilding SaaS |
+| 2026-04-06 | OpenClaw redirigé : dev-runner-habiter 1x/h, SwissBuilding health-check désactivé |
 
 ## Comment lancer un agent Claude Code sur un projet
 
