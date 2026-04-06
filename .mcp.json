@@ -8,6 +8,20 @@
         "@github/mcp-server"
       ],
       "env": {}
+    },
+    "multi_mcp": {
+      "type": "stdio",
+      "command": "C:\\Users\\robin\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "args": [
+        "-m",
+        "multi_mcp.server"
+      ],
+      "env": {
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}",
+        "DEFAULT_MODEL": "gpt-4o",
+        "DEFAULT_MODEL_LIST": "gpt-4o,gpt-4o-mini"
+      }
     }
   }
 }
