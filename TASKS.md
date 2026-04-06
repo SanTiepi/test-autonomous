@@ -7,27 +7,29 @@
 
 | # | Projet | Action immédiate | Pourquoi |
 |---|--------|-----------------|----------|
-| 1 | **Habiter** | Frontend + dossier preuve PDF + 20 testeurs Morges/Lausanne | Produit citoyen, crée le marché, open source, volume |
-| 2 | **Batiscan-V4** | pgvector + Whisper + Marker + compta interne | Business qui paie, quick wins stack existante |
-| 3 | **Suxe** | PeerShield + Coffre-Fort Incident | Safety solo meetings, repositionné |
-| 4 | **NegotiateAI** | Web app + bot Telegram pour amis | Feedback réel sur le produit |
-| 5 | **WorldEngine** | Stabiliser orchestrate/compose | Brique de simulation |
-| 6 | **test-autonomous** | Pipeline diet + Fractal V2 | Infrastructure du studio |
+| 1 | **ReCap** | Core engine (dossier vivant) + intégrer Habiter comme 1er module | Moteur universel, connecte tous les produits |
+| 2 | **Habiter** (module ReCap) | Pilote ASLOCA Vaud, 20 testeurs | 1er module, MVP prêt (102 tests) |
+| 3 | **Trankill** (module ReCap) | Dev OpenClaw 1x/h, chercher porteur | Bouclier anti-arnaque (22+ tests) |
+| 4 | **Vigila** (module ReCap) | Publier GitHub, chercher co-fondatrice | Safety solo (148 tests, spec complète) |
+| 5 | **Batiscan-V4** | pgvector + Whisper + Marker + compta | Business qui paie, quick wins |
 
-**GELÉ :** SwissBuilding — infrastructure prête, en attente de données Habiter + Batiscan. Renaît quand Habiter a 1000+ utilisateurs.
+**GELÉ :** SwissBuilding, NegotiateAI (brique interne), WorldEngine (brique interne), FreeTime.
+**STRATÉGIE :** Lancer les modules séparément → connecter via ReCap quand traction prouvée.
 
 ## État des projets
 
-| Projet | Tests | Branche | Dernier commit | État |
-|--------|-------|---------|----------------|------|
-| SwissBuilding | 8000+ (pytest) | building-life-os | gelé | **GELÉ** — infra prête, attend données Habiter+Batiscan |
-| NegotiateAI | 400 | master | 12h | Dev actif — web app + 20 scénarios |
-| Batiscan-V4 | 3056 (pytest) | main | 30h | Prod — maintenance |
-| WorldEngine | 573 | master | 12h | Dev actif — MCP + presets |
-| test-autonomous | 479 | master | 2j | Stable — control plane |
-| Suxe | 148 | main | 10j | Pivot safety solo meetings — PeerShield + Coffre-Fort |
-| Habiter | 12 | master | actif | **PRIORITÉ #1** — copilote domestique OS, MVP app-first, OpenClaw 1x/h |
-| OrbitPilot | 62 | master | 5j | En pause |
+| Projet | Tests | Branche | État |
+|--------|-------|---------|------|
+| **ReCap** | 0 | master | **NOUVEAU** — core engine dossier vivant, connecte tout |
+| **Habiter** | 102 | master | Module ReCap logement, MVP prêt, pilote ASLOCA |
+| **Trankill** | 22+ | master | Module ReCap arnaques, dev OpenClaw 1x/h |
+| **Vigila** (Suxe) | 148 | main | Module ReCap sécurité, cherche co-fondatrice |
+| **Batiscan-V4** | 3056 | main | Prod — quick wins (pgvector, Whisper, compta) |
+| NegotiateAI | 400 | master | Gelé — brique simulation interne |
+| WorldEngine | 573 | master | Gelé — brique simulation interne |
+| SwissBuilding | 8000+ | building-life-os | Gelé — attend traction ReCap |
+| test-autonomous | 479 | master | Control plane + OpenClaw + Fractal V2 |
+| OrbitPilot | 62 | master | En pause |
 | PulseOps | 25 | master | 5j | Done v1 |
 
 ## Projets archivés / dormants
