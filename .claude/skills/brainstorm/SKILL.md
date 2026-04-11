@@ -1,32 +1,33 @@
 ---
 name: brainstorm
-description: "Brainstorm adaptatif multi-agents. Usage: /brainstorm <idée>. De la question rapide à l'exploration radicale."
+description: "Brainstorm adaptatif multi-agents (Fractal V2). Usage: /brainstorm <idée>. Kill fast, diverge hard, converge sharp."
 user-invocable: true
 ---
 
-# /brainstorm
+# /brainstorm — Fractal V2
 
 ## Classifie
 
 - **Quick** — question simple → Claude seul, 3-5 lignes
-- **Standard** — feature, architecture → Codex + Claude, pensée divergente
+- **Standard** — feature, architecture → Codex + Claude en parallèle
 - **Deep** — stratégie, business → Codex obligatoire, contraire vrai, analogie forcée
 - **Explore** — innovation, nouvelles pistes → simulation multi-agents, exploration large
+- **Fractal** — vision, produit, pivot → le mode complet, kill-first, personas, web search
 
-Détecte automatiquement. Ne demande jamais le mode.
+Détecte automatiquement. Si Robin dit "fractal" → mode Fractal.
 
 ## Quick
 3-5 lignes. Verdict + pourquoi + alternative.
 
 ## Standard
-Codex + Claude. Avant tout : cadre implicite, ce qu'il empêche de voir, idée hors cadre. Timeout 45s.
+Codex + Claude EN PARALLÈLE (pas séquentiellement). Cadre implicite, ce qu'il empêche de voir, idée hors cadre.
 
 ## Deep
-Comme Standard + contraire vrai + analogie forcée. Codex obligatoire 90s.
+Comme Standard + contraire vrai + analogie forcée. Codex obligatoire.
 
 ## Explore
 
-Le mode le plus important. On explore LARGE — volontairement trop large au début pour ne rien louper. On affine après.
+Le mode large. On explore TOUT — volontairement trop large au début pour ne rien louper.
 
 ### Principe fondamental
 Ne PAS converger trop vite. Ouvrir le champ au maximum AVANT de trier. Les meilleures idées sont aux intersections les plus improbables.
@@ -38,137 +39,224 @@ Ne PAS converger trop vite. Ouvrir le champ au maximum AVANT de trier. Les meill
 Génère 7-10 points de vue radicalement différents. Pas des variations — des MONDES différents :
 - 3 experts du sujet (mais de sous-domaines éloignés)
 - 3 experts de domaines SANS RAPPORT (sciences, arts, nature, sports, cuisine, musique, médecine, justice, jeux...)
-- 1-2 profils impossibles ou inventés ("un historien de l'an 3000", "un océan qui pense", "un enfant-philosophe")
+- 1-2 profils impossibles ou inventés
 
-Chaque point de vue : 1 mécanisme transférable de son domaine, pas une opinion. 2 lignes max.
-
-Ne trie PAS encore. Ne juge PAS. Accumule.
+Chaque point de vue : 1 mécanisme transférable, 2 lignes max. Ne trie PAS encore.
 
 **Phase 2 — Collisions**
 
-Prends les points de vue les plus ÉLOIGNÉS et force des collisions par paires :
-- Qu'est-ce qui émerge quand on connecte A et B ?
-- Quel produit/concept/approche existe à cette intersection ?
-- Qu'est-ce qui est IMPOSSIBLE à trouver sans cette collision ?
-
-3-5 collisions. Cherche celles qui produisent un "c'est bizarre mais..." — c'est là que l'innovation est.
+Force des collisions par paires entre les plus ÉLOIGNÉS. 3-5 collisions.
 
 **Phase 3 — Patterns**
 
-Regarde l'ensemble des points de vue et collisions. Quels PATTERNS émergent ?
-- Qu'est-ce que plusieurs experts disent sans le savoir ?
-- Quelle direction revient sous des formes différentes ?
-- Quel problème sous-jacent est révélé par les collisions ?
+Quels PATTERNS émergent ? Qu'est-ce que plusieurs experts disent sans le savoir ?
 
 **Phase 4 — Synthèse ouverte**
 
-Présente à l'utilisateur :
-- Les 3-5 insights les plus surprenants
-- Les 2-3 collisions les plus fertiles
-- Le pattern émergent
-- 2-3 directions possibles (pas 1 seule — garder le champ ouvert)
-- Pour chaque direction : 1 ligne de ce que ça donne concrètement
+3-5 insights + 2-3 directions + 1 pattern émergent. **Ne conclus PAS.** L'explore ouvre des portes.
 
-**Ne conclus PAS.** L'explore ouvre des portes. L'utilisateur choisit laquelle franchir. Si l'utilisateur veut creuser une direction, relance un brainstorm Standard ou Deep dessus.
+---
 
-### Relancer en cours de projet
+## Fractal (NOUVEAU — V2)
 
-L'explore n'est pas que pour le début. Relance-le :
-- Quand le projet stagne
-- Quand une décision importante approche
-- Quand l'utilisateur dit "on rate peut-être quelque chose"
-- Toutes les 2-3 semaines sur un projet actif
+Le mode le plus puissant. Pour les grandes décisions : nouveau produit, pivot, vision.
 
-À chaque relance, les experts changent. Le contexte du projet nourrit de nouvelles collisions.
+### Règles absolues
 
-## Protocole Codex (Standard, Deep, Explore)
+1. **5 lignes max par idée.** Si tu peux pas l'expliquer en 5 lignes, c'est pas clair.
+2. **Kill en 30 secondes.** Si Robin dit "bof" ou "c'est un gadget" ou "ça existe déjà", c'est MORT. Pas de "mais si on reformule..."
+3. **Problème d'abord.** Jamais de solution sans problème validé.
+4. **Codex et Claude en parallèle.** Toujours. Dans le même message.
+5. **1 page max de sortie par étape.** Tout output qui dépasse = échec de synthèse.
+6. **Logger les kills.** Chaque idée tuée + la raison → brainstorm_log.md. On ne re-propose JAMAIS une idée tuée sans nouvelle info.
+7. **Un vrai utilisateur > 100 simulations.** Après le fractal, le premier move est TOUJOURS "parle à un humain réel."
 
-Codex a accès au repo via CLI. Mais ne le laisse PAS explorer à l'aveugle — pré-briefé + divergence forcée.
+### Étape 0 — Le problème (5 min)
 
-### Principe : Claude pense AVANT, Codex conteste APRÈS
+Clarifie le problème en 2 phrases. Pas de solution. Juste la douleur.
+
+Si Robin donne directement un sujet/solution, COMMENCE PAR TUER :
+
+### Étape 1 — Kill first (5 min)
+
+Avant d'imaginer quoi que ce soit, 3 tests en parallèle :
+
+**Test 1 : "Qui fait déjà ça ?"**
+→ Web search brutal. Si 3+ concurrents bien financés → raison de continuer ou KILL.
+
+**Test 2 : "Robin est-il le bon ?"**
+→ Avantage Robin (terrain, expertise, assets existants) < 3/5 → KILL.
+
+**Test 3 : "10 personnes paieraient demain ?"**
+→ Si même pas 10 early adopters identifiables → KILL.
+
+Si un test échoue → **NEXT.** Log le kill. Pas de reformulation.
+
+### Étape 2 — Diverger (10 min)
+
+3 agents EN PARALLÈLE dans le même message :
+
+| Agent | Rôle | Format |
+|-------|------|--------|
+| **Claude** | L'inventeur | 3 directions radicalement différentes. 5 lignes chacune. |
+| **Codex** | Le destructeur | Pour chaque direction, la raison #1 d'échec. |
+| **Web search** | Le réel | Ce qui existe déjà, taille du marché, signaux. |
+
+### Étape 3 — Converger (5 min)
+
+Robin lit les 3 outputs courts. Choisit 1 direction ou "aucune, next."
+
+Si 1 direction survit :
+- Score flash : marché / faisabilité MVP (Claude+Codex) / trouvabilité porteur / timing (4 chiffres)
+- Si < 16/20 → KILL
+- Si ≥ 16/20 → Étape 4
+
+**Grille de scoring (mise à jour 2026-04-07) :**
+| Critère | /5 | Description |
+|---------|-----|-------------|
+| Marché | /5 | Taille, croissance, douleur |
+| Faisabilité MVP | /5 | Claude+Codex peuvent bootstrapper en 1 semaine ? |
+| Trouvabilité porteur | /5 | Quelqu'un de passionné voudra porter ce projet ? Facile à pitcher ? |
+| Timing | /5 | Fenêtre d'opportunité ouverte maintenant ? |
+
+Note : "avantage Robin" n'est PLUS un critère. Robin = usine à prototypes. L'expertise domaine vient du porteur.
+
+### Étape 4 — Approfondir (15 min)
+
+Seulement la direction survivante. Claude + Codex en parallèle :
+
+**Claude creuse :**
+- Comment construire (avec quelles briques existantes)
+- Pour qui exactement (5 personas en 1 ligne chacun)
+- Premier move concret (pas la vision — le DAY 1)
+
+**Codex creuse :**
+- Pourquoi ça va foirer (risques juridiques, techniques, marché)
+- Ce que Robin ne voit pas
+- La question à poser à un vrai utilisateur pour valider/invalider
+
+**Web search :**
+- Concurrents spécifiques, pricing, traction
+- Projets open source réutilisables
+- Réglementation applicable
+
+Output total : **1 page max.**
+
+### Étape 5 — Verdict (5 min)
+
+Robin décide :
+- **"Go"** → écrire le brief d'exécution (prompt Claude Code)
+- **"Pas convaincu"** → noter dans BEST.md, passer au sujet suivant
+- **"Creuse X"** → retour à l'étape 4 une seule fois sur l'aspect X
+
+### Personas Express (si demandé)
+
+Quand Robin demande des personas :
+- **10-20 profils** variés et réalistes
+- **1 ligne par réaction** (pas des paragraphes)
+- **Couvrir les extrêmes** : le fan, le sceptique, l'exclu, le power user, le non-tech, l'adversaire
+- **Extraire les insights** : qu'est-ce que les personas révèlent qu'on n'avait pas vu ?
+
+### Cross-Fractal (si demandé)
+
+Quand Robin dit "fractal" sur l'ensemble des projets :
+- Lister les projets actifs (depuis TASKS.md)
+- Pour chaque PAIRE de projets : 1 collision en 2 lignes
+- Identifier les 3 croisements les plus fertiles
+- Score chacun
+- Proposer le croisement #1 à implémenter
+
+---
+
+## Protocole Codex (tous les modes sauf Quick)
+
+### Principe : Claude pense AVANT, Codex conteste APRÈS — EN PARALLÈLE
 
 ```
-1. Claude forme sa première thèse (2-3 lignes, position claire)
-2. Claude construit le prompt Codex avec :
-   - Le contexte essentiel (pas "lis les docs" — le contenu résumé)
-   - Sa propre thèse (pour que Codex la conteste)
-   - Le format de sortie attendu
-3. Codex tourne en background, Claude continue son analyse
-4. Claude intègre les divergences de Codex dans la synthèse
+1. Claude forme sa thèse (2-3 lignes)
+2. Claude lance Codex en background IMMÉDIATEMENT (même message)
+3. Claude continue son analyse pendant que Codex tourne
+4. Quand Codex revient : intégrer les divergences
 ```
 
-### Template prompt Codex par mode
+### Template Codex par mode
 
 **Standard :**
 ```
-Tu es le contradicteur dans un brainstorm duo.
 SUJET: {sujet}
-CONTEXTE: {2-5 lignes de contexte essentiel, pas "lis les fichiers"}
-THÈSE CLAUDE: {la position de Claude en 2-3 lignes}
+CONTEXTE: {2-5 lignes}
+THÈSE CLAUDE: {2-3 lignes}
 
-Ta mission :
-1. BLIND_SPOT — Ce que cette thèse ne voit pas (1 point, 2 lignes max)
-2. STRONGER — Comment rendre cette thèse plus forte (1 point, 2 lignes max)
-3. ALTERNATIVE — Une approche radicalement différente (1 point, 2 lignes max)
-
-Format strict, pas de prose. Si tu veux lire un fichier du repo pour vérifier un fait, fais-le, mais ne lis PAS tout.
+1. BLIND_SPOT — Ce que cette thèse ne voit pas (2 lignes)
+2. STRONGER — Comment la rendre plus forte (2 lignes)
+3. ALTERNATIVE — Approche radicalement différente (2 lignes)
+300 mots max.
 ```
 
 **Deep :**
 ```
-Tu es le contradicteur dans un brainstorm Deep.
 SUJET: {sujet}
-CONTEXTE: {contexte essentiel résumé}
-THÈSE CLAUDE: {position de Claude}
+CONTEXTE: {résumé}
+THÈSE CLAUDE: {position}
 
-Ta mission :
-1. CONTRAIRE_VRAI — Quelle croyance évidente est fausse ici ? Formule-la. (2-3 lignes)
-2. ANALOGIE_FORCÉE — Prends un domaine SANS RAPPORT ({domaine suggéré par Claude}). Quel mécanisme de ce domaine s'applique ici ? (2-3 lignes)
-3. BLIND_SPOT — Ce que la thèse de Claude ne voit pas (2-3 lignes)
-4. VERDICT — En 1 phrase : qu'est-ce qui change si on combine tout ça ?
-
-Tu peux lire des fichiers du repo si tu as besoin de vérifier un fait précis. Pas de prose, pas de politesse. 300 mots max.
+1. CONTRAIRE_VRAI — Quelle croyance évidente est fausse ? (2-3 lignes)
+2. ANALOGIE_FORCÉE — Mécanisme d'un domaine sans rapport (2-3 lignes)
+3. BLIND_SPOT — Ce que Claude ne voit pas (2-3 lignes)
+4. VERDICT — 1 phrase
+300 mots max.
 ```
 
-**Explore :**
+**Fractal :**
 ```
-Tu es un panel d'experts divergents dans un brainstorm Explore.
 SUJET: {sujet}
-CONTEXTE: {contexte essentiel résumé}
-EXPERTS CLAUDE: {liste des experts que Claude a choisis}
+CONTEXTE: {résumé}
+DIRECTIONS CLAUDE: {les 3 directions proposées, 5 lignes chacune}
 
-Ta mission — NE PAS dupliquer les experts de Claude. Choisis 3 experts de domaines TOTALEMENT DIFFÉRENTS des siens.
-
-Pour chaque expert :
-- ROLE: {domaine}
-- MÉCANISME: {1 mécanisme transférable, 2 lignes max}
+Pour CHAQUE direction :
+1. KILL_REASON — La raison #1 d'échec (1 ligne)
+2. SAVE_IF — Ce qui sauverait cette direction (1 ligne)
 
 Puis :
-- COLLISION: la collision la plus improbable entre un de tes experts et un de Claude (3 lignes)
-- PATTERN: ce que l'ensemble révèle que ni toi ni Claude ne voyez seuls (2 lignes)
-
-Pas de prose. Pas de redondance avec Claude.
+3. DIRECTION_MANQUÉE — Une 4e direction que Claude n'a pas vue (5 lignes)
+4. QUESTION_UTILISATEUR — La question à poser à un vrai humain pour trancher (1 ligne)
+300 mots max. Brutal. Pas poli.
 ```
 
 ### Règles d'exécution
 
 - **Toujours en background** (`&`) — Claude ne bloque JAMAIS sur Codex
-- **Timeout** : Standard 45s, Deep 90s, Explore 60s
-- **Si Codex converge avec Claude** : la synthèse le dit explicitement ("convergence sur X") — c'est un signal fort
-- **Si Codex diverge** : c'est LÀ que la valeur est — creuser la divergence, pas la résoudre
-- **Codex ne lit le repo QUE si un fait précis doit être vérifié** — le contexte est dans le prompt
+- **Si Codex converge avec Claude** : signal fort → le dire explicitement
+- **Si Codex diverge** : c'est LÀ que la valeur est → creuser la divergence
+- **Codex ne lit le repo QUE pour vérifier un fait précis**
+
+---
 
 ## Après chaque brainstorm
 
+### Log
 `.claude/brainstorm_log.md` :
 ```
 - [date] [mode] [résultat] [titre] — [1 ligne]
 ```
 
+### Kills
+Si une idée est tuée, logger :
+```
+- [date] [KILLED] [titre] — [raison du kill en 1 ligne]
+```
+
+### BEST.md
+Si une idée score ≥ 16/20 → ajouter dans `docs/idea-lab/BEST.md`
+
+---
+
 ## Principes
 
-- Quick/Standard/Deep = DÉCIDER. Explore = DÉCOUVRIR.
-- En Explore : ne jamais converger trop tôt. La largeur est une force, pas un défaut.
-- Les meilleures idées viennent des collisions les plus improbables
-- Si tu ne surprends pas l'utilisateur, recommence
-- Anticipe ce que l'utilisateur n'a pas encore pensé — c'est ta valeur
+- Quick/Standard/Deep = DÉCIDER. Explore = DÉCOUVRIR. Fractal = TRANSFORMER.
+- **Kill fast.** Une idée morte vite libère de l'énergie pour la bonne.
+- **Problème > solution.** Toujours commencer par la douleur.
+- **Court > long.** 5 lignes > 50 lignes. 1 page > 5 pages.
+- **Parallèle > séquentiel.** Claude + Codex dans le même message.
+- **Réel > simulé.** 1 interview utilisateur > 100 personas IA.
+- **Les meilleures idées viennent des collisions les plus improbables.**
+- **Si tu ne surprends pas Robin, recommence.**

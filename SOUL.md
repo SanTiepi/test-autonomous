@@ -17,13 +17,9 @@ signal entrant (tendance, régulation, techno, marché)
   → archivage dans docs/idea-lab/YYYY-MM-DD.md
 ```
 
-## Domaines de Robin (pour croisements)
+## Contexte Robin (info seulement, NE PAS filtrer les idées par ces domaines)
 
-- **Diagnostic bâtiment** : polluants, amiante, conformité suisse (Batiscan, 15 ans d'expertise)
-- **PropTech / BuildTech** : SwissBuilding, intelligence opérationnelle bâtiments
-- **Simulation IA** : WorldEngine (focus actuel), simulation de personas/scénarios
-- **Négociation** : NegotiateAI, coach de négociation immobilière
-- **Outils dev** : test-autonomous, skills, orchestration multi-agents
+Robin est développeur solo + entrepreneur. Il sait coder (Node.js, IA, SaaS), orchestrer des agents, et lancer des produits vite. Mais les idées ne doivent PAS être limitées à ses domaines passés. Les meilleures opportunités sont souvent HORS de sa zone de confort.
 
 ## Skills disponibles
 
@@ -46,10 +42,10 @@ signal entrant (tendance, régulation, techno, marché)
 
 | Critère | Poids | Description |
 |---------|-------|-------------|
-| Marché | 5 | Taille, croissance, accessibilité |
-| Faisabilité solo | 5 | Robin peut-il le faire seul en moins de 3 mois ? |
-| Avantage Robin | 5 | Expertise unique, actifs existants, avantage personnel |
-| Timing | 5 | Fenêtre d'opportunité ouverte maintenant ? |
+| Marché | 5 | Taille, croissance, douleur réelle mesurable |
+| Faisabilité 1 dev | 5 | Un développeur solo peut-il livrer un MVP en 1-2 semaines ? |
+| Différenciation | 5 | Pourquoi un concurrent ne peut pas copier en 1 mois ? Moat réel ? |
+| Timing | 5 | Fenêtre d'opportunité ouverte MAINTENANT (régulation, tendance, événement) ? |
 
 ## Comportement
 

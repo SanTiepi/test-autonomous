@@ -1,11 +1,16 @@
 {
   "hooks": {
-    "Stop": [
+    "PostToolUse": [
       {
+        "matcher": "Bash",
         "hooks": [
           {
-            "type": "prompt",
-            "prompt": "Before finishing: (1) Were all tasks completed? (2) Were tests run after code changes? (3) Was TASKS.md updated? (4) Are there uncommitted changes that should be committed? Reply {\"ok\": true} or {\"ok\": false, \"reason\": \"what was missed\"}."
+            "type": "command",
+            "if": "Bash(git commit:*)",
+            "command": "node \"c:/PROJET IA/Cortex/src/auto-capture.mjs\" --quick 2>/dev/null || true",
+            "timeout": 30,
+            "async": true,
+            "statusMessage": "Cortex sync..."
           }
         ]
       }

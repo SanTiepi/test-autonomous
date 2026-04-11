@@ -9,6 +9,11 @@
       ],
       "env": {}
     },
+    "cortex": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["c:/PROJET IA/Cortex/src/mcp-server.mjs"]
+    },
     "multi_mcp": {
       "type": "stdio",
       "command": "C:\\Users\\robin\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
