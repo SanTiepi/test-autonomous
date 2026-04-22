@@ -3,3 +3,8 @@ coverage/
 *.tmp
 node_modules/
 .env
+
+# misplaced scaffolded sites (moved to C:/PROJET IA/ when possible)
+bike-site/
+lan-site/
+lan-tall/
