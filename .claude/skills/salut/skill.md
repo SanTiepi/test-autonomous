@@ -10,14 +10,17 @@ Quand Robin tape `/salut` (ou au tout premier message de la session sur un proje
 
 C'est le **pendant entrée** de `/bye` — sans `/salut`, on perd la mémoire entre sessions.
 
-## Étape 1 — Identifier le projet (slug)
+## Étape 1 — Identifier le projet (résolution stricte)
 
-Détecte le slug du projet courant depuis :
-1. Un champ `slug:` dans le `CLAUDE.md` à la racine du repo
-2. Le nom du repo git (`git remote get-url origin` → extraire le nom)
-3. Le nom du dossier parent du `pwd` courant
+**Le nom du dossier ne suffit PAS** : certains repos ont un dossier ≠ slug (ex: `JusticeBot/` → `justicepourtous`, `NeuralShop/` → `neuralshop-benoit`). Source de vérité : `apps.json` du studio.
 
-Slug attendu : minuscule, tirets (ex: `batiscan-v4`, `cortex`, `studio-portfolio`, `justicepourtous`).
+**Ordre de résolution** :
+1. **`GET /api/apps/by-path?path=<basename_pwd>`** — résolution canonique via le registre. Retourne `{slug, name, ...}` ou 404.
+2. Champ `slug:` dans `CLAUDE.md` du repo (rare).
+3. `git remote get-url origin` → extraire le nom (ex: `SanTiepi/JusticePourtous` → essayer `justicepourtous`).
+4. Nom du dossier parent — fallback ultime.
+
+Slug attendu : `[a-z0-9-]+` (minuscule, tirets).
 
 ## Étape 2 — Fetch le dernier handoff + les notes en attente
 

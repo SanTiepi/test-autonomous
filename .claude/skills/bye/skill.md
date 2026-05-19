@@ -8,14 +8,25 @@ user-invocable: true
 
 Quand Robin tape `/bye`, tu termines la session **proprement** pour que la prochaine instance Claude qui ouvre ce projet reprenne sans réexplication.
 
-## Étape 1 — Identifier le projet
+## Étape 1 — Identifier le projet (résolution stricte du slug)
 
-Détecte le slug du projet courant depuis :
-- Le `CLAUDE.md` à la racine du repo (chercher slug dans Studio Robin section)
-- Ou le nom du repo git (`git remote get-url origin` → extraire le nom)
-- Ou le nom du dossier parent
+**Le nom du dossier ne suffit PAS** : certains repos ont un dossier qui diffère du slug studio. Exemples : `JusticeBot/` → slug `justicepourtous`, `NeuralShop/` → slug `neuralshop-benoit`. La source de vérité est `apps.json` (le champ `local_path` pointe vers le dossier physique).
 
-Slug attendu : minuscule, tirets (ex: `batiscan-v4`, `cortex`, `justicepourtous`).
+**Ordre de résolution** (s'arrêter au premier qui marche) :
+
+1. **`apps.json` via API** — recommandé :
+   ```bash
+   # $REPO_PATH = pwd ou un dossier reconnaissable (ex: "JusticeBot")
+   curl -s -u robin:$PWD "https://robinetclaude.ch/api/apps/by-path?path=$(basename $REPO_PATH)"
+   # Retourne 200 avec { slug, name, ... } si match, 404 sinon.
+   ```
+2. **`CLAUDE.md` à la racine du repo** — si présent et contient un champ `slug:` explicite.
+3. **`git remote get-url origin`** — déduire le slug du nom de repo GitHub (ex: `SanTiepi/JusticePourtous` → `justicepourtous`). Attention aux casses (apps.json utilise minuscule, GitHub peut avoir des majuscules).
+4. **Nom du dossier parent** — fallback ultime, seulement si rien d'autre.
+
+**Slug attendu** : minuscule, tirets uniquement, regex `[a-z0-9-]+` (l'API rejette le reste).
+
+Si tu ne peux PAS résoudre un slug fiable, demande à Robin avant de POST.
 
 ## Étape 2 — Composer le handoff
 
