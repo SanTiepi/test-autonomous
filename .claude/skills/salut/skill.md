@@ -59,15 +59,44 @@ Dernier handoff : <ts relatif, ex. "il y a 14h">
 Puis demande à Robin :
 > "On reprend sur <next_step en 1 ligne> ou tu veux pivoter ?"
 
-## Étape 4 — Vérifier que le contexte est encore valide
+## Étape 4 — Preflight (à exécuter AVANT de présenter le handoff)
 
-**Avant d'agir** sur le `next_step` proposé par l'ancienne Claude, vérifie que c'est encore pertinent :
+Avant de balancer le handoff brut, lance ces checks en parallèle pour donner à Robin une vraie photo de l'écart entre "ce qu'on disait" et "ce qui est". Format des résultats dans le bullet point "État courant" du résumé.
 
-- Git status / dernier commit : a-t-il bougé depuis le handoff ?
-- Tests verts ? (rapide check)
-- Le fichier/ligne mentionné en `next_step` existe-t-il toujours ?
+### Checks à faire en parallèle (1 message avec plusieurs tool calls)
 
-Si quelque chose a changé entre les deux sessions (Robin a touché au repo manuellement, ou un autre process), **dis-le explicitement** avant de continuer.
+1. **Git** :
+   - `git log -1 --format='%h %ar — %s'` → dernier commit (sha + il y a X + message)
+   - `git status --short` → modifs non commit en attente
+   - Si le repo a un upstream : `git log @{u}.. --oneline` → commits non poussés
+   - `git log <handoff_ts>..HEAD --oneline | head -10` → ce qui a été commit DEPUIS le handoff
+
+2. **Existence des fichiers cités dans next_step** :
+   - Si `next_step` mentionne un path (regex `[a-zA-Z0-9_\-/.]+\.[a-z]+`), vérifier `Test-Path` / `ls`
+   - Si introuvable → drapeau "fichier mentionné disparu" dans la présentation
+
+3. **Container state** (si le projet a un container) :
+   - Lire `apps.json` localement → si `container != null` → `GET https://robinetclaude.ch/api/state` (champ `health.containers[]`) et vérifier l'état
+   - Si pas running → drapeau ⚠
+
+4. **Tests** (si applicable) :
+   - Si `package.json` présent et contient un script `test` : NE PAS lancer automatiquement (peut être lent). Juste signaler : "tests dispo, lance `npm test` si tu veux".
+   - Pour les repos avec `pytest` / `cargo test` / etc : pareil.
+
+### Format du preflight dans la présentation
+
+Ajoute une section "🩺 État courant" entre "Dernier handoff" et le résumé :
+
+```
+🩺 État courant
+• Git : dernier commit <sha> "<msg>" il y a <âge> · <N commits depuis le handoff>
+• Working tree : <propre | N fichiers modifiés non commit>
+• Container <name> : <running ✓ | exited ⚠ | absent>
+• Path next_step "<file>" : <existe ✓ | introuvable ⚠>
+```
+
+Si tout est OK → présenter le handoff normalement. Si écart ⚠ → le SIGNALER explicitement dans la phrase finale, par exemple :
+> "Attention : 3 commits depuis le handoff (Robin a touché au code) ET le fichier mentionné en next_step n'existe plus. On vérifie ensemble avant de continuer ?"
 
 ## Étape 5 — Démarrer le travail
 

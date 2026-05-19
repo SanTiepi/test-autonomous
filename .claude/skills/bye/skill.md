@@ -29,9 +29,14 @@ Construis un JSON structuré qui condense la session pour le prochain Claude :
   "decisions": ["Choix archi : on garde X au lieu de Y parce que Z (cf discussion avec Robin)"],
   "blockers": "Attente Robin sur la doctrine du module W avant d'implémenter la suite.",
   "next_step": "Au prochain démarrage : reprendre sur le test flake (fichier test/abc.test.js ligne 42), creuser la race.",
-  "context_for_next_claude": "Robin pivote vite sur ce sujet — vérifier au /salut s'il a changé d'avis avant de continuer la direction. Le repo a un sous-dossier `experiments/` à ignorer."
+  "context_for_next_claude": "Robin pivote vite sur ce sujet — vérifier au /salut s'il a changé d'avis avant de continuer la direction. Le repo a un sous-dossier `experiments/` à ignorer.",
+  "tags": ["bug", "tests", "race-condition"]
 }
 ```
+
+`tags[]` est optionnel mais **fortement recommandé** : 1-5 mots-clés courts en kebab-case (ex: `infra`, `ui`, `memory`, `cortex`, `migration`, `flake`, `bug`, `refactor`). Permettent de filtrer dans `/api/handoffs/search?tag=X` et dans la page `/search.html`.
+
+**Tu n'as PAS besoin d'inclure `interim_notes` dans le body** : le serveur ramasse automatiquement les notes posées via `/note` depuis le dernier handoff. Si tu veux explicitement zapper ce comportement, passe `"interim_notes": []`.
 
 Règles de composition :
 - `what_done` : faits objectifs, pas autosatisfaction (pas "j'ai bien bossé sur X" — juste "X fait")
