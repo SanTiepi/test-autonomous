@@ -19,9 +19,13 @@ Détecte le slug du projet courant depuis :
 
 Slug attendu : minuscule, tirets (ex: `batiscan-v4`, `cortex`, `studio-portfolio`, `justicepourtous`).
 
-## Étape 2 — Fetch le dernier handoff
+## Étape 2 — Fetch le dernier handoff + les notes en attente
 
-GET vers `https://robinetclaude.ch/api/handoff/<slug>/latest`.
+Fetch en parallèle :
+- **`GET /api/handoff/<slug>/latest`** — le dernier handoff posé via `/bye`
+- **`GET /api/notes/<slug>`** — les notes intermédiaires posées via `/note` depuis ce dernier handoff (= notes en attente d'ingestion)
+
+Les deux donnent une image complète : le handoff = "ce qu'on avait pensé à la fin", les notes = "ce qui s'est ajouté depuis sans recap formel" (sessions interrompues, observations cross-session, warnings d'autres Claudes).
 
 Auth :
 - Basic auth (`robin:<password>`) — récupérer le password depuis Bitwarden si le wrapper `bw-auto.ps1` est disponible (cf. CLAUDE.md global), sinon depuis `.env` local (`STUDIO_BASIC_PWD` ou équivalent), sinon demander à Robin **une fois** dans la session
@@ -30,14 +34,18 @@ Auth :
 Exemple :
 
 ```bash
-curl -s -u "robin:$BASIC_PWD" \
-  https://robinetclaude.ch/api/handoff/<slug>/latest
+# Handoff
+curl -s -u "robin:$BASIC_PWD" https://robinetclaude.ch/api/handoff/<slug>/latest
+# Notes en attente (depuis le dernier handoff)
+curl -s -u "robin:$BASIC_PWD" https://robinetclaude.ch/api/notes/<slug>
 ```
 
-Réponses possibles :
+Réponses possibles pour le handoff :
 - `200` avec JSON du handoff → étape 3
 - `404 { "error": "no handoff yet" }` → première session, dis-le simplement à Robin et démarre normalement
 - Network/timeout → fallback : chercher localement dans `~/.claude/projects/c--PROJET-IA-<repo>/memory/HISTORY.md` si présent
+
+Pour les notes : `200 { count, notes[] }` — peut être vide (`count: 0`), normal.
 
 ## Étape 3 — Présenter le handoff à Robin
 
@@ -55,6 +63,16 @@ Dernier handoff : <ts relatif, ex. "il y a 14h">
 • Prochaine étape proposée : <next_step>
 • Note pour moi : <context_for_next_claude>
 ```
+
+**Si des notes en attente sont présentes** (count > 0), ajoute une section après le handoff :
+
+```
+📌 Notes intermédiaires depuis ce handoff (<count>)
+• [<kind>] <text>  (posée il y a <âge>)
+• ...
+```
+
+Ces notes sont des marqueurs posés au fil de l'eau (par toi, par Robin, ou par une autre session Claude). Elles peuvent CONTREDIRE le handoff (ex: "le next_step est périmé, voici pourquoi"). Lis-les AVANT de proposer la reprise.
 
 Puis demande à Robin :
 > "On reprend sur <next_step en 1 ligne> ou tu veux pivoter ?"
